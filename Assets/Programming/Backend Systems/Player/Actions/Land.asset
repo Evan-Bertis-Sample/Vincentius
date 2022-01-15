@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6708d73f4a859984a90065ca04f005e1, type: 3}
+  m_Name: Land
+  m_EditorClassIdentifier: 
+  binding:
+    m_Name: Binding
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6bed5035-6bdb-4f96-904a-18682bed1b4f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9f9138c9-755d-4842-a363-366dbd522608
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Binding
+      m_Flags: 0
+  newState: 5
+  canBeStates: 00000000
+  checkParameter: 1
+  checkBinding: 0
+  checkBindingStart: 0
+  checkParameterAfterInit: 0
+  checkBindingAfterInit: 0
+  checkBindingStartAfterInit: 0
+  bindingTriggeredThisFrame: 0
+  interruptable: 0
+  waitForAnimationEvent: 0
+  animationFlag: 0
+  animationEventName: 
+  landTime: 0.25
+  landParticles: {fileID: 1166751312267982865, guid: 4466fcdb04e3b4f4fa9888bb782e934f, type: 3}
+  particlesOffset: {x: 0, y: -0.5}
+  requiredFallVelocity: -15

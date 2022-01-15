@@ -1,0 +1,3466 @@
+fileFormatVersion: 2
+guid: 86610cb5f8f2e7b4982fc070e43bad94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6592798692138576902
+    second: MountainBaseTileSet_0
+  - first:
+      213: -3554034272491429730
+    second: MountainBaseTileSet_1
+  - first:
+      213: 2403142557941573133
+    second: MountainBaseTileSet_2
+  - first:
+      213: -2621792180085431853
+    second: MountainBaseTileSet_3
+  - first:
+      213: 2950394626455526722
+    second: MountainBaseTileSet_4
+  - first:
+      213: -5118224876042588639
+    second: MountainBaseTileSet_5
+  - first:
+      213: -2451095291068545443
+    second: MountainBaseTileSet_6
+  - first:
+      213: -2282466552194500166
+    second: MountainBaseTileSet_7
+  - first:
+      213: -4773858031011337094
+    second: MountainBaseTileSet_8
+  - first:
+      213: -4395108178840917256
+    second: MountainBaseTileSet_9
+  - first:
+      213: 5520537899174365432
+    second: MountainBaseTileSet_10
+  - first:
+      213: 4678221620032500322
+    second: MountainBaseTileSet_11
+  - first:
+      213: 3319027088907825142
+    second: MountainBaseTileSet_12
+  - first:
+      213: -607016889227085316
+    second: MountainBaseTileSet_13
+  - first:
+      213: -391145519913504834
+    second: MountainBaseTileSet_14
+  - first:
+      213: -5333478784845498950
+    second: MountainBaseTileSet_15
+  - first:
+      213: -7675268912507320945
+    second: MountainBaseTileSet_16
+  - first:
+      213: 7441430245595736413
+    second: MountainBaseTileSet_17
+  - first:
+      213: -6394887838910226618
+    second: MountainBaseTileSet_18
+  - first:
+      213: 2065000212285466123
+    second: MountainBaseTileSet_19
+  - first:
+      213: 4916640100053692863
+    second: MountainBaseTileSet_20
+  - first:
+      213: -7144718391638791331
+    second: MountainBaseTileSet_21
+  - first:
+      213: 6739837305175544506
+    second: MountainBaseTileSet_22
+  - first:
+      213: 2067998719354997292
+    second: MountainBaseTileSet_23
+  - first:
+      213: 7862384912034734636
+    second: MountainBaseTileSet_24
+  - first:
+      213: 1981355008787243414
+    second: MountainBaseTileSet_25
+  - first:
+      213: -7090339773492794169
+    second: MountainBaseTileSet_26
+  - first:
+      213: 3107565148209127815
+    second: MountainBaseTileSet_27
+  - first:
+      213: -1947389637353638108
+    second: MountainBaseTileSet_28
+  - first:
+      213: 7784960703818670417
+    second: MountainBaseTileSet_29
+  - first:
+      213: -6894242684936568160
+    second: MountainBaseTileSet_30
+  - first:
+      213: -1732035470719551459
+    second: MountainBaseTileSet_31
+  - first:
+      213: -7127741064186853903
+    second: MountainBaseTileSet_32
+  - first:
+      213: 424480629732438001
+    second: MountainBaseTileSet_33
+  - first:
+      213: 8237102174727606649
+    second: MountainBaseTileSet_34
+  - first:
+      213: -1394451944688225385
+    second: MountainBaseTileSet_35
+  - first:
+      213: -2556055741370771238
+    second: MountainBaseTileSet_36
+  - first:
+      213: 4376116555808976500
+    second: MountainBaseTileSet_37
+  - first:
+      213: 5895210911602205866
+    second: MountainBaseTileSet_38
+  - first:
+      213: 5892038755302256543
+    second: MountainBaseTileSet_39
+  - first:
+      213: -8866249491059384846
+    second: MountainBaseTileSet_40
+  - first:
+      213: -241718108139202740
+    second: MountainBaseTileSet_41
+  - first:
+      213: -3052188398363486556
+    second: MountainBaseTileSet_42
+  - first:
+      213: -8314674401352852244
+    second: MountainBaseTileSet_43
+  - first:
+      213: -5583143600494563739
+    second: MountainBaseTileSet_44
+  - first:
+      213: -6474379316921067947
+    second: MountainBaseTileSet_45
+  - first:
+      213: -6426847116614055137
+    second: MountainBaseTileSet_46
+  - first:
+      213: -1361912705887966633
+    second: MountainBaseTileSet_47
+  - first:
+      213: -6045974899347331983
+    second: MountainBaseTileSet_48
+  - first:
+      213: -3258392645659909854
+    second: MountainBaseTileSet_49
+  - first:
+      213: -4961996695541120987
+    second: MountainBaseTileSet_50
+  - first:
+      213: 5874930292110263249
+    second: MountainBaseTileSet_51
+  - first:
+      213: 2008513262431225222
+    second: MountainBaseTileSet_52
+  - first:
+      213: 6431600361804934318
+    second: MountainBaseTileSet_53
+  - first:
+      213: -8640936871850350068
+    second: MountainBaseTileSet_54
+  - first:
+      213: -8275649095607123453
+    second: MountainBaseTileSet_55
+  - first:
+      213: -6751717685355254296
+    second: MountainBaseTileSet_56
+  - first:
+      213: -2712607189982031718
+    second: MountainBaseTileSet_57
+  - first:
+      213: 5388094369106769495
+    second: MountainBaseTileSet_58
+  - first:
+      213: -886680994347578218
+    second: MountainBaseTileSet_59
+  - first:
+      213: 4716092737285333970
+    second: MountainBaseTileSet_60
+  - first:
+      213: 501219926056373872
+    second: MountainBaseTileSet_61
+  - first:
+      213: 5833483709457797860
+    second: MountainBaseTileSet_62
+  - first:
+      213: -8675356521570163340
+    second: MountainBaseTileSet_63
+  - first:
+      213: -899131524047009641
+    second: MountainBaseTileSet_64
+  - first:
+      213: 8757390148138402529
+    second: MountainBaseTileSet_65
+  - first:
+      213: -4945767896946220466
+    second: MountainBaseTileSet_66
+  - first:
+      213: -2969818894428411905
+    second: MountainBaseTileSet_67
+  - first:
+      213: 3656018751091749643
+    second: MountainBaseTileSet_68
+  - first:
+      213: -5266390322760192550
+    second: MountainBaseTileSet_69
+  - first:
+      213: 2014163963831845684
+    second: MountainBaseTileSet_70
+  - first:
+      213: 9092877610684110648
+    second: MountainBaseTileSet_71
+  - first:
+      213: -8911045786706739802
+    second: MountainBaseTileSet_72
+  - first:
+      213: -7655377917478381525
+    second: MountainBaseTileSet_73
+  - first:
+      213: -5097278333696007834
+    second: MountainBaseTileSet_74
+  - first:
+      213: -7517802125712170847
+    second: MountainBaseTileSet_75
+  - first:
+      213: 2961993182419531182
+    second: MountainBaseTileSet_76
+  - first:
+      213: -7670547107089381842
+    second: MountainBaseTileSet_77
+  - first:
+      213: 1481726614418776796
+    second: MountainBaseTileSet_78
+  - first:
+      213: 4119495358468850168
+    second: MountainBaseTileSet_79
+  - first:
+      213: 7904832629995728583
+    second: MountainBaseTileSet_80
+  - first:
+      213: 2478234582393776950
+    second: MountainBaseTileSet_81
+  - first:
+      213: -3104630795800160553
+    second: MountainBaseTileSet_82
+  - first:
+      213: -8249692201575593207
+    second: MountainBaseTileSet_83
+  - first:
+      213: -1808345116180014049
+    second: MountainBaseTileSet_84
+  - first:
+      213: 1365229764977141550
+    second: MountainBaseTileSet_85
+  - first:
+      213: -3720963081863111846
+    second: MountainBaseTileSet_86
+  - first:
+      213: -8941491411225791820
+    second: MountainBaseTileSet_87
+  - first:
+      213: -4126463189151171635
+    second: MountainBaseTileSet_88
+  - first:
+      213: 1806023889061738526
+    second: MountainBaseTileSet_89
+  - first:
+      213: 7694874294040261230
+    second: MountainBaseTileSet_90
+  - first:
+      213: -2766480862641919091
+    second: MountainBaseTileSet_91
+  - first:
+      213: -5094322790149337771
+    second: MountainBaseTileSet_92
+  - first:
+      213: -7238030511778232994
+    second: MountainBaseTileSet_93
+  - first:
+      213: 4742952825493343968
+    second: MountainBaseTileSet_94
+  - first:
+      213: -6603521920989286290
+    second: MountainBaseTileSet_95
+  - first:
+      213: 7552396148333467519
+    second: MountainBaseTileSet_96
+  - first:
+      213: -6477466039589181202
+    second: MountainBaseTileSet_97
+  - first:
+      213: 4631473321371449957
+    second: MountainBaseTileSet_98
+  - first:
+      213: -254401002926324109
+    second: MountainBaseTileSet_99
+  - first:
+      213: 2030785289313476107
+    second: MountainBaseTileSet_100
+  - first:
+      213: 1941861321537921044
+    second: MountainBaseTileSet_101
+  - first:
+      213: -5770947916619720475
+    second: MountainBaseTileSet_102
+  - first:
+      213: 4344454758085192397
+    second: MountainBaseTileSet_103
+  - first:
+      213: -1951684156389548953
+    second: MountainBaseTileSet_104
+  - first:
+      213: 2999476588797031776
+    second: MountainBaseTileSet_105
+  - first:
+      213: -5959885838201425116
+    second: MountainBaseTileSet_106
+  - first:
+      213: 3314893589095038187
+    second: MountainBaseTileSet_107
+  - first:
+      213: 335965793756957100
+    second: MountainBaseTileSet_108
+  - first:
+      213: -1742196098658794385
+    second: MountainBaseTileSet_109
+  - first:
+      213: 2800737771587306293
+    second: MountainBaseTileSet_110
+  - first:
+      213: 7842782168462365709
+    second: MountainBaseTileSet_111
+  - first:
+      213: -9020216461385400522
+    second: MountainBaseTileSet_112
+  - first:
+      213: 7015940546228584350
+    second: MountainBaseTileSet_113
+  - first:
+      213: -5518994266258937372
+    second: MountainBaseTileSet_114
+  - first:
+      213: -3733976539917555999
+    second: MountainBaseTileSet_115
+  - first:
+      213: 8838215128025259477
+    second: MountainBaseTileSet_116
+  - first:
+      213: 1857057636080175724
+    second: MountainBaseTileSet_117
+  - first:
+      213: -1314866362979601662
+    second: MountainBaseTileSet_118
+  - first:
+      213: -4198794874280375550
+    second: MountainBaseTileSet_119
+  - first:
+      213: -7191242378993991957
+    second: MountainBaseTileSet_120
+  - first:
+      213: 5788692843562349043
+    second: MountainBaseTileSet_121
+  - first:
+      213: -2534881849118350797
+    second: MountainBaseTileSet_122
+  - first:
+      213: 4453740506695758489
+    second: MountainBaseTileSet_123
+  - first:
+      213: -4257151222138194312
+    second: MountainBaseTileSet_0
+  - first:
+      213: 8728182984272689053
+    second: MountainBaseTileSet_1
+  - first:
+      213: -1486421146375490203
+    second: MountainBaseTileSet_2
+  - first:
+      213: -667761345293675808
+    second: MountainBaseTileSet_3
+  - first:
+      213: -2229441496130308804
+    second: MountainBaseTileSet_4
+  - first:
+      213: -4484718731967185812
+    second: MountainBaseTileSet_5
+  - first:
+      213: 8436765113309403467
+    second: MountainBaseTileSet_6
+  - first:
+      213: 5699547480654953990
+    second: MountainBaseTileSet_7
+  - first:
+      213: -7486809276400498012
+    second: MountainBaseTileSet_8
+  - first:
+      213: -3241584091993870380
+    second: MountainBaseTileSet_9
+  - first:
+      213: -1681699784124845113
+    second: MountainBaseTileSet_10
+  - first:
+      213: 7307707568742153246
+    second: MountainBaseTileSet_11
+  - first:
+      213: 4137484526938768130
+    second: MountainBaseTileSet_12
+  - first:
+      213: -2126938902021825968
+    second: MountainBaseTileSet_13
+  - first:
+      213: -8081436554677672783
+    second: MountainBaseTileSet_14
+  - first:
+      213: 4607194444829472043
+    second: MountainBaseTileSet_15
+  - first:
+      213: 47806465879936957
+    second: MountainBaseTileSet_16
+  - first:
+      213: -6663131608179470811
+    second: MountainBaseTileSet_17
+  - first:
+      213: 7845464310998624973
+    second: MountainBaseTileSet_18
+  - first:
+      213: -2481256245082861139
+    second: MountainBaseTileSet_19
+  - first:
+      213: 8107848603472549553
+    second: MountainBaseTileSet_20
+  - first:
+      213: -1641404853368258682
+    second: MountainBaseTileSet_21
+  - first:
+      213: 1448188772163403702
+    second: MountainBaseTileSet_22
+  - first:
+      213: -3156739307293521110
+    second: MountainBaseTileSet_23
+  - first:
+      213: -6224452376105892633
+    second: MountainBaseTileSet_24
+  - first:
+      213: 2129588854504171330
+    second: MountainBaseTileSet_25
+  - first:
+      213: -7605396704009142390
+    second: MountainBaseTileSet_26
+  - first:
+      213: -5286466985473686507
+    second: MountainBaseTileSet_27
+  - first:
+      213: -2821785923156115977
+    second: MountainBaseTileSet_28
+  - first:
+      213: -7075738402262937741
+    second: MountainBaseTileSet_29
+  - first:
+      213: 4110613126924344969
+    second: MountainBaseTileSet_30
+  - first:
+      213: -388623568463215673
+    second: MountainBaseTileSet_31
+  - first:
+      213: -6261169920511839502
+    second: MountainBaseTileSet_32
+  - first:
+      213: -4635114095500497449
+    second: MountainBaseTileSet_33
+  - first:
+      213: 5159571046398254324
+    second: MountainBaseTileSet_34
+  - first:
+      213: -2873843468417529963
+    second: MountainBaseTileSet_35
+  - first:
+      213: 6803227804815298001
+    second: MountainBaseTileSet_36
+  - first:
+      213: 591280642634218506
+    second: MountainBaseTileSet_37
+  - first:
+      213: -4230019713588806874
+    second: MountainBaseTileSet_38
+  - first:
+      213: -8256916595472019729
+    second: MountainBaseTileSet_39
+  - first:
+      213: 425528870038608034
+    second: MountainBaseTileSet_40
+  - first:
+      213: -2478095291390164482
+    second: MountainBaseTileSet_41
+  - first:
+      213: 4674505516869319497
+    second: MountainBaseTileSet_42
+  - first:
+      213: -6869287447395199631
+    second: MountainBaseTileSet_43
+  - first:
+      213: 7516257941922824048
+    second: MountainBaseTileSet_44
+  - first:
+      213: -4617986195974223009
+    second: MountainBaseTileSet_45
+  - first:
+      213: 522596308007134195
+    second: MountainBaseTileSet_46
+  - first:
+      213: -4883013911342016970
+    second: MountainBaseTileSet_47
+  - first:
+      213: 7046498133020550464
+    second: MountainBaseTileSet_48
+  - first:
+      213: 798917447243614519
+    second: MountainBaseTileSet_49
+  - first:
+      213: 3788979944948095352
+    second: MountainBaseTileSet_50
+  - first:
+      213: -3240268174591708182
+    second: MountainBaseTileSet_51
+  - first:
+      213: -8638127590712264036
+    second: MountainBaseTileSet_52
+  - first:
+      213: 3485018286237419307
+    second: MountainBaseTileSet_53
+  - first:
+      213: 1272494780984110252
+    second: MountainBaseTileSet_54
+  - first:
+      213: -7791680149748434883
+    second: MountainBaseTileSet_55
+  - first:
+      213: 2006482794291874699
+    second: MountainBaseTileSet_56
+  - first:
+      213: 3705248236152663510
+    second: MountainBaseTileSet_57
+  - first:
+      213: 6274128817393140669
+    second: MountainBaseTileSet_58
+  - first:
+      213: 1758272777645765685
+    second: MountainBaseTileSet_59
+  - first:
+      213: -6341098126323996104
+    second: MountainBaseTileSet_60
+  - first:
+      213: -5149990976112663477
+    second: MountainBaseTileSet_61
+  - first:
+      213: -7212458748672083151
+    second: MountainBaseTileSet_62
+  - first:
+      213: 3791552581488300839
+    second: MountainBaseTileSet_63
+  - first:
+      213: 3706397687517346270
+    second: MountainBaseTileSet_64
+  - first:
+      213: -6184817254356036861
+    second: MountainBaseTileSet_65
+  - first:
+      213: -8752652035003469337
+    second: MountainBaseTileSet_66
+  - first:
+      213: 3891740279241398981
+    second: MountainBaseTileSet_67
+  - first:
+      213: -6809716439148128562
+    second: MountainBaseTileSet_68
+  - first:
+      213: 2462946385871970337
+    second: MountainBaseTileSet_69
+  - first:
+      213: 3779552717882099759
+    second: MountainBaseTileSet_70
+  - first:
+      213: 3857864380639895761
+    second: MountainBaseTileSet_71
+  - first:
+      213: 3309394441942485897
+    second: MountainBaseTileSet_72
+  - first:
+      213: -7084907037760946642
+    second: MountainBaseTileSet_73
+  - first:
+      213: 7144671121959637364
+    second: MountainBaseTileSet_74
+  - first:
+      213: -334297942079732377
+    second: MountainBaseTileSet_75
+  - first:
+      213: 1428509314457876625
+    second: MountainBaseTileSet_76
+  - first:
+      213: -8137171842884041375
+    second: MountainBaseTileSet_77
+  - first:
+      213: 6149158164708502136
+    second: MountainBaseTileSet_78
+  - first:
+      213: 6858186496433432690
+    second: MountainBaseTileSet_79
+  - first:
+      213: -1486691056263881378
+    second: MountainBaseTileSet_80
+  - first:
+      213: -976223392811528415
+    second: MountainBaseTileSet_81
+  - first:
+      213: 2890204835489423352
+    second: MountainBaseTileSet_82
+  - first:
+      213: -6534916234605171160
+    second: MountainBaseTileSet_83
+  - first:
+      213: -3694246404194997847
+    second: MountainBaseTileSet_84
+  - first:
+      213: -8288967804426008525
+    second: MountainBaseTileSet_85
+  - first:
+      213: 7917857689321433856
+    second: MountainBaseTileSet_86
+  - first:
+      213: 357030709354044035
+    second: MountainBaseTileSet_87
+  - first:
+      213: 8654906841598065046
+    second: MountainBaseTileSet_88
+  - first:
+      213: -7137800973594236198
+    second: MountainBaseTileSet_89
+  - first:
+      213: 2044345198804610911
+    second: MountainBaseTileSet_90
+  - first:
+      213: 1603448879916632330
+    second: MountainBaseTileSet_91
+  - first:
+      213: 7534535744000301896
+    second: MountainBaseTileSet_92
+  - first:
+      213: 5843403502366154316
+    second: MountainBaseTileSet_93
+  - first:
+      213: -8052495728985740642
+    second: MountainBaseTileSet_94
+  - first:
+      213: -6599153494007560507
+    second: MountainBaseTileSet_95
+  - first:
+      213: -4918271968971444838
+    second: MountainBaseTileSet_96
+  - first:
+      213: 6824633559804714508
+    second: MountainBaseTileSet_97
+  - first:
+      213: 1157334910111966918
+    second: MountainBaseTileSet_98
+  - first:
+      213: 2919007853818139001
+    second: MountainBaseTileSet_99
+  - first:
+      213: 4681656679897228895
+    second: MountainBaseTileSet_100
+  - first:
+      213: -433184452343434525
+    second: MountainBaseTileSet_101
+  - first:
+      213: 5727889376075621673
+    second: MountainBaseTileSet_102
+  - first:
+      213: 8331051204866330447
+    second: MountainBaseTileSet_103
+  - first:
+      213: 706983455962009305
+    second: MountainBaseTileSet_104
+  - first:
+      213: 3837947939887220217
+    second: MountainBaseTileSet_105
+  - first:
+      213: 6281577465723335215
+    second: MountainBaseTileSet_106
+  - first:
+      213: -1031529849054762431
+    second: MountainBaseTileSet_107
+  - first:
+      213: 6704096980623094173
+    second: MountainBaseTileSet_108
+  - first:
+      213: -3497538725574592955
+    second: MountainBaseTileSet_109
+  - first:
+      213: -7219748960718777142
+    second: MountainBaseTileSet_110
+  - first:
+      213: -2855522075771102985
+    second: MountainBaseTileSet_111
+  - first:
+      213: -7835934951825240871
+    second: MountainBaseTileSet_112
+  - first:
+      213: 3697462578909290255
+    second: MountainBaseTileSet_113
+  - first:
+      213: -1294509603376502895
+    second: MountainBaseTileSet_114
+  - first:
+      213: 4335051391189621072
+    second: MountainBaseTileSet_115
+  - first:
+      213: -4121219970796526744
+    second: MountainBaseTileSet_116
+  - first:
+      213: 1693310965374039059
+    second: MountainBaseTileSet_117
+  - first:
+      213: 1557319499269372960
+    second: MountainBaseTileSet_118
+  - first:
+      213: 3417934758354661783
+    second: MountainBaseTileSet_119
+  - first:
+      213: 6836199404304241418
+    second: MountainBaseTileSet_120
+  - first:
+      213: 1693893291620845289
+    second: MountainBaseTileSet_121
+  - first:
+      213: 7006835017715983396
+    second: MountainBaseTileSet_122
+  - first:
+      213: -2419962532814752300
+    second: MountainBaseTileSet_123
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MountainBaseTileSet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8763551d48f8be4c0800000000000000
+      internalID: -4257151222138194312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97be282e2cb02970800000000000000
+      internalID: 8728182984272689053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2980b2892abb6f0800000000000000
+      internalID: -667761345293675808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3533a775ce6f01e0800000000000000
+      internalID: -2229441496130308804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c3e87031413c1c0800000000000000
+      internalID: -4484718731967185812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b491730bb29651570800000000000000
+      internalID: 8436765113309403467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e39e47c3cd81f40800000000000000
+      internalID: 5699547480654953990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa8c0341a2891890800000000000000
+      internalID: -7486809276400498012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfe52761749303d0800000000000000
+      internalID: -3241584091993870380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_10
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c33364d4f669a8e0800000000000000
+      internalID: -1681699784124845113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c3f4dd0513a6560800000000000000
+      internalID: 7307707568742153246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2034cd3814c4b6930800000000000000
+      internalID: 4137484526938768130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a970e66589b72e0800000000000000
+      internalID: -2126938902021825968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4a4935548f8df80800000000000000
+      internalID: -8081436554677672783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25b63700fa00ff30800000000000000
+      internalID: 4607194444829472043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf8db83ab7d9a000800000000000000
+      internalID: 47806465879936957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e09caea1dc783a0800000000000000
+      internalID: -6663131608179470811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcae31b4930b0ec60800000000000000
+      internalID: 7845464310998624973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_19
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1dd13679ec09dd0800000000000000
+      internalID: -2481256245082861139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6d0aef85dd48070800000000000000
+      internalID: 8107848603472549553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ff16e7bfe8839e0800000000000000
+      internalID: -1641404853368258682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf3284f300091410800000000000000
+      internalID: 1448188772163403702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bc14c33520134d0800000000000000
+      internalID: -3156739307293521110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e44fd0ea8d4e99a0800000000000000
+      internalID: -6224452376105892633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2472a56b7c1dd8d10800000000000000
+      internalID: 2129588854504171330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fbb992ef3347690800000000000000
+      internalID: -7605396704009142390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514c20e1942b2a6b0800000000000000
+      internalID: -5286466985473686507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdf41247a007d8d0800000000000000
+      internalID: -2821785923156115977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f0789796dedcd90800000000000000
+      internalID: -7075738402262937741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_30
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e12672cd4db0930800000000000000
+      internalID: 4110613126924344969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3c76a6ce45b9af0800000000000000
+      internalID: -388623568463215673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_32
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2f781612bdb19a0800000000000000
+      internalID: -6261169920511839502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd694cb944ccafb0800000000000000
+      internalID: -4635114095500497449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc55f5b78a7a9740800000000000000
+      internalID: 5159571046398254324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59785ec779e0e18d0800000000000000
+      internalID: -2873843468417529963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd8318b4abe96e50800000000000000
+      internalID: 6803227804815298001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cf6ca9c96a43800800000000000000
+      internalID: 591280642634218506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_38
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bb3aa6b73fb45c0800000000000000
+      internalID: -4230019713588806874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeccda7a1a896d80800000000000000
+      internalID: -8256916595472019729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a81354b048c7e500800000000000000
+      internalID: 425528870038608034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef10f1546790c9dd0800000000000000
+      internalID: -2478095291390164482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b7991400e2fd040800000000000000
+      internalID: 4674505516869319497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17595fd26736ba0a0800000000000000
+      internalID: -6869287447395199631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_44
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fb48c76cc1f4860800000000000000
+      internalID: 7516257941922824048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_45
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b8c4b950e99efb0800000000000000
+      internalID: -4617986195974223009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f322b3c292a04700800000000000000
+      internalID: 522596308007134195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_47
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6361b2d08bc0c3cb0800000000000000
+      internalID: -4883013911342016970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_48
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045a421d7b03ac160800000000000000
+      internalID: 7046498133020550464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73941d77f23561b00800000000000000
+      internalID: 798917447243614519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879d5bf5f29259430800000000000000
+      internalID: 3788979944948095352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_51
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3357c43414803d0800000000000000
+      internalID: -3240268174591708182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_52
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a381719b43f1880800000000000000
+      internalID: -8638127590712264036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b270ceabaa54d5030800000000000000
+      internalID: 3485018286237419307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caca817e24fc8a110800000000000000
+      internalID: 1272494780984110252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3838c69f246ed390800000000000000
+      internalID: -7791680149748434883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b43b9787578db10800000000000000
+      internalID: 2006482794291874699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dda588b3afab6330800000000000000
+      internalID: 3705248236152663510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_58
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db382cbeaee221750800000000000000
+      internalID: 6274128817393140669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_59
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534b0d986c3a66810800000000000000
+      internalID: 1758272777645765685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_60
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a2096c9d4eff7a0800000000000000
+      internalID: -6341098126323996104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_61
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4466583e7e8788b0800000000000000
+      internalID: -5149990976112663477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_62
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bfd383bf238eb90800000000000000
+      internalID: -7212458748672083151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_63
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72353defbfc4e9430800000000000000
+      internalID: 3791552581488300839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_64
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9fcc83f05cf6330800000000000000
+      internalID: 3706397687517346270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303d669c97d1b2aa0800000000000000
+      internalID: -6184817254356036861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_66
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1b4030955588680800000000000000
+      internalID: -8752652035003469337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca53462a2d320630800000000000000
+      internalID: 3891740279241398981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_68
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6107f5af60f71a0800000000000000
+      internalID: -6809716439148128562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_69
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1202bbe40b42e2220800000000000000
+      internalID: 2462946385871970337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_70
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2889370c2ba37430800000000000000
+      internalID: 3779552717882099759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d06cafd633e98530800000000000000
+      internalID: 3857864380639895761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_72
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b42a506b45ded20800000000000000
+      internalID: 3309394441942485897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_73
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ef79b269a5dad90800000000000000
+      internalID: -7084907037760946642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47155650888f62360800000000000000
+      internalID: 7144671121959637364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_75
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7658139fac55c5bf0800000000000000
+      internalID: -334297942079732377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198399627a513d310800000000000000
+      internalID: 1428509314457876625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_77
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165069c4255f21f80800000000000000
+      internalID: -8137171842884041375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_78
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87aa42b65c2365550800000000000000
+      internalID: 6149158164708502136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_79
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278ab43484c2d2f50800000000000000
+      internalID: 6858186496433432690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_80
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d14a47c563e5be0800000000000000
+      internalID: -1486691056263881378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fca0a1ff1c372f0800000000000000
+      internalID: -976223392811528415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff96732cf11c1820800000000000000
+      internalID: 2890204835489423352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_83
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eec6fde405f45a0800000000000000
+      internalID: -6534916234605171160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_84
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a96135e7766bbcc0800000000000000
+      internalID: -3694246404194997847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338c98ed2bba7fc80800000000000000
+      internalID: -8288967804426008525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_86
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b691a2e91e1ed60800000000000000
+      internalID: 7917857689321433856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_87
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a14fcd98d64f400800000000000000
+      internalID: 357030709354044035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_88
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699fc81bae76c1870800000000000000
+      internalID: 8654906841598065046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_89
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada6a7b05df61fc90800000000000000
+      internalID: -7137800973594236198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_90
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f260d7029fe5c10800000000000000
+      internalID: 2044345198804610911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_91
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09cde6c248904610800000000000000
+      internalID: 1603448879916632330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b1f98e65c009860800000000000000
+      internalID: 7534535744000301896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_93
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4edec59680f71150800000000000000
+      internalID: 5843403502366154316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_94
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a64766cc9cf3090800000000000000
+      internalID: -8052495728985740642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_95
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6c66b6cd81b64a0800000000000000
+      internalID: -6599153494007560507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_96
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d22bcc3b9cebbb0800000000000000
+      internalID: -4918271968971444838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_97
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e9e5e6018f5be50800000000000000
+      internalID: 6824633559804714508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6e16b08fdaf0010800000000000000
+      internalID: 1157334910111966918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_99
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971d76f6d26628820800000000000000
+      internalID: 2919007853818139001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_100
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56eb9522f598f040800000000000000
+      internalID: 4681656679897228895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_101
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2f8d329050df9f0800000000000000
+      internalID: -433184452343434525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_102
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925a8b53a0d8d7f40800000000000000
+      internalID: 5727889376075621673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_103
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fc5a75ee6dd9370800000000000000
+      internalID: 8331051204866330447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_104
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de81ba15b5bfc900800000000000000
+      internalID: 706983455962009305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_105
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f58b672151234530800000000000000
+      internalID: 3837947939887220217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_106
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22b9818c65ac2750800000000000000
+      internalID: 6281577465723335215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_107
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ae0eb41154fa1f0800000000000000
+      internalID: -1031529849054762431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_108
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91fecd1facb90d50800000000000000
+      internalID: 6704096980623094173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_109
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54634f15f0f367fc0800000000000000
+      internalID: -3497538725574592955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_110
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac49cd4729c4ecb90800000000000000
+      internalID: -7219748960718777142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_111
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f890612dc52f58d0800000000000000
+      internalID: -2855522075771102985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_112
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc83698daa214390800000000000000
+      internalID: -7835934951825240871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_113
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f103220a6005330800000000000000
+      internalID: 3697462578909290255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1976964df5af80ee0800000000000000
+      internalID: -1294509603376502895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_115
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0599beea542392c30800000000000000
+      internalID: 4335051391189621072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_116
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8636d6f854c7ec6c0800000000000000
+      internalID: -4121219970796526744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_117
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314b469f959df7710800000000000000
+      internalID: 1693310965374039059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_118
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c7db365d5bc9510800000000000000
+      internalID: 1557319499269372960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_119
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791b031cd81fe6f20800000000000000
+      internalID: 3417934758354661783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_120
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a039a43732f0fde50800000000000000
+      internalID: 6836199404304241418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_121
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e64a7e59fae18710800000000000000
+      internalID: 1693893291620845289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_122
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424aab623574d3160800000000000000
+      internalID: 7006835017715983396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_123
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d572ddd5e09a6ed0800000000000000
+      internalID: -2419962532814752300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MountainBaseTileSet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d062bbe8c6da95120800000000000000
+      internalID: 2403142557941573133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

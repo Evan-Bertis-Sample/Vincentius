@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e20b604d46be146937167ba99b9458, type: 3}
+  m_Name: Wall Jump
+  m_EditorClassIdentifier: 
+  binding:
+    m_Name: Binding
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d2c0c332-0e69-423d-b802-f818871561e5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b767f8cf-eff3-4f07-b71a-f094add4b861
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Binding
+      m_Flags: 0
+  newState: 3
+  canBeStates: 00000000
+  checkParameter: 1
+  checkBinding: 1
+  checkBindingStart: 1
+  checkParameterAfterInit: 1
+  checkBindingAfterInit: 1
+  checkBindingStartAfterInit: 0
+  bindingTriggeredThisFrame: 0
+  interruptable: 0
+  waitForAnimationEvent: 0
+  animationFlag: 0
+  animationEventName: 
+  wallCheckDistance: 0.25
+  jumpAngle: 60
+  jumpHeight: 2
+  wallLayers:
+    serializedVersion: 2
+    m_Bits: 512

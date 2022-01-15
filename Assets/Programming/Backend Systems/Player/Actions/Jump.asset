@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3ed7db2c23eee42ac952bf1d65c691, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: 
+  binding:
+    m_Name: Binding
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 222a8eae-1bdb-4c61-8bbd-72e31469799a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ed9871d2-3852-4100-ae99-0bdb03991234
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Binding
+      m_Flags: 0
+  newState: 3
+  canBeStates: 00000000
+  checkParameter: 1
+  checkBinding: 1
+  checkBindingStart: 1
+  checkParameterAfterInit: 0
+  checkBindingAfterInit: 1
+  checkBindingStartAfterInit: 0
+  bindingTriggeredThisFrame: 0
+  interruptable: 0
+  waitForAnimationEvent: 1
+  animationFlag: 0
+  animationEventName: Jump
+  jumpHeight: 2
+  jumpTime: 0.15
+  particlesOffset: {x: 0, y: -0.25}
+  jumpParticlesPrefab: {fileID: 1166751312267982865, guid: 392c10c863ab9604485240ef6e7a261e, type: 3}

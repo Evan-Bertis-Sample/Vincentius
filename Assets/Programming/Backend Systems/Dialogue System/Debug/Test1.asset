@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d230df27aada5194c9cd434011b768aa, type: 3}
+  m_Name: Test1
+  m_EditorClassIdentifier: 
+  text: Test1
+  nextDialogues:
+  - previewText: 
+    next: {fileID: 11400000, guid: e8e0c2341cc2c5a45a19f5fe7ace9455, type: 2}
+  - previewText: 
+    next: {fileID: 11400000, guid: 67671cdb95e72f54aa0253b620e6087a, type: 2}
+  - previewText: 
+    next: {fileID: 11400000, guid: 5cdd6e7d7a89af1498ea82b76a7c2e84, type: 2}
+  - previewText: 
+    next: {fileID: 11400000, guid: 771d19ee6bf90514198bd8cbea17fdc4, type: 2}
+  selectedResponse:
+    previewText: 
+    next: {fileID: 0}
+  mustSeeDialogues: []
+  anySeeDialogues: []

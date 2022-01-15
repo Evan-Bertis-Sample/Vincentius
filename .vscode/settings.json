@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/*.meta": true,
+    "Assets\\Programming\\Backend Systems\\Player\\Actions\\**.asset": true
+  },
+  "cSpell.words": [
+    "Behaviour",
+    "Dont",
+    "Lerp",
+    "Mathf",
+    "vcam"
+  ]
+}

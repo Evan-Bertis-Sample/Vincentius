@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0294a935a0c01bf47aad060dd1334fbd, type: 3}
+  m_Name: Chirp
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 30669a79448608a4890cbd95fc0523d2, type: 3}
+  - {fileID: 8300000, guid: 4ce2d573b29f87d45a4f632a3423672c, type: 3}
+  - {fileID: 8300000, guid: 163efcdcf4846014ca418acf3e43e438, type: 3}
+  - {fileID: 8300000, guid: 97854303d03a32f46a289d7119b11b9d, type: 3}
+  - {fileID: 8300000, guid: 0943bc40277c29b4a9151fbf182166d6, type: 3}
+  - {fileID: 8300000, guid: a66bbeac407a9ab4d962fece410c4fff, type: 3}
+  - {fileID: 8300000, guid: 58accf15a35416e4e9e3f43db75f6061, type: 3}
+  - {fileID: 8300000, guid: f299270a61ae67a4eaf31e47395967ba, type: 3}
+  loop: 0
+  volume:
+    min: 0.5
+    max: 3
+    targetValue: 1.5
+    cylces: 2
+  pitch:
+    min: 0.1
+    max: 2
+    targetValue: 1
+    cylces: 2
+  source: {fileID: 0}

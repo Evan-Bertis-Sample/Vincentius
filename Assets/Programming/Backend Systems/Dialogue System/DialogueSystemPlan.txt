@@ -1,0 +1,56 @@
+Dialogue System Plan:
+
+Independent of the System will be a Text Unwrapper System
+The jobs of the Unwrapper system are as follows:
+-Take a string of text and
+    -Format it to fit a certain bounds
+    -Unwrap the text by either character or word at a time
+    -Parse additional instructions, marked by <> and an identifier like function = "parameter 1","parameter 2"
+        -<pause = "1000"> means pause for one second
+        -<event = "eventName"> means execute an event with eventName as a parameter
+        -<effect = "3", "effectName"> means make the next 3 words of the text have an effect
+
+When people or the game speaks, it will be generalized under a scriptable object class called Dialogue
+The Dialogue class will contain the following data:
+    -Parameters for when the dialogue can be accessed
+        -If the player has gotten a certain achievement
+        -If the player has seen a certain dialogue (information recieved through DialogueManager)
+    -The text spoken
+    -The next Dialogue (if no response)
+    -Responses, and their next Dialogue
+//The Dialogue Class will be void of functions
+
+To manage the Dialogue, there will be a DialogueManager, a static class
+The DialogueManager will contain the following data:
+    -Global settings for the Dialogue
+    -The appearances of spoken text, and game text (Frontends)
+    -The visited dialogues
+The DialogueManager will have the following responsibilities:
+    -Rendering the text of a dialogue onto a certain frontend
+        -Frontends will be prefabs with a DialogueFrontend class (see below)
+    -Managing when responses are chosen
+    -Progressing the conversation and allowing for exits
+
+To keep the dialogue data separate from the display, there will be a Monobehaviour class named DialogueFrontend
+The DialogueFrontend will contain data:
+    -Where to place character portrait (if any)
+    -Where to place textBody
+    -Where to place where to place character name (if any)
+    -The relative position of everything
+The DialogueFrontend will also be responsible for handling visuals when:
+    -A conversation starts
+    -Changing characters
+    -A conversation ends
+The DialogueFrontend will be attached to a prefab containing visuals and required textboxes
+
+Finally, to interact with dialogue, there will be a Monobehaviour class called DialogueEmitter:
+The DialogueEmitter will contain the data:
+    -A list of the starting dialogue for conversations
+    -Default greeting dialogue
+    -Default ending dialogue
+    -The character portrait
+    -The character name
+    -The "visited" dialogues, including branches
+The DialogueEmitter will handle:
+    -When to EmitDialogue (through a button press, or an event)
+    -Choosing which dialogue, or series of dialogue can be accessed

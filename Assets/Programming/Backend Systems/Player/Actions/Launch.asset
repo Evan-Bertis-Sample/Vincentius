@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7361185ede2920348b6820e0c5730c80, type: 3}
+  m_Name: Launch
+  m_EditorClassIdentifier: 
+  binding:
+    m_Name: Binding
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 362cefcd-a852-4ed4-a6f4-6a7ada3a16df
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 691c16a4-5414-45a5-aa58-91af80c1e3bf
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Binding
+      m_Flags: 0
+  newState: 0
+  canBeStates: 010000000300000002000000
+  checkParameter: 1
+  checkBinding: 1
+  checkBindingStart: 1
+  checkParameterAfterInit: 0
+  checkBindingAfterInit: 1
+  checkBindingStartAfterInit: 0
+  bindingTriggeredThisFrame: 0
+  interruptable: 1
+  waitForAnimationEvent: 0
+  animationFlag: 0
+  animationEventName: 
+  launchStrength: 11
+  slowTimeScale: 0.5
+  slowGravityScale: 0
+  chargeTime: 0.5
+  timesInAir: 1
+  performedInAir: 0
+  zoomAmount: 4.5
+  zoomInTime: 0.75
+  zoomOutTime: 0.5
+  originalZoom: 3.5
+  bowSprites:
+  - {fileID: 21300000, guid: ef2139ed282cfb84388c7a56898b4d7d, type: 3}
+  - {fileID: 21300000, guid: 04a2ded907101494e9811b15f441061d, type: 3}
+  - {fileID: 21300000, guid: e1b34d2cdb2492c4a904d01471c496a1, type: 3}
+  spriteMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  bowEaseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 7.5684695
+      outSlope: 7.5684695
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.043155763
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.0059968797
+      outSlope: -0.0059968797
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3932773
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minBowDistance: 0.25
+  maxBowDistance: 0.75
+  minBowSize: 0
+  maxBowSize: 1
+  shrinkTime: 0.5
+  wobbleSpeed: 10
+  wobbleAmplitude: 10
+  playerSprites:
+  - {fileID: 3488018767466313706, guid: 6b21326c7f17ea749bc09a109fcf3c55, type: 3}
+  - {fileID: 228044117305990027, guid: 6b21326c7f17ea749bc09a109fcf3c55, type: 3}
+  - {fileID: -5703922713674368916, guid: 6b21326c7f17ea749bc09a109fcf3c55, type: 3}
+  - {fileID: -4186974694710371105, guid: 6b21326c7f17ea749bc09a109fcf3c55, type: 3}
+  - {fileID: 6041628856747149484, guid: 6b21326c7f17ea749bc09a109fcf3c55, type: 3}
+  cloudPrefab: {fileID: 1166751312267982865, guid: e0ffaf2d1f080874e9ca314994f292d7, type: 3}
+  cloudOffset: {x: 0, y: -0.525}
+  ableSleeveColor: {r: 0.18431373, g: 0.26666668, b: 0.2627451, a: 1}
+  unableSleeveColor: {r: 0.43529415, g: 0.20000002, b: 0.17254902, a: 1}
+  indicatorSprite: {fileID: 839834916919616985, guid: 1f837b604ad9bf147939cf4d033ff614, type: 3}
+  indicatorColor: {r: 0.9686275, g: 0.93725497, b: 0.7803922, a: 1}
+  drawNoise: Draw
+  releaseNoise: Release
+  fullyChargedNoise: Ding
