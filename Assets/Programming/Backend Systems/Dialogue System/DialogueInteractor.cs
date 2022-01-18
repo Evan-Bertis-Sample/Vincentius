@@ -9,8 +9,9 @@ public class DialogueInteractor : MonoBehaviour
     public bool interactActionInit;
 
     public DialogueEmitter selectedEmitter;
+    private DialogueEmitter lastSelectedEmitter;
 
-    private void Awake() 
+    private void Awake()
     {
         interactAction.Enable();
         interactAction.started += context => interactActionInit = true;
@@ -19,15 +20,42 @@ public class DialogueInteractor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        selectedEmitter = DialogueManager.Instance.FindEmitter(transform.position);
+        lastSelectedEmitter = selectedEmitter;
 
-        if(interactActionInit)
+        if (selectedEmitter == null)
         {
-            DialogueManager.Instance.StartConversation(selectedEmitter);
+            selectedEmitter = DialogueManager.Instance.FindEmitter(transform.position);
+        }
+        else if (!selectedEmitter.active) 
+        {
+            selectedEmitter = DialogueManager.Instance.FindEmitter(transform.position);
+        }
+
+        if (selectedEmitter != null)
+        {
+            if (!selectedEmitter.active)
+            {
+                bool right = (selectedEmitter.transform.position.x - transform.position.x <= 0);
+                selectedEmitter.ShowSpeechBubble(right);
+                if (interactActionInit || !selectedEmitter.requireInput)
+                {
+                    DialogueManager.Instance.StartConversation(selectedEmitter);
+                }
+            }
+            else
+            {
+                selectedEmitter.HideSpeechBubble();
+            }
+        }
+
+
+        if (selectedEmitter != lastSelectedEmitter)
+        {
+            lastSelectedEmitter?.HideSpeechBubble();
         }
     }
 
-    private void LateUpdate() 
+    private void LateUpdate()
     {
         interactActionInit = false;
     }

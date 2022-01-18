@@ -11,6 +11,7 @@ public class TextUnwrapper : MonoBehaviour
     {
         public string originalText;
         public string currentText;
+        public string outputText;
         public bool characterUnwrap = false;
         public float defaultWaitTime {get; private set;} = 0.25f;
         public float currentWaitTime;
@@ -25,28 +26,20 @@ public class TextUnwrapper : MonoBehaviour
 
         public string GetOutputText()
         {
-            string output = currentText;
-            foreach(string command in foundCommands)
-            {
-                output = ReplaceFirst(output, command, "");
-            }
-            return output;
+            return outputText;
         }
 
-        public string ReplaceFirst(string text, string search, string replace)
+        public void SetDefaultWaitTime(float newTime)
         {
-            int pos = text.IndexOf(search);
-            if (pos < 0)
-            {
-                return text;
-            }
-            return text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
+            defaultWaitTime = newTime;
+            currentWaitTime = defaultWaitTime;
         }
     }
 
     public static TextUnwrapper Instance;
     public List<UnwrapRequest> requests = new List<UnwrapRequest>();
-    public float characterTime = 0.5f;
+    public float defaultWaitTime = 0.1f;
+    public bool unwrapCharDefault = true;
 
     public delegate void Notify(string id);
     public event Notify TextEvent;
@@ -70,7 +63,7 @@ public class TextUnwrapper : MonoBehaviour
     }
 
     private void Update() {
-        endingText = UnwrapText(startingText);
+        endingText = UnwrapText(startingText); 
     }
 
     public string UnwrapText(string text)
@@ -86,10 +79,24 @@ public class TextUnwrapper : MonoBehaviour
 
         //Add to requests
         UnwrapRequest request = new UnwrapRequest(text);
+        request.SetDefaultWaitTime(defaultWaitTime);
+        request.characterUnwrap = unwrapCharDefault;
         int index = requests.Count;
         requests.Add(request);
         StartCoroutine(UnwrapText(index));
         return request.GetOutputText();
+    }
+
+    public void RemoveRequest(string text)
+    {
+        foreach(UnwrapRequest ur in requests)
+        {
+            if(ur.originalText == text)
+            {
+                requests.Remove(ur);
+                break;
+            }
+        }
     }
 
     IEnumerator UnwrapText(int index)
@@ -98,6 +105,9 @@ public class TextUnwrapper : MonoBehaviour
         while(request.currentText != request.originalText)
         {
             string unrevealed = request.originalText.Remove(0, request.currentText.Length);
+
+            if(unrevealed.Length == 0) break;;
+
             string nextWord = GetStringBetweenCharacters(unrevealed, unrevealed[0], ' '); //Next word is "word ". The following space is included
 
             if (nextWord.Contains('<'))
@@ -118,7 +128,7 @@ public class TextUnwrapper : MonoBehaviour
                 char nextChar = unrevealed[0];
                 request.currentText += nextChar;
             }
-
+            request.outputText = RemoveCommands(request.currentText);
         }
     }
 
@@ -127,7 +137,7 @@ public class TextUnwrapper : MonoBehaviour
     {
         //Commands have the syntax <CommandName(parameter1, parameter2, etc)>
         //Debug.Log("Found Command");
-        string fullCommand = GetStringBetweenCharacters(unrevealed, '<', '>', false); //Outputs commandName(parameter1, parameter2)
+        string fullCommand = GetStringBetweenCharacters(unrevealed, '<', '>', 0, false); //Outputs commandName(parameter1, parameter2)
         request.foundCommands.Add(GetStringBetweenCharacters(unrevealed, '<', '>') + " ");
         string commandName = ExtractCommandName(fullCommand);
         string[] parameters = ExtractParameters(fullCommand, commandName);
@@ -164,7 +174,7 @@ public class TextUnwrapper : MonoBehaviour
     private string[] ExtractParameters(string fullCommand, string commandName)
     {
         string fullParameters = RemoveWhiteSpace(fullCommand.Remove(0, commandName.Length)); //Outputs (parameter1,parameter2)
-        fullParameters = GetStringBetweenCharacters(fullParameters, '(', ')', false); //Outputs parameter1,parameter2
+        fullParameters = GetStringBetweenCharacters(fullParameters, '(', ')', 0, false); //Outputs parameter1,parameter2
         List<string> parameters = new List<string>();
 
         while(fullParameters.Length > 0)
@@ -208,6 +218,28 @@ public class TextUnwrapper : MonoBehaviour
         request.pauseTime = float.Parse(parameters[0]);
     }
 
+    public String RemoveCommands(string request)
+    {
+        string examine = request;
+        List<string> commands = new List<string>();
+
+        for(int i = 0; i < examine.Length; i++)
+        {
+            if(examine[i] == '<')
+            {
+                //Found command
+                commands.Add(GetStringBetweenCharacters(examine, '<', '>', i));
+            }
+        }
+
+        foreach(string com in commands)
+        {
+            examine = ReplaceFirst(examine, com, "");
+        }
+
+        return examine;
+    }
+
     #endregion
 
     #region General String Functions
@@ -238,9 +270,9 @@ public class TextUnwrapper : MonoBehaviour
         return nonwhitespaceCharacterIndex;
     }
 
-    private string GetStringBetweenCharacters(string input, char charFrom, char charTo, bool inclusive = true)
+    private string GetStringBetweenCharacters(string input, char charFrom, char charTo, int startingIndex = 0, bool inclusive = true)
     {
-        int posFrom = input.IndexOf(charFrom);
+        int posFrom = input.IndexOf(charFrom, startingIndex);
         if (posFrom != -1) //if found char
         {
             int posTo = input.IndexOf(charTo, posFrom + 1);
@@ -255,6 +287,16 @@ public class TextUnwrapper : MonoBehaviour
         }
 
         return string.Empty;
+    }
+
+    private string ReplaceFirst(string text, string search, string replace)
+    {
+        int pos = text.IndexOf(search);
+        if (pos < 0)
+        {
+            return text;
+        }
+        return text.Substring(0, pos) + replace + text.Substring(pos + search.Length);
     }
 
     #endregion

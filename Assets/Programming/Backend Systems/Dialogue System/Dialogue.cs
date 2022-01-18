@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-[CreateAssetMenu(menuName = "Dialogue")]
+[CreateAssetMenu(menuName = "Dialogue/Base Dialogue")]
 public class Dialogue : ScriptableObject
 {
     [Header("Dialogue Options")]
     [TextArea] public string text;
     public List<NextDialogue> nextDialogues = new List<NextDialogue>();
     public NextDialogue selectedResponse;
+    public bool continueOnComplete = false;
 
     [Header("Dialogue Parameters")]
     public List<Dialogue> mustSeeDialogues = new List<Dialogue>();
@@ -19,8 +20,10 @@ public class Dialogue : ScriptableObject
     {
         //Gets a list of what both lists have, then checks whether all of them have been seen
         bool seenRequired = DialogueManager.Instance.visitedDialogues.Intersect(mustSeeDialogues).Count() == mustSeeDialogues.Count();
+        if (mustSeeDialogues.Count == 0) seenRequired = true;
         //Same thing, but it checks whether any of them have been seen
         bool seenAny = DialogueManager.Instance.visitedDialogues.Intersect(anySeeDialogues).Count() > ((anySeeDialogues.Count > 0) ? 0 : -1);
+        if (anySeeDialogues.Count == 0) seenAny = true;
         //Debug.Log(seenRequired && seenAny);
         return (seenRequired && seenAny);
     }
@@ -29,7 +32,7 @@ public class Dialogue : ScriptableObject
     {
         if(nextDialogues == null) return null;
         if(nextDialogues.Count == 0) return null;
-        IEnumerable<NextDialogue> possibleDialogues = nextDialogues.Where(d => d.next?.CheckDialogue() == true).ToList();
+        IEnumerable<NextDialogue> possibleDialogues = nextDialogues.Where(d => (d.next?.CheckDialogue() == true || d.next == null)).ToList();
         return (possibleDialogues.Any()) ? possibleDialogues.ToList() : null;
     }
 
