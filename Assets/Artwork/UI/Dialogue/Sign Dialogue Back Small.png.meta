@@ -1,0 +1,499 @@
+fileFormatVersion: 2
+guid: 7bf18f49b603e5d48bb4b0a462790089
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3679575026252922099
+    second: Sign Dialogue Back Small_0
+  - first:
+      213: -4153419626385422832
+    second: Sign Dialogue Back Small_1
+  - first:
+      213: 8654079633508630273
+    second: Sign Dialogue Back Small_2
+  - first:
+      213: 1459191794594516210
+    second: Sign Dialogue Back Small_3
+  - first:
+      213: -8187443558961493397
+    second: Sign Dialogue Back Small_4
+  - first:
+      213: -8337786703808277311
+    second: Sign Dialogue Back Small_5
+  - first:
+      213: 620975744685030791
+    second: Sign Dialogue Back Small_6
+  - first:
+      213: 3151912604466356672
+    second: Sign Dialogue Back Small_7
+  - first:
+      213: -7644357578449018295
+    second: Sign Dialogue Back Small_8
+  - first:
+      213: 5247933200962680229
+    second: Sign Dialogue Back Small_9
+  - first:
+      213: -4866718415177962204
+    second: Sign Dialogue Back Small_10
+  - first:
+      213: 2221532509981019380
+    second: Sign Dialogue Back Small_11
+  - first:
+      213: -8942817008821311289
+    second: Sign Dialogue Back Small_12
+  - first:
+      213: -2112708516949878200
+    second: Sign Dialogue Back Small_13
+  - first:
+      213: 575490290619516930
+    second: Sign Dialogue Back Small_14
+  - first:
+      213: -6231996944664572745
+    second: Sign Dialogue Back Small_15
+  - first:
+      213: 3410328114377968598
+    second: Sign Dialogue Back Small_16
+  - first:
+      213: 5347338346807772436
+    second: Sign Dialogue Back Small_17
+  - first:
+      213: 6658298971173835347
+    second: Sign Dialogue Back Small_18
+  - first:
+      213: -4847984083908308279
+    second: Sign Dialogue Back Small_19
+  - first:
+      213: -2543729776418881958
+    second: Sign Dialogue Back Small_20
+  - first:
+      213: -3875948750613575624
+    second: Sign Dialogue Back Small_21
+  - first:
+      213: -2965304158732989656
+    second: Sign Dialogue Back Small_22
+  - first:
+      213: 7234365733550590168
+    second: Sign Dialogue Back Small_23
+  - first:
+      213: -909530345332917770
+    second: Sign Dialogue Back Small_24
+  - first:
+      213: -5532569013776932845
+    second: Sign Dialogue Back Small_25
+  - first:
+      213: -7765744393040174580
+    second: Sign Dialogue Back Small_26
+  - first:
+      213: -7753038174091951123
+    second: Sign Dialogue Back Small_27
+  - first:
+      213: -9033203407040863812
+    second: Sign Dialogue Back Small_28
+  - first:
+      213: -7677310173387164983
+    second: Sign Dialogue Back Small_29
+  - first:
+      213: 6647579351142105901
+    second: Sign Dialogue Back Small_30
+  - first:
+      213: 5351359498344615085
+    second: Sign Dialogue Back Small_31
+  - first:
+      213: 6276460168483416223
+    second: Sign Dialogue Back Small_32
+  - first:
+      213: 481995356854860639
+    second: Sign Dialogue Back Small_33
+  - first:
+      213: -7497583591577742805
+    second: Sign Dialogue Back Small_34
+  - first:
+      213: 5764375601569093810
+    second: Sign Dialogue Back Small_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03cbc342068fecc0800000000000000
+      internalID: -3679575026252922099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01649260bd61c56c0800000000000000
+      internalID: -4153419626385422832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f793d4397791870800000000000000
+      internalID: 8654079633508630273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc88ffb437104410800000000000000
+      internalID: 1459191794594516210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a4a89467b506e80800000000000000
+      internalID: -8187443558961493397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4588a1b2b3a4c80800000000000000
+      internalID: -8337786703808277311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78db51456262e9800800000000000000
+      internalID: 620975744685030791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c12b4070d7ddbb20800000000000000
+      internalID: 3151912604466356672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9422b70b849c9e590800000000000000
+      internalID: -7644357578449018295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5fb58017764d840800000000000000
+      internalID: 5247933200962680229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d2779e261f57cb0800000000000000
+      internalID: -4866718415177962204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc86623c0874de10800000000000000
+      internalID: 2221532509981019380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Dialogue Back Small_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c862e1cf4bb4e380800000000000000
+      internalID: -8942817008821311289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

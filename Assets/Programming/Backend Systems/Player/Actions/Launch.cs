@@ -74,6 +74,13 @@ public class Launch : PlayerAction
         brain = cam.GetComponent<CinemachineBrain>();
         originalZoom = (brain.ActiveVirtualCamera as CinemachineVirtualCamera).m_Lens.OrthographicSize;
 
+        CreateObjects();
+
+        performedInAir = 0;
+    }
+
+    private void CreateObjects()
+    {
         bowObject = new GameObject("Bow Object");
         bowSr = bowObject.AddComponent<SpriteRenderer>();
         bowSr.sprite = bowSprites[0];
@@ -91,9 +98,8 @@ public class Launch : PlayerAction
         indicatorSr.sortingLayerName = "Objects";
         indicatorSr.sortingOrder = 5;
         indicatorObject.SetActive(false);
-
-        performedInAir = 0;
     }
+
     public override bool CheckForOverrideExit(PlayerController controller)
     {
         return false;
@@ -126,6 +132,8 @@ public class Launch : PlayerAction
         controller.canMove = false;
 
         vcam = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
+
+        if (bowObject == null || indicatorObject == null) CreateObjects();
 
         //Handle Camera Zoom
         zoomTween?.Kill();

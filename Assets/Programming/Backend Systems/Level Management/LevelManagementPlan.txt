@@ -1,0 +1,24 @@
+There will be a class named Level
+This will store:
+    -The scene of the Level
+    -Starting music
+    -The name of the Level
+    -The default doorway (if none is assigned)
+
+There will be a monobehaviour class named LevelDoorway
+This will store:
+    -An ID, assigned in the inspector
+    -The level you will be entering in (lookup in the LevelManager)
+This will have the virtual functions:
+    -OnDoorwayHover -> When the player is near the door
+    -OnDoorwayEnter -> When the player enters the door
+    -OnDoorwayExit -> When the player exits through the doorway
+
+There will be a LevelManager
+This will store:
+    -The visited Levels
+    -All the levels in the game
+This will deal with:
+    -The transitions between scenes
+    -Initiating the level
+    -Spawning the player at the right doorway
