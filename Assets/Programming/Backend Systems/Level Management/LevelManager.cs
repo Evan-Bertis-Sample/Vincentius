@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     public List<Level> visitedLevels = new List<Level>();
     public Transform player;
 
+    public List<GameObject> persistentObjects;
+    public List<GameObject> spawnedPersistentObjects;
+
     public InputAction enterAction;
     public bool enterActionInit;
 
@@ -36,12 +39,51 @@ public class LevelManager : MonoBehaviour
         {
             visitedLevels.Add(FindLevel(SceneManager.GetActiveScene().name));
         }
+        OnSceneEnter();
     }
 
     private void LateUpdate() {
         enterActionInit = false;
     }
     
+    public void OnSceneEnter()
+    {
+        List<GameObject> sceneObjects = FindObjectsOfType<GameObject>().ToList();
+
+        //Remove duplicates in the scene
+        foreach(GameObject g in sceneObjects)
+        {
+            if (persistentObjects.Contains(g))
+            {
+                //This object is one of the persistent object we have listed
+                if(spawnedPersistentObjects.Contains(g))
+                {
+                    GameObject persistentObject = spawnedPersistentObjects[spawnedPersistentObjects.IndexOf(g)];
+                    if (persistentObject != g)
+                    {
+                        //There is a duplicate
+                        Destroy(g);
+                    }
+                }
+                else
+                {
+                    //We should have at least one in each scene
+                    spawnedPersistentObjects.Add(g);
+                    DontDestroyOnLoad(g);
+                }
+            }
+        }
+
+        //Add missing objects
+        List<GameObject> missingObjects = persistentObjects.Except(spawnedPersistentObjects).ToList();
+
+        foreach(GameObject m in missingObjects)
+        {
+            GameObject mSpawn = Instantiate(m);
+            spawnedPersistentObjects.Add(mSpawn);
+        }
+    }
+
     public Level FindLevel(string scene)
     {
         return levels.Where((l) => l.sceneName == scene).FirstOrDefault();
@@ -85,6 +127,7 @@ public class LevelManager : MonoBehaviour
         }
 
         player.position = toDoor.transform.position;
+        OnSceneEnter();
         toDoor.OnDoorwayExit();
 
         screenFade = ScreenFader.Instance.FadeScene(0);
