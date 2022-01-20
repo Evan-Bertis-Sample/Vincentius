@@ -3437,6 +3437,18 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 2172470911897241979, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
   m_PrefabInstance: {fileID: 2172470911687787460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &209980097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209980092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4105972d388a88f408f06cdaa39cdd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &210270760
 GameObject:
   m_ObjectHideFlags: 0
@@ -11906,6 +11918,7 @@ MonoBehaviour:
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 223272431}
+  frontendIndex: 0
 --- !u!1 &293722277
 GameObject:
   m_ObjectHideFlags: 0
@@ -46447,6 +46460,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8054354775015819361, guid: 328e2471877ba644cb70772baa01600f, type: 3}
   m_PrefabInstance: {fileID: 8054354773820602606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400732866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400732865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4105972d388a88f408f06cdaa39cdd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418370435
 GameObject:
   m_ObjectHideFlags: 0
@@ -48439,7 +48464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorwayID: Default
   nextLevel: {fileID: 11400000, guid: f02e8bd52b4846744aecc463218ad4d5, type: 2}
-  nextDoorwayID: Default
+  nextDoorwayID: Right
   requireInput: 1
 --- !u!61 &1544452054
 BoxCollider2D:
@@ -51832,6 +51857,7 @@ MonoBehaviour:
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 416539999}
+  frontendIndex: 1
 --- !u!61 &1717865594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57431,6 +57457,7 @@ MonoBehaviour:
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 416539999}
+  frontendIndex: 1
 --- !u!61 &2086907079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58525,6 +58552,22 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1013985449}
+    - target: {fileID: 7064557311886259898, guid: 544ed999ba0bee44aa83cdec7f4fc5b7, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064557311886259900, guid: 544ed999ba0bee44aa83cdec7f4fc5b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.96099997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064557312446986256, guid: 544ed999ba0bee44aa83cdec7f4fc5b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.96099997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064557312446986268, guid: 544ed999ba0bee44aa83cdec7f4fc5b7, type: 3}
+      propertyPath: orthographic size
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 544ed999ba0bee44aa83cdec7f4fc5b7, type: 3}
 --- !u!1001 &8054354773820602606

@@ -29,6 +29,8 @@ public class DialogueManager : MonoBehaviour
     public float speechBubbleBobAmplitude = 0.1f;
     public float speechBubbleBobSpeed = 0.75f;
 
+    public List<DialogueFrontend> frontends;
+
     private void Awake()
     {
         if (Instance == null)
@@ -45,11 +47,20 @@ public class DialogueManager : MonoBehaviour
         leaveAction.Enable();
         nextAction.started += context => nextActionInit = true;
         leaveAction.started += context => leaveActionInit = true;
+        LevelManager.OnSceneChange += newScene => possibleEmitters.Clear();
     }
+
     private void LateUpdate()
     {
         nextActionInit = false;
         leaveActionInit = false;
+    }
+
+    public DialogueFrontend GetFrontend(int index)
+    {
+        if(index > frontends.Count - 1) return frontends[0];
+
+        return frontends[index];
     }
 
     public DialogueEmitter FindEmitter(Vector3 pos)
@@ -169,7 +180,7 @@ public class DialogueManager : MonoBehaviour
             if (nextDialogue == null && currentDialogue != end)
             {
                 //No more next dialogues
-                Debug.Log("Reached End");
+                //Debug.Log("Reached End");
                 nextDialogue = end;
             }
 

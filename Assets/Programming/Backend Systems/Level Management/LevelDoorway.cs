@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelDoorway : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class LevelDoorway : MonoBehaviour
     {
         GetComponent<Collider2D>().isTrigger = true;
         hovering = false;
+        LevelManager.OnSceneChange += newScene => 
+        {
+            Debug.Log("Adding doorway");
+            //LevelManager.Instance.sceneDoors.Add(this);
+        };
     }
 
     private void Update()
@@ -21,7 +27,7 @@ public class LevelDoorway : MonoBehaviour
         if (hovering)
         {
             OnDoorwayHover();
-            Debug.Log(LevelManager.Instance.enterActionInit);
+            //Debug.Log(LevelManager.Instance.enterActionInit);
             if (LevelManager.Instance.enterActionInit || !requireInput)
             {
                 OnDoorwayEnter();
@@ -31,12 +37,12 @@ public class LevelDoorway : MonoBehaviour
 
     public virtual void OnDoorwayHover()
     {
-        Debug.Log($"Hovering over doorway {doorwayID}");
+        //Debug.Log($"Hovering over doorway {doorwayID}");
     }
 
     public void OnDoorwayEnter()
     {
-        Debug.Log("Entering Doorway");
+        //Debug.Log("Entering Doorway");
         LevelManager.Instance.TransitionLevel(nextLevel, nextDoorwayID);
     }
 

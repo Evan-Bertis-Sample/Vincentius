@@ -12,7 +12,6 @@ public class Sound : ScriptableObject
     public CenteralizedRange volume;
     public CenteralizedRange pitch;
 
-    [HideInInspector]
     public AudioSource source;
 
     public void Play()
@@ -23,6 +22,8 @@ public class Sound : ScriptableObject
             return;
         }
         AudioClip clip = clips[Random.Range(0, clips.Length - 1)];
+
+        if (source == null) source = AudioManager.Instance.FindSoundSource(this);
 
         source.clip = clip;
         source.volume = volume.Evaluate() * AudioManager.Instance.globalVolume;

@@ -54,4 +54,9 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
+
+    public AudioSource FindSoundSource(Sound s)
+    {
+        return transform.GetChild(Array.FindIndex(sounds, sound => sound.name == s.name)).GetComponent<AudioSource>();
+    }
 }

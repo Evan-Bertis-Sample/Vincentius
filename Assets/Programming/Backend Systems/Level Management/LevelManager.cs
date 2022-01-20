@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 using System.Linq;
 using UnityEngine.InputSystem;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -14,10 +15,14 @@ public class LevelManager : MonoBehaviour
     public Transform player;
 
     public List<GameObject> persistentObjects;
-    public List<GameObject> spawnedPersistentObjects;
+
+    public List<LevelDoorway> sceneDoors = new List<LevelDoorway>();
 
     public InputAction enterAction;
     public bool enterActionInit;
+
+    public delegate void SceneChange(string newScene);
+    public static event SceneChange OnSceneChange;
 
     private void Awake()
     {
@@ -32,6 +37,7 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(this);
         enterAction.Enable();
         enterAction.started += (context) => enterActionInit = true;
+        persistentObjects = new List<GameObject>();
     }
 
     private void Start() {
@@ -39,50 +45,27 @@ public class LevelManager : MonoBehaviour
         {
             visitedLevels.Add(FindLevel(SceneManager.GetActiveScene().name));
         }
-        OnSceneEnter();
     }
 
     private void LateUpdate() {
         enterActionInit = false;
     }
-    
-    public void OnSceneEnter()
+
+    public void EnablePersistency(GameObject gameObject)
     {
-        List<GameObject> sceneObjects = FindObjectsOfType<GameObject>().ToList();
-
-        //Remove duplicates in the scene
-        foreach(GameObject g in sceneObjects)
+        if(persistentObjects.Any(p => p.name == gameObject.name))
         {
-            if (persistentObjects.Contains(g))
-            {
-                //This object is one of the persistent object we have listed
-                if(spawnedPersistentObjects.Contains(g))
-                {
-                    GameObject persistentObject = spawnedPersistentObjects[spawnedPersistentObjects.IndexOf(g)];
-                    if (persistentObject != g)
-                    {
-                        //There is a duplicate
-                        Destroy(g);
-                    }
-                }
-                else
-                {
-                    //We should have at least one in each scene
-                    spawnedPersistentObjects.Add(g);
-                    DontDestroyOnLoad(g);
-                }
-            }
+            //There is a persistent object with the same name already
+            //Destroy duplicate
+            Destroy(gameObject);
+            return;
         }
 
-        //Add missing objects
-        List<GameObject> missingObjects = persistentObjects.Except(spawnedPersistentObjects).ToList();
-
-        foreach(GameObject m in missingObjects)
-        {
-            GameObject mSpawn = Instantiate(m);
-            spawnedPersistentObjects.Add(mSpawn);
-        }
+        //There is no persistent object with name
+        persistentObjects.Add(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
+    
 
     public Level FindLevel(string scene)
     {
@@ -101,7 +84,8 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator TransitionLevelStart(Level level, string doorWayID)
     {
-        Debug.Log("Transitioning to Scene: " + level.sceneName);
+        string previousSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("Transitioning to Scene: " + level.sceneName + " from Scene: " + previousSceneName);
         AsyncOperation nextLevelOperation = SceneManager.LoadSceneAsync(level.sceneName);
         nextLevelOperation.allowSceneActivation = false;
         Tween screenFade = ScreenFader.Instance.FadeScene(1);
@@ -109,14 +93,27 @@ public class LevelManager : MonoBehaviour
 
         screenFade.OnComplete(() => fadeComplete = true);
 
-        yield return new WaitUntil(() => fadeComplete && nextLevelOperation.progress >= 0.9f); //Wait until the screen fade is complete, and the next level is done loading
-
+         //Wait until the screen fade is complete, and the next level is done loading
+        while (!nextLevelOperation.isDone && !fadeComplete)
+        {
+            yield return null;
+        }
         nextLevelOperation.allowSceneActivation = true;
+
+        yield return null;
+        
         //We are now in the next level
         visitedLevels.Add(FindLevel(level.sceneName));
+        sceneDoors.Clear();
+        OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
+        sceneDoors = FindObjectsOfType<LevelDoorway>().ToList();
 
-        //We need to find the doorways
-        List<LevelDoorway> sceneDoors = FindObjectsOfType<LevelDoorway>().ToList();
+        /*
+        yield return new WaitUntil(() => {
+            sceneDoors = sceneDoors.Where(s => s != null).ToList();
+            return (sceneDoors.Count == (FindObjectsOfType<LevelDoorway>().Count()));
+        }); //Wait for doors
+        */
 
         LevelDoorway toDoor = FindDoorway(sceneDoors, doorWayID);
         if (toDoor == null) FindDoorway(sceneDoors, level.defaultDoorwayID);
@@ -126,8 +123,8 @@ public class LevelManager : MonoBehaviour
             toDoor = sceneDoors[0];
         }
 
+        Debug.Log(toDoor.transform.position);
         player.position = toDoor.transform.position;
-        OnSceneEnter();
         toDoor.OnDoorwayExit();
 
         screenFade = ScreenFader.Instance.FadeScene(0);

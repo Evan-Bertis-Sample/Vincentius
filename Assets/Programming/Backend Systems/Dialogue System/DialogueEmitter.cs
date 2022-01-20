@@ -29,6 +29,7 @@ public class DialogueEmitter : MonoBehaviour
 
     [Header("Display Options")]
     public DialogueFrontend frontend;
+    public int frontendIndex = 0;
     private DialogueManager DM;
 
     private void Start() 
@@ -41,6 +42,8 @@ public class DialogueEmitter : MonoBehaviour
         speechBubbleSr.sortingLayerName = DM.dialogueSortingLayer;
         speechBubbleSr.material = DM.spriteMaterial;
         speechBubble.SetActive(false);
+
+        frontend = DialogueManager.Instance.GetFrontend(frontendIndex);
     }
 
     public Dialogue GetStartingDialogue()
