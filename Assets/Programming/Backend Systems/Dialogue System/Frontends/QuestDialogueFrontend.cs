@@ -9,7 +9,7 @@ public class QuestDialogueFrontend : DialogueFrontend
     [Header("Elements")]
     public RectTransform UIElement;
     public Image backImage;
-    public TextMeshPro mainTextBox;
+    public TextMeshProUGUI mainTextBox;
 
     [Header("Back Animation")]
     public Sprite[] backImageAnimation;
@@ -30,6 +30,7 @@ public class QuestDialogueFrontend : DialogueFrontend
         UIElement.gameObject.SetActive(true);
         mainTextBox?.gameObject.SetActive(false);
         backImage.SetNativeSize();
+        UIElement.anchoredPosition = Vector2.zero;
     }
 
     public override void OnDisplayStart(DialogueEmitter emitter, Dialogue dialogue)

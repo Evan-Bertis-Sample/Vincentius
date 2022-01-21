@@ -3437,18 +3437,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 2172470911897241979, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
   m_PrefabInstance: {fileID: 2172470911687787460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &209980097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209980092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4105972d388a88f408f06cdaa39cdd42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &210270760
 GameObject:
   m_ObjectHideFlags: 0
@@ -12083,6 +12071,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &301566041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 301566041, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
+  m_PrefabInstance: {fileID: 2172470911687787460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &308360896
 GameObject:
   m_ObjectHideFlags: 0
@@ -57457,7 +57456,7 @@ MonoBehaviour:
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 416539999}
-  frontendIndex: 2
+  frontendIndex: 1
 --- !u!61 &2086907079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58286,6 +58285,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137982225, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
+      propertyPath: UIElement
+      value: 
+      objectReference: {fileID: 2172470911687787462}
+    - target: {fileID: 1137982225, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
+      propertyPath: backImage
+      value: 
+      objectReference: {fileID: 2172470911687787461}
+    - target: {fileID: 1137982225, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
+      propertyPath: mainTextBox
+      value: 
+      objectReference: {fileID: 301566041}
     - target: {fileID: 1921389758, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
       propertyPath: UIElement
       value: 
@@ -58294,6 +58305,10 @@ PrefabInstance:
       propertyPath: backImage
       value: 
       objectReference: {fileID: 2172470911687787461}
+    - target: {fileID: 1921389758, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
+      propertyPath: mainTextBox
+      value: 
+      objectReference: {fileID: 301566041}
     - target: {fileID: 2114913271, guid: bf473a9650f842a4c8c9625d6629ca4a, type: 3}
       propertyPath: player
       value: 
@@ -58407,6 +58422,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 301566041, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
+      propertyPath: m_margin.y
+      value: 5.4271545
+      objectReference: {fileID: 0}
+    - target: {fileID: 301566041, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
+      propertyPath: m_margin.w
+      value: 0.34222412
+      objectReference: {fileID: 0}
     - target: {fileID: 2172470911897241860, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58494,10 +58517,6 @@ PrefabInstance:
     - target: {fileID: 2172470911897241976, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467336440934506598, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}
-      propertyPath: m_Name
-      value: Image
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec27ffc1647bb03449bf095da6b6820f, type: 3}

@@ -1,0 +1,21 @@
+There is a class, Notification
+This contains the values:
+    -Message
+    -Sub Message
+    -Notification time
+It can be created by passing a string for the Message, and a string for the SubMessage
+
+To manage, there will be a Notification Class
+This will contain the values
+    -Requested Notifications (cleared every frame)
+        Will be a dictionary with a Notification Key, and Notification Frontend value
+This will handle:
+    -Taking notifications with the same frontend and sequencing them one after another
+    -Handling event loop for NotificationFrontendClass
+
+To Display, there will be an abstract NotificationFrontendClass
+This will have the functions:
+    -OnNotificationStart
+    -OnNotificationUpdate
+    -OnNotificationEnd
+    -IsNotificationFinished (bool)

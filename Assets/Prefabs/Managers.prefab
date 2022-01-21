@@ -1,5 +1,120 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &158052176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158052177}
+  - component: {fileID: 158052178}
+  m_Layer: 0
+  m_Name: Notifications
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158052177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158052176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1137982224}
+  m_Father: {fileID: 1451170974884171672}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158052178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158052176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c352a7daf85be44a898e1559a33e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontends:
+  - {fileID: 1137982225}
+--- !u!1 &1137982223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137982224}
+  - component: {fileID: 1137982225}
+  m_Layer: 0
+  m_Name: Scroll Alerts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1137982224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137982223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158052177}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137982225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137982223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467c2e7b8fe77fe48ba0e2809a7c7634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIElement: {fileID: 0}
+  backImage: {fileID: 0}
+  mainTextBox: {fileID: 0}
+  backImageAnimation:
+  - {fileID: 4984258710544907291, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: 7969586541655498858, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: 8350483974897307309, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -4487208339799299972, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -6848140898670654052, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -6538177610125834570, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -7959302167996750243, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -6035985463965018004, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: 6135346736834216793, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -7538190581723441433, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -3378128688788882098, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -2911294878991509269, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: 4758643946478217325, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: 1434194845948354589, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -4217783250760338728, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  - {fileID: -3365032230171445127, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
+  currentSpriteIndex: 0
+  textBoxAnimationTime: 1.5
+  timeElapsed: 0
+  displayStartFrame: 15
+  objectFadeTime: 0.5
+  textFadeTime: 0.5
 --- !u!1 &1921389756
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,9 +180,9 @@ MonoBehaviour:
   - {fileID: 1434194845948354589, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
   - {fileID: -4217783250760338728, guid: 9bd5c501ae305d54db21bb3abad6c6ef, type: 3}
   currentSpriteIndex: 0
-  textBoxAnimationTime: 0.25
+  textBoxAnimationTime: 1
   timeElapsed: 0
-  displayStartFrame: 0
+  displayStartFrame: 10
 --- !u!1 &2114913269
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +820,7 @@ Transform:
   - {fileID: 1451170975377516404}
   - {fileID: 1451170974523697624}
   - {fileID: 2114913270}
+  - {fileID: 158052177}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -765,17 +881,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayedText: 
   noCommandText: 
-  elementPosition: {x: 50, y: -50, z: 0}
-  hiddenElementPosition: {x: 50, y: -200, z: 0}
+  elementPosition: {x: 0, y: -25, z: 0}
+  hiddenElementPosition: {x: 0, y: -100, z: 0}
   UIElement: {fileID: 0}
   mainTextBox: {fileID: 0}
   nameTextBox: {fileID: 0}
   responseTransform: {fileID: 0}
-  responseDistance: 60
+  responseDistance: 30
   responseStartX: 500
   responseFont: {fileID: 11400000, guid: 30d57b9cbe656524eb15aa6d96f6e2b6, type: 2}
   responseColor: {r: 0.098039225, g: 0.121568635, b: 0.13333334, a: 1}
-  responseFontSize: 48
+  responseFontSize: 32
   selectedCursor: {fileID: 0}
   cursorXOffset: -150
   cursorYOffset: 0
