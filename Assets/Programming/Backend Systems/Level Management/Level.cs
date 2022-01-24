@@ -11,4 +11,5 @@ public class Level : ScriptableObject
     public string sceneName;
     public AudioClip startingMusic;
     public string defaultDoorwayID;
+    public bool playerActive = true;
 }

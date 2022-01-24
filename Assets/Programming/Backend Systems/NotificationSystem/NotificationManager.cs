@@ -21,6 +21,10 @@ public class NotificationManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start() {
+        LevelManager.OnSceneChange += (name) => requestedNotifications.Clear();
+    }
+
     private void LateUpdate() {
         if(requestedNotifications == null)
         {

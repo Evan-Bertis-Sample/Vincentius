@@ -98,6 +98,27 @@ TextureImporter:
   - first:
       213: -4734781179977736970
     second: QuestScroll_15
+  - first:
+      213: 5741662503289005326
+    second: QuestScroll_16
+  - first:
+      213: 5034083138506739263
+    second: QuestScroll_17
+  - first:
+      213: -2728805063714117480
+    second: QuestScroll_18
+  - first:
+      213: -1559749426211950544
+    second: QuestScroll_19
+  - first:
+      213: -3069149410939464036
+    second: QuestScroll_20
+  - first:
+      213: -4782184777774125317
+    second: QuestScroll_21
+  - first:
+      213: -4208375755374327648
+    second: QuestScroll_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -183,7 +204,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 0
@@ -528,6 +549,153 @@ TextureImporter:
       bones: []
       spriteID: 6fcd83e4a9daa4eb0800000000000000
       internalID: -4734781179977736970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_16
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05a8b840ab7eaf40800000000000000
+      internalID: 5741662503289005326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_17
+      rect:
+        serializedVersion: 2
+        x: 8160
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e4a7851f7acd540800000000000000
+      internalID: 5034083138506739263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_18
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898680c9046512ad0800000000000000
+      internalID: -2728805063714117480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_19
+      rect:
+        serializedVersion: 2
+        x: 9120
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03074082928aa5ae0800000000000000
+      internalID: -1559749426211950544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_20
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c969a5e2fd03865d0800000000000000
+      internalID: -3069149410939464036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_21
+      rect:
+        serializedVersion: 2
+        x: 10080
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2e7e184442adb0800000000000000
+      internalID: -4782184777774125317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestScroll_22
+      rect:
+        serializedVersion: 2
+        x: 10560
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a80c832c88d895c0800000000000000
+      internalID: -4208375755374327648
       vertices: []
       indices: 
       edges: []

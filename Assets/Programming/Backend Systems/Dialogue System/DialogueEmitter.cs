@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Linq;
 using DG.Tweening;
 
-[RequireComponent(typeof(Collider2D))]
 public class DialogueEmitter : MonoBehaviour
 {
     public string characterName;
@@ -44,6 +43,13 @@ public class DialogueEmitter : MonoBehaviour
         speechBubble.SetActive(false);
 
         frontend = DialogueManager.Instance.GetFrontend(frontendIndex);
+
+        InitEmitter();
+    }
+
+    public virtual void InitEmitter()
+    {
+        //Default Behavior
     }
 
     public Dialogue GetStartingDialogue()

@@ -14,6 +14,9 @@ public class ScreenFader : MonoBehaviour
     public float fadeTime = 0.5f;
 
     public Vector3 position = Vector3.zero;
+    public Tween currentTween;
+
+    private int currentHighestPriority;
 
     private void Awake() {
         if (Instance == null)
@@ -32,11 +35,20 @@ public class ScreenFader : MonoBehaviour
         box.color = new Color(faderColor.r, faderColor.g, faderColor.b, 0);
     }
 
-    public Tween FadeScene(float to, float from = -1)
+    private void LateUpdate() {
+        currentHighestPriority = int.MinValue;
+    }
+
+    public Tween FadeScene(float to, float from = -1, int priority = 0)
     {
+        if (priority <= currentHighestPriority) return null;
+
+        currentHighestPriority = priority;
+
         if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
-        
+
         box.DOKill();
+
         return box.DOFade(to, fadeTime).SetEase(Ease.InOutCubic);
     }
 }

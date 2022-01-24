@@ -28,7 +28,7 @@ public class LevelDoorway : MonoBehaviour
         {
             OnDoorwayHover();
             //Debug.Log(LevelManager.Instance.enterActionInit);
-            if (LevelManager.Instance.enterActionInit || !requireInput)
+            if (LevelManager.Instance.enterActionInit && requireInput)
             {
                 OnDoorwayEnter();
             }
@@ -48,8 +48,7 @@ public class LevelDoorway : MonoBehaviour
 
     public virtual void OnDoorwayExit()
     {
-        NotificationManager.Instance.RequestNotification(new Notification(SceneManager.GetActiveScene().name), 0);
-        NotificationManager.Instance.RequestNotification(new Notification("Test"), 0);
+        NotificationManager.Instance.RequestNotification(new Notification(SceneManager.GetActiveScene().name, "Area", 1f), 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -57,6 +56,10 @@ public class LevelDoorway : MonoBehaviour
         if (other.gameObject == LevelManager.Instance.player.gameObject)
         {
             hovering = true;
+            if (requireInput == false)
+            {
+                OnDoorwayEnter();
+            }
         }
     }
 

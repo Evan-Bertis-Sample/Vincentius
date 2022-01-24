@@ -22,6 +22,8 @@ public class Parallax : MonoBehaviour
         startingCamPosition = cam.transform.position;
 
         relativeDistance = InvLerp(0, 5, startingZ);
+
+        LevelManager.OnSceneLateChange += name => startingCamPosition = cam.transform.position;
     }
 
     // Update is called once per frame

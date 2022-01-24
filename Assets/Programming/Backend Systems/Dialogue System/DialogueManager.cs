@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
         leaveAction.Enable();
         nextAction.started += context => nextActionInit = true;
         leaveAction.started += context => leaveActionInit = true;
-        LevelManager.OnSceneChange += newScene => possibleEmitters.Clear();
+        LevelManager.OnSceneChange += newScene => possibleEmitters = possibleEmitters.Where(e => e != null).ToList(); //Remove missing references
     }
 
     private void LateUpdate()
@@ -65,6 +65,7 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueEmitter FindEmitter(Vector3 pos)
     {
+        possibleEmitters = possibleEmitters.Where(e => e != null).ToList();
         if (possibleEmitters.Count == 0) return null;
         foreach(DialogueEmitter em in possibleEmitters)
         {
@@ -105,6 +106,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueEmitter emitter)
     {
+        if (!possibleEmitters.Contains(emitter)) return;
         StartCoroutine(StartConversationCoroutine(emitter));
     }
 

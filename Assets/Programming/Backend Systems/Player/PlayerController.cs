@@ -69,10 +69,13 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
-        foreach (PlayerAction action in currentSet.actions)
+        if (currentSet != null)
         {
-            if (action == currentAction) continue;
-            action.bindingTriggeredThisFrame = false; //Reset the flag
+            foreach (PlayerAction action in currentSet.actions)
+            {
+                if (action == currentAction) continue;
+                action.bindingTriggeredThisFrame = false; //Reset the flag
+            }
         }
         lastFrameVelocity = rb.velocity;
     }

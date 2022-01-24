@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
 
     public delegate void SceneChange(string newScene);
     public static event SceneChange OnSceneChange;
+    public static event SceneChange OnSceneLateChange;
 
     private void Awake()
     {
@@ -43,7 +44,9 @@ public class LevelManager : MonoBehaviour
     private void Start() {
         if(FindVisitedLevel(SceneManager.GetActiveScene().name) == null)
         {
-            visitedLevels.Add(FindLevel(SceneManager.GetActiveScene().name));
+            Level start = FindLevel(SceneManager.GetActiveScene().name);
+            visitedLevels.Add(start);
+            player.gameObject.SetActive(start.playerActive);
         }
     }
 
@@ -53,10 +56,12 @@ public class LevelManager : MonoBehaviour
 
     public void EnablePersistency(GameObject gameObject)
     {
+        persistentObjects = persistentObjects.Where(p => p.gameObject != null).ToList();
         if(persistentObjects.Any(p => p.name == gameObject.name))
         {
             //There is a persistent object with the same name already
             //Destroy duplicate
+            Debug.Log("Deleted Duplicate: " + gameObject.name);
             Destroy(gameObject);
             return;
         }
@@ -106,8 +111,9 @@ public class LevelManager : MonoBehaviour
         visitedLevels.Add(FindLevel(level.sceneName));
         sceneDoors.Clear();
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
-        sceneDoors = FindObjectsOfType<LevelDoorway>().ToList();
-
+        screenFade = ScreenFader.Instance.FadeScene(0);
+        
+        yield return null;
         /*
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();
@@ -120,15 +126,21 @@ public class LevelManager : MonoBehaviour
         if (toDoor == null)
         {
             Debug.LogWarning($"Could not find level doorway: {doorWayID} or default doorway {level.defaultDoorwayID}");
-            toDoor = sceneDoors[0];
+            toDoor = (sceneDoors.Count > 0) ? sceneDoors[0] : null;
         }
 
-        Debug.Log(toDoor.transform.position);
-        player.position = toDoor.transform.position;
-        toDoor.OnDoorwayExit();
+        //Debug.Log(toDoor.transform.position);
+        player.gameObject.SetActive(level.playerActive);
 
-        screenFade = ScreenFader.Instance.FadeScene(0);
+        if (toDoor != null)
+        {
+            player.position = toDoor.transform.position;
+            toDoor.OnDoorwayExit();
+        }
 
+        yield return null;
+        OnSceneLateChange?.Invoke(level.sceneName);
+        sceneDoors = FindObjectsOfType<LevelDoorway>().ToList();
         //yield return new WaitUntil(() => screenFade.IsComplete());
     }
 
