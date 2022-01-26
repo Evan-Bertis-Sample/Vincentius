@@ -18,7 +18,7 @@ public class LevelDoorway : MonoBehaviour
         LevelManager.OnSceneChange += newScene => 
         {
             Debug.Log("Adding doorway");
-            //LevelManager.Instance.sceneDoors.Add(this);
+            LevelManager.Instance.sceneDoors.Add(this);
         };
     }
 

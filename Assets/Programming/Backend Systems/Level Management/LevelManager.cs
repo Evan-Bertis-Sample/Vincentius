@@ -135,12 +135,12 @@ public class LevelManager : MonoBehaviour
         if (toDoor != null)
         {
             player.position = toDoor.transform.position;
+            Debug.Log("Teleporting To Door");
             toDoor.OnDoorwayExit();
         }
 
         yield return null;
         OnSceneLateChange?.Invoke(level.sceneName);
-        sceneDoors = FindObjectsOfType<LevelDoorway>().ToList();
         //yield return new WaitUntil(() => screenFade.IsComplete());
     }
 

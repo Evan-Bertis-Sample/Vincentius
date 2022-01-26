@@ -7,7 +7,11 @@ public class RespawnManager : MonoBehaviour
 {
     public static RespawnManager Instance;
     public PlayerController player;
+    public float fadeSpeed = 0.25f;
+
     public Vector3 lastSafePos;
+    public Queue<Vector3> safePos;
+    public int numFrames;
     public float safeTimeOnGround = 0.5f;
     public bool updateSafePos;
 
@@ -28,13 +32,20 @@ public class RespawnManager : MonoBehaviour
     {
         lastSafePos = player.transform.position;
         updateSafePos = true;
+        safePos = new Queue<Vector3>();
     }
 
     private void Update() 
     {
         if(player.timeOnGround >= safeTimeOnGround && updateSafePos)
         {
-            lastSafePos = player.transform.position;
+            if (safePos.Count> numFrames - 1)
+            {
+                safePos.Dequeue();
+            }
+
+            safePos.Enqueue(player.transform.position);
+            lastSafePos = safePos.Peek();
         }
     }
 
@@ -42,12 +53,12 @@ public class RespawnManager : MonoBehaviour
     {
         updateSafePos = false;
         player.canMove = false;
-        ScreenFader.Instance.FadeScene(1).OnComplete(() =>
+        ScreenFader.Instance.FadeSceneSpeed(1, fadeSpeed).OnComplete(() =>
         {
             player.transform.position = lastSafePos;
             player.canMove = true;
             updateSafePos = true;
-            ScreenFader.Instance.FadeScene(0);
+            ScreenFader.Instance.FadeSceneSpeed(0, fadeSpeed);
         });
     }
 }

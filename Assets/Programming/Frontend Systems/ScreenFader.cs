@@ -51,4 +51,17 @@ public class ScreenFader : MonoBehaviour
 
         return box.DOFade(to, fadeTime).SetEase(Ease.InOutCubic);
     }
+
+    public Tween FadeSceneSpeed(float to, float speed, float from = -1, int priority = 0)
+    {
+        if (priority <= currentHighestPriority) return null;
+
+        currentHighestPriority = priority;
+
+        if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
+
+        box.DOKill();
+
+        return box.DOFade(to, speed).SetEase(Ease.InOutCubic);
+    }
 }

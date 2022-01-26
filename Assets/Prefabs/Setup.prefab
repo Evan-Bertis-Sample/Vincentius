@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2423004820217123540}
+  fadeSpeed: 0.3
   lastSafePos: {x: 0, y: 0, z: 0}
+  numFrames: 10
   safeTimeOnGround: 0.5
+  updateSafePos: 0
 --- !u!1 &725710984
 GameObject:
   m_ObjectHideFlags: 0
