@@ -113,13 +113,12 @@ public class LevelManager : MonoBehaviour
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
         screenFade = ScreenFader.Instance.FadeScene(0);
         
-        yield return null;
-        /*
+
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();
             return (sceneDoors.Count == (FindObjectsOfType<LevelDoorway>().Count()));
         }); //Wait for doors
-        */
+
 
         LevelDoorway toDoor = FindDoorway(sceneDoors, doorWayID);
         if (toDoor == null) FindDoorway(sceneDoors, level.defaultDoorwayID);

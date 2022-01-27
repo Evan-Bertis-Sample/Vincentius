@@ -10,6 +10,9 @@ using Cinemachine;
 [CreateAssetMenu(menuName = "Player/Actions/Launch")]
 public class Launch : PlayerAction
 {
+    [Header("Quests Required")]
+    public Quest quest;
+
     [Header("Mechanic Values")]
     public float launchStrength = 2f;
     public float slowTimeScale = 0.5f;
@@ -108,6 +111,8 @@ public class Launch : PlayerAction
 
     public override bool CheckParameter(PlayerController controller)
     {
+        if (QuestManager.Instance.GetQuestStatus(quest) == false) return false;
+        
         if (controller.OnGround) performedInAir = 0;
         bool param = (performedInAir < timesInAir);
 

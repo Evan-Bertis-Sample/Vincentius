@@ -20,6 +20,7 @@ public class LevelDoorway : MonoBehaviour
             Debug.Log("Adding doorway");
             LevelManager.Instance.sceneDoors.Add(this);
         };
+        OnStart();
     }
 
     private void Update()
@@ -35,15 +36,25 @@ public class LevelDoorway : MonoBehaviour
         }
     }
 
+    public virtual void OnStart()
+    {
+
+    }
+
     public virtual void OnDoorwayHover()
     {
         //Debug.Log($"Hovering over doorway {doorwayID}");
     }
 
-    public void OnDoorwayEnter()
+    public virtual void OnDoorwayEnter()
     {
         //Debug.Log("Entering Doorway");
         LevelManager.Instance.TransitionLevel(nextLevel, nextDoorwayID);
+    }
+
+    public virtual void OnDoorwayLeave()
+    {
+        
     }
 
     public virtual void OnDoorwayExit()
@@ -68,6 +79,7 @@ public class LevelDoorway : MonoBehaviour
         if (other.gameObject == LevelManager.Instance.player.gameObject)
         {
             hovering = false;
+            OnDoorwayLeave();
         }
     }
 }

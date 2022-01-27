@@ -41,6 +41,7 @@ MonoBehaviour:
   waitForAnimationEvent: 0
   animationFlag: 0
   animationEventName: 
+  quest: {fileID: 11400000, guid: de1ec8879b277ec4cbee5ad9f589907b, type: 2}
   launchStrength: 11
   slowTimeScale: 0.5
   slowGravityScale: 0
