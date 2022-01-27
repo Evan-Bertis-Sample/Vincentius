@@ -40,6 +40,8 @@ public class PlayerGFX : MonoBehaviour
     }
 
     void LateUpdate() {
+        if (GameStateManager.Instance.paused) return; //The game is paused (I know this is lazy)
+
         if (overrides.Count <= 0)
         {
             HandleSpriteDirection();

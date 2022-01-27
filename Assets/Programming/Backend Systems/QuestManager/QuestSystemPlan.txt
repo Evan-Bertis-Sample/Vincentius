@@ -1,4 +1,0 @@
-There will be an abstract class with the data:
-    -Quest Name
-    -Quest Description
-    -
