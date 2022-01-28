@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameStateManager.Instance.paused) return; //This is lazy but I don't care
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         HandleActions();
         Move();
@@ -60,15 +61,11 @@ public class PlayerController : MonoBehaviour
         HandlePredfinedStateLogic();
         previousState = currentState;
         lastAction = currentAction;
-
-        if (Input.GetKeyDown(KeyCode.P) && debug)
-        {
-            Debug.Break();
-        }
     }
 
     void LateUpdate()
     {
+        if(GameStateManager.Instance.paused) return; //This is lazy but I don't care
         if (currentSet != null)
         {
             foreach (PlayerAction action in currentSet.actions)

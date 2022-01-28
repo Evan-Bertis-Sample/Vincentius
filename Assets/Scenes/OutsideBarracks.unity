@@ -1271,66 +1271,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &171713366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 171713367}
-  - component: {fileID: 171713368}
-  m_Layer: 0
-  m_Name: Game State Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &171713367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171713366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 217706041}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &171713368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171713366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca5535f7b5361f4683fdaea035d6005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paused: 0
-  pauseAction:
-    m_Name: Pause
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 2303c06d-3984-4b66-b7e6-ebbf4a61834c
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: f80c4fba-5d76-49d3-add5-87a2a74d7d29
-      m_Path: <Keyboard>/p
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pause
-      m_Flags: 0
 --- !u!1 &177092121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,11 +1810,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &217706041 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2423004818837570416, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
-  m_PrefabInstance: {fileID: 807848515}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223680067
 GameObject:
   m_ObjectHideFlags: 0
@@ -65272,6 +65207,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: indentSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c833f9813b700843ac94ec50623a48a, type: 3}
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: spriteMaterial
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: descriptionColor.r
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: descriptionColor.g
+      value: 0.3372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: descriptionColor.b
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 171713368, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
+      propertyPath: descriptionColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3447498938076102716, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

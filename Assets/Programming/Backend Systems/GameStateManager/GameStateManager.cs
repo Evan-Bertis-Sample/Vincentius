@@ -15,7 +15,29 @@ public class GameStateManager : MonoBehaviour
     public InputAction pauseAction;
     
     [Header("Pause State")]
-    public bool time;
+    public RectTransform pauseElement;
+    public float showTime = 0.5f;
+    public Vector3 hiddenPos = new Vector3(0, -250, 0);
+    public Vector3 showPos = Vector3.zero;
+    public float fadeAmount = 0.8f;
+    public Vector3 rightPageLocation;
+
+    [Header("Quest State")]
+    public RectTransform questElement;
+    public GameObject questCursor;
+    public RectTransform questsDisplayTransform;
+    public float itemDistance;
+    public Vector3 descriptionOffset = new Vector3(20, -50, 0);
+    public TMP_FontAsset itemFont;
+    public Color itemColor;
+    public float itemFontSize = 32f;
+    public Color descriptionColor;
+    private List<GameObject> questItems = new List<GameObject>();
+
+    [Header("Options State")]
+    public RectTransform optionsElement;
+    public GameObject optionsCursor;
+
 
     public void Awake()
     {
@@ -35,6 +57,7 @@ public class GameStateManager : MonoBehaviour
     public void Start()
     {
         paused = false;
+        pauseElement.anchoredPosition = hiddenPos;
     }
 
     public void HandlePauseState()
@@ -55,11 +78,112 @@ public class GameStateManager : MonoBehaviour
     {
         Debug.Log("Pause");
         Time.timeScale = 0;
+        //pauseElement.anchoredPosition = hiddenPos;
+        pauseElement.DOKill();
+        pauseElement.DOAnchorPos(showPos, showTime).SetUpdate(true);
+        ScreenFader.Instance.FadeSceneSpeed(fadeAmount, showTime).SetUpdate(true);
+        optionsElement.gameObject.SetActive(false);
+        questElement.gameObject.SetActive(false);
+        optionsCursor.SetActive(false);
+        questCursor.SetActive(false);
+
     }
 
     public void OnPauseExit()
     {
         Debug.Log("Resume");
         Time.timeScale = 1;
+        //pauseElement.anchoredPosition = showPos;
+        pauseElement.DOKill();
+        pauseElement.DOAnchorPos(hiddenPos, showTime);
+        ScreenFader.Instance.FadeSceneSpeed(0, showTime);
     }
+
+    public void Resume()
+    {
+        paused = false;
+        OnPauseExit();
+    }
+
+    public void ShowQuests()
+    {
+        if(!paused) return;
+        
+        Debug.Log("Showing Quests");
+
+        optionsElement.gameObject.SetActive(false);
+        questElement.gameObject.SetActive(true);
+        questElement.anchoredPosition = rightPageLocation;
+        questCursor.SetActive(true);
+        optionsCursor.SetActive(false);
+
+        //Generate quests
+        List<Quest> activeQuests = QuestManager.Instance.activeQuests;
+
+        if (questItems.Count > 0)
+        {
+            foreach(GameObject q in questItems)
+            {
+                Destroy(q);
+            }
+            questItems.Clear();
+        }
+
+        if (activeQuests.Count == 0)
+        {
+            GameObject noQuest = CreateTextBox(questsDisplayTransform.position, "There are no active quests");
+            noQuest.transform.parent = questsDisplayTransform;
+            questItems.Add(noQuest);
+        }
+        else
+        {
+            for (int i = 0; i < activeQuests.Count; i++)
+            {
+                Vector3 curItemPosition = questsDisplayTransform.position + new Vector3(0, -(i * itemDistance));
+                GameObject quest = CreateTextBox(curItemPosition, activeQuests[i].questName);
+                quest.transform.localScale = Vector3.one;
+                quest.transform.parent = questsDisplayTransform;
+                questItems.Add(quest);
+
+                if (activeQuests[i].questDescription == "") continue;
+
+                GameObject description = CreateTextBox(curItemPosition + descriptionOffset, activeQuests[i].questDescription);
+                description.transform.parent = quest.transform;
+                description.GetComponent<TextMeshProUGUI>().color = descriptionColor;
+            }
+        }
+        
+    }
+
+    private GameObject CreateTextBox(Vector3 pos, string text)
+    {
+        GameObject itemObject = new GameObject($"Item");
+        RectTransform itemTransform = itemObject.AddComponent<RectTransform>();
+        TextMeshProUGUI tm = itemObject.AddComponent<TextMeshProUGUI>();
+
+        itemTransform.anchoredPosition = pos;
+        tm.font = itemFont;
+        tm.color = itemColor;
+        tm.fontSize = itemFontSize;
+        tm.enableWordWrapping = false;
+        itemTransform.localScale = Vector3.one;
+        tm.SetText(text);
+
+        return itemObject;
+    }
+
+    public void ShowOptions()
+    {
+        if(!paused) return;
+
+        Debug.Log("Showing Options");
+
+        questElement.gameObject.SetActive(false);
+        optionsElement.gameObject.SetActive(true);
+        optionsElement.anchoredPosition = rightPageLocation;
+        optionsCursor.SetActive(true);
+        questCursor.SetActive(false);
+
+    }
+
 }
