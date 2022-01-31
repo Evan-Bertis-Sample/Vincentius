@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     public List<Level> visitedLevels = new List<Level>();
     public Transform player;
     public Level activeLevel {get; private set;}
-    private bool transitioning;
+    public bool transitioning;
 
     public List<GameObject> persistentObjects;
 
@@ -152,8 +152,8 @@ public class LevelManager : MonoBehaviour
         
         OnSceneLateChange?.Invoke(level.sceneName);
         activeLevel = level;
-        AudioManager.Instance.SetBackgroundMusic(level.backgroundMusic);
         transitioning = false;
+        AudioManager.Instance.SetBackgroundMusic(level.backgroundMusic);
     }
 
     public LevelDoorway FindDoorway(List<LevelDoorway> doorways, string find)
