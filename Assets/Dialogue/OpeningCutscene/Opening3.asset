@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799ee6bc5a0826439eb1f229d6113af, type: 3}
   m_Name: Opening3
   m_EditorClassIdentifier: 
-  text: ...there was you. <Pause(1)> Just you. Floating in this abyss we call space.
-  nextDialogues: []
+  text: VINCETIUS.
+  nextDialogues:
+  - previewText: 
+    next: {fileID: 11400000, guid: 8a426da35aa573049a5d365e4ebab431, type: 2}
   selectedResponse:
     previewText: 
     next: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799ee6bc5a0826439eb1f229d6113af, type: 3}
   m_Name: Opening1
   m_EditorClassIdentifier: 
-  text: Long, long ago...
+  text: Vincentius...
   nextDialogues:
   - previewText: 
     next: {fileID: 11400000, guid: c7ea6e3c1ce73cd4b953372bb1dc9cc0, type: 2}

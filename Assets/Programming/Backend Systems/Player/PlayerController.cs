@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour
     Camera cMain;
     public PlayerGFX playerGFX;
 
+    public delegate void OnAction(PlayerAction action);
+    public static OnAction OnPlayerAction;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

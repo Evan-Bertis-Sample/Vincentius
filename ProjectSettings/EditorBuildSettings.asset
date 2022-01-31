@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OpeningCutscene.unity
     guid: ea3641babdbeb224780721ccc79c5ff3
+  - enabled: 1
+    path: Assets/Scenes/InsideBarracks.unity
+    guid: c19ce202c7bb2854f8025bb39dfaabcb
+  - enabled: 1
+    path: Assets/Scenes/OutsideBarracks.unity
+    guid: 193d0f97172a0a64c8964667d9982665
   m_configObjects: {}

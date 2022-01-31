@@ -56,8 +56,8 @@ public class QuestManager : MonoBehaviour
 
         foreach(Quest q in completedThisFrame)
         {
-            NotificationManager.Instance.RequestNotification(new Notification(q.questName, "Quest"), 0);
-            NotificationManager.Instance.RequestNotification(new Notification("Completed", "Quest"), 0);
+            NotificationManager.Instance.RequestNotification(new Notification(q.questName, "Quest", 1), 0);
+            NotificationManager.Instance.RequestNotification(new Notification("Completed", "Quest", 1), 0);
         }
 
         activeQuests = activeQuests.Except(completedThisFrame).ToList();

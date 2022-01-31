@@ -35,15 +35,15 @@ public class CameraZoom : MonoBehaviour
         vcam = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
     }
 
-    public void ZoomCamera(float zoomAmount, float zoomTime)
+    public void ZoomCamera(float zoomAmount, float zoomTime, Ease ease = Ease.InOutCubic)
     {
         zoomTween?.Kill();
-        zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, zoomAmount, zoomTime).SetEase(Ease.InOutBack);
+        zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, zoomAmount, zoomTime).SetEase(ease);
     }
 
-    public void ResetZoom(float zoomTime = 1f)
+    public void ResetZoom(float zoomTime = 1f, Ease ease = Ease.InOutCubic)
     {
         zoomTween?.Kill();
-        zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, originalZoom, zoomTime).SetEase(Ease.InOutBack);
+        zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, originalZoom, zoomTime).SetEase(ease);
     }
 }

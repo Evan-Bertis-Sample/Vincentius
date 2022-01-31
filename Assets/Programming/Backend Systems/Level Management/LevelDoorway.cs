@@ -9,6 +9,7 @@ public class LevelDoorway : MonoBehaviour
     public Level nextLevel;
     public string nextDoorwayID;
     public bool requireInput = true;
+    public bool canEnter = true;
     private bool hovering;
 
     private void Start()
@@ -48,6 +49,7 @@ public class LevelDoorway : MonoBehaviour
 
     public virtual void OnDoorwayEnter()
     {
+        if (canEnter == false) return;
         //Debug.Log("Entering Doorway");
         LevelManager.Instance.TransitionLevel(nextLevel, nextDoorwayID);
     }
@@ -59,7 +61,10 @@ public class LevelDoorway : MonoBehaviour
 
     public virtual void OnDoorwayExit()
     {
-        NotificationManager.Instance.RequestNotification(new Notification(SceneManager.GetActiveScene().name, "Area", 1f), 0);
+        Level level = LevelManager.Instance.FindLevel(SceneManager.GetActiveScene().name);
+        if (LevelManager.Instance.FindVisitedLevel(level.sceneName) != null) return;
+        string displayName = (level.levelName != "") ? level.levelName : level.sceneName;
+        NotificationManager.Instance.RequestNotification(new Notification(displayName, "Area", 1f), 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

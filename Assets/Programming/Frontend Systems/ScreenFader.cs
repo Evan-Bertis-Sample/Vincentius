@@ -64,4 +64,10 @@ public class ScreenFader : MonoBehaviour
 
         return box.DOFade(to, speed).SetEase(Ease.InOutCubic);
     }
+
+    public void SetAlpha(float a, float priority)
+    {
+        if (priority <= currentHighestPriority) return;
+        box.color = new Color(faderColor.r, faderColor.g, faderColor.b, a);
+    }
 }

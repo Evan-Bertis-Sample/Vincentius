@@ -70,6 +70,7 @@ public abstract class PlayerAction : ScriptableObject
     {
         controller.currentState = newState;
         if (waitForAnimationEvent && !animationFlag) return;
+        PlayerController.OnPlayerAction?.Invoke(this);
         Initiate(controller);
         performingAction = true;
         timeElapsed = 0f;

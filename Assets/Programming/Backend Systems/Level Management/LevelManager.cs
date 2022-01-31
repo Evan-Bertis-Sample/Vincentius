@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     public List<Level> levels = new List<Level>();
     public List<Level> visitedLevels = new List<Level>();
     public Transform player;
+    public Level activeLevel {get; private set;}
+    private bool transitioning;
 
     public List<GameObject> persistentObjects;
 
@@ -20,6 +22,8 @@ public class LevelManager : MonoBehaviour
 
     public InputAction enterAction;
     public bool enterActionInit;
+
+    public PolygonCollider2D levelBoundary;
 
     public delegate void SceneChange(string newScene);
     public static event SceneChange OnSceneChange;
@@ -39,6 +43,7 @@ public class LevelManager : MonoBehaviour
         enterAction.Enable();
         enterAction.started += (context) => enterActionInit = true;
         persistentObjects = new List<GameObject>();
+        levelBoundary.isTrigger = true;
     }
 
     private void Start() {
@@ -47,6 +52,7 @@ public class LevelManager : MonoBehaviour
             Level start = FindLevel(SceneManager.GetActiveScene().name);
             visitedLevels.Add(start);
             player.gameObject.SetActive(start.playerActive);
+            activeLevel = start;
         }
     }
 
@@ -84,11 +90,13 @@ public class LevelManager : MonoBehaviour
 
     public void TransitionLevel(Level level, string doorwayID)
     {
+        if (transitioning) return;
         StartCoroutine(TransitionLevelStart(level, doorwayID));
     }
 
     public IEnumerator TransitionLevelStart(Level level, string doorWayID)
     {
+        transitioning = true;
         string previousSceneName = SceneManager.GetActiveScene().name;
         Debug.Log("Transitioning to Scene: " + level.sceneName + " from Scene: " + previousSceneName);
         AsyncOperation nextLevelOperation = SceneManager.LoadSceneAsync(level.sceneName);
@@ -119,7 +127,6 @@ public class LevelManager : MonoBehaviour
             return (sceneDoors.Count == (FindObjectsOfType<LevelDoorway>().Count()));
         }); //Wait for doors
 
-
         LevelDoorway toDoor = FindDoorway(sceneDoors, doorWayID);
         if (toDoor == null) FindDoorway(sceneDoors, level.defaultDoorwayID);
         if (toDoor == null)
@@ -139,12 +146,25 @@ public class LevelManager : MonoBehaviour
         }
 
         yield return null;
+        
         OnSceneLateChange?.Invoke(level.sceneName);
+        activeLevel = level;
         //yield return new WaitUntil(() => screenFade.IsComplete());
+        transitioning = false;
     }
 
     public LevelDoorway FindDoorway(List<LevelDoorway> doorways, string find)
     {
         return doorways.Where((d) => d.doorwayID == find).FirstOrDefault();
+    }
+
+    public void SetLevelBoundary(PolygonCollider2D col)
+    {
+        List<Vector2> points = new List<Vector2>();
+        foreach(Vector2 pt in col.points)
+        {
+            points.Add(col.transform.TransformPoint(pt));
+        }
+        levelBoundary.points = points.ToArray();
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020b8a373a76aae42877fb9071c0738a, type: 3}
   m_Name: OutsideBarracks
   m_EditorClassIdentifier: 
-  levelName: Outside Barracks
+  levelName: The Barracks
   sceneName: OutsideBarracks
   startingMusic: {fileID: 0}
   defaultDoorwayID: 

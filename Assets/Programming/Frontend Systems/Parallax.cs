@@ -8,7 +8,7 @@ public class Parallax : MonoBehaviour
     private float startingZ;
 
     Camera cam;
-    private Vector3 startingCamPosition;
+    public Vector3 startingCamPosition;
 
     public float xShiftFactor = 1f;
     public float yShiftFactor = 1f;

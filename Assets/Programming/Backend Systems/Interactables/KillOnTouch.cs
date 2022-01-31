@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class KillOnTouch : Interactable
 {
-    public override void OnContact()
+    public override void OnContact(GameObject player)
     {
         RespawnManager.Instance.KillPlayer();
     }
 
-    public override void OnExit()
+    public override void OnExit(GameObject player)
     {
 
     }
 
-    public override void OnHold()
+    public override void OnHold(GameObject player)
     {
 
     }

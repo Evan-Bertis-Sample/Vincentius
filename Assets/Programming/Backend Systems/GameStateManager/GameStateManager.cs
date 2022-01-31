@@ -21,6 +21,7 @@ public class GameStateManager : MonoBehaviour
     public Vector3 showPos = Vector3.zero;
     public float fadeAmount = 0.8f;
     public Vector3 rightPageLocation;
+    public List<Level> cannotPauseLevels = new List<Level>();
 
     [Header("Quest State")]
     public RectTransform questElement;
@@ -62,6 +63,8 @@ public class GameStateManager : MonoBehaviour
 
     public void HandlePauseState()
     {
+        if (cannotPauseLevels.Contains(LevelManager.Instance.activeLevel)) return;
+        
         if (!paused)
         {
             paused = true;

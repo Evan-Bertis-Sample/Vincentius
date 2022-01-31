@@ -6,9 +6,9 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public string playerTag = "Player";
-    public abstract void OnContact();
-    public abstract void OnHold();
-    public abstract void OnExit();
+    public abstract void OnContact(GameObject player);
+    public abstract void OnHold(GameObject player);
+    public abstract void OnExit(GameObject player);
 
     private void Awake() {
         GetComponent<Collider2D>().isTrigger = true;
@@ -18,7 +18,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            OnContact();
+            OnContact(other.gameObject);
         }
     }
 
@@ -26,7 +26,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            OnHold();
+            OnHold(other.gameObject);
         }
     }
 
@@ -34,7 +34,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            OnExit();
+            OnExit(other.gameObject);
         }
     }
 }
