@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 using System.Linq;
 using UnityEngine.InputSystem;
-using System;
+using Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     public bool enterActionInit;
 
     public PolygonCollider2D levelBoundary;
+    public CinemachineConfiner confiner;
 
     public delegate void SceneChange(string newScene);
     public static event SceneChange OnSceneChange;
@@ -53,7 +54,10 @@ public class LevelManager : MonoBehaviour
             visitedLevels.Add(start);
             player.gameObject.SetActive(start.playerActive);
             activeLevel = start;
+            AudioManager.Instance.SetBackgroundMusic(start.backgroundMusic);
         }
+
+        confiner = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineConfiner>();
     }
 
     private void LateUpdate() {
@@ -120,7 +124,6 @@ public class LevelManager : MonoBehaviour
         sceneDoors.Clear();
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
         screenFade = ScreenFader.Instance.FadeScene(0);
-        
 
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();
@@ -149,7 +152,7 @@ public class LevelManager : MonoBehaviour
         
         OnSceneLateChange?.Invoke(level.sceneName);
         activeLevel = level;
-        //yield return new WaitUntil(() => screenFade.IsComplete());
+        AudioManager.Instance.SetBackgroundMusic(level.backgroundMusic);
         transitioning = false;
     }
 
@@ -160,11 +163,15 @@ public class LevelManager : MonoBehaviour
 
     public void SetLevelBoundary(PolygonCollider2D col)
     {
+        confiner.m_BoundingShape2D = col;
+
+        /*
         List<Vector2> points = new List<Vector2>();
         foreach(Vector2 pt in col.points)
         {
             points.Add(col.transform.TransformPoint(pt));
         }
         levelBoundary.points = points.ToArray();
+        */
     }
 }

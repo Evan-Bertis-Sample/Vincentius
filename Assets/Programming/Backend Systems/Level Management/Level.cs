@@ -9,7 +9,7 @@ public class Level : ScriptableObject
 {
     public string levelName;
     public string sceneName;
-    public AudioClip startingMusic;
+    public AudioClip backgroundMusic;
     public string defaultDoorwayID;
     public bool playerActive = true;
 }

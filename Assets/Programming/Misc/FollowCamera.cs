@@ -7,6 +7,8 @@ public class FollowCamera : MonoBehaviour
     public Vector2 offset = Vector2.zero;
     public float zPos = 0;
     private Camera mainCamera;
+
+    private LevelManager.SceneChange SceneChange;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +16,19 @@ public class FollowCamera : MonoBehaviour
         transform.position = mainCamera.transform.position + (Vector3)offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, zPos);
         transform.parent = mainCamera.transform;
+
+        SceneChange = new LevelManager.SceneChange((sceneName => DestroyThis()));
+
+        LevelManager.OnSceneLateChange += SceneChange;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void OnDestroy() {
+        if (gameObject == null) return;
+        LevelManager.OnSceneLateChange -= SceneChange;
+    }
 
+    private void DestroyThis()
+    {
+        if (GetComponent<PersistentObject>() == null) Destroy(gameObject);
     }
 }

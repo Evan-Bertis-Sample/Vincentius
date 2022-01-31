@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     public float globalVolume = 1;
 
+    public AudioSource backgroundMusicSource;
+
     void Awake()
     {
         if (Instance == null)
@@ -22,6 +24,11 @@ public class AudioManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
 
+        GameObject backgroundMusicObject = new GameObject("Background Music");
+        backgroundMusicObject.transform.parent = transform;
+        backgroundMusicSource = backgroundMusicObject.AddComponent<AudioSource>();
+        backgroundMusicSource.loop = true;
+
         foreach (Sound s in sounds)
         {
             if (s.clips == null) continue;
@@ -31,6 +38,11 @@ public class AudioManager : MonoBehaviour
 
             newObject.transform.parent = transform;
         }
+    }
+
+    private void Update()
+    {
+        backgroundMusicSource.volume = globalVolume;
     }
 
     public void PlaySound(string name)
@@ -58,5 +70,12 @@ public class AudioManager : MonoBehaviour
     public AudioSource FindSoundSource(Sound s)
     {
         return transform.GetChild(Array.FindIndex(sounds, sound => sound.name == s.name)).GetComponent<AudioSource>();
+    }
+
+    public void SetBackgroundMusic(AudioClip clip)
+    {
+        if(backgroundMusicSource.clip = clip) return; //Keep song playing
+        backgroundMusicSource.clip = clip;
+        backgroundMusicSource.Play();
     }
 }
