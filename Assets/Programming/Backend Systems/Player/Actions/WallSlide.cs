@@ -55,6 +55,7 @@ public class WallSlide : PlayerAction
         slideParticles = Instantiate(slideParticlesPrefab, wallCast.point + slideParticlesOffset, Quaternion.identity);
         slideParticles.transform.parent = controller.transform;
         slideSystem = slideParticles.GetComponent<ParticleSystem>();
+
     }
 
     protected override void OnExit(PlayerController controller, bool interrupted)

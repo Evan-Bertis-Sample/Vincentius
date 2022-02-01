@@ -41,9 +41,9 @@ MonoBehaviour:
   waitForAnimationEvent: 0
   animationFlag: 0
   animationEventName: 
-  wallCheckDistance: 0.25
+  wallCheckDistance: 0.275
   jumpAngle: 60
   jumpHeight: 2
   wallLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768

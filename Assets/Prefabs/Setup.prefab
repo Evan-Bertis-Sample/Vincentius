@@ -3727,7 +3727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004819009983907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.421, z: -10}
+  m_LocalPosition: {x: 3.7777786, y: 6.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2423004819446676573}
@@ -3920,6 +3920,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff5589501b377f7448c925a6be139764, type: 2}
   - {fileID: 11400000, guid: c7c3c3f1e50bf734fbe111081fdbd3d5, type: 2}
   globalVolume: 0.5
+  backgroundMusicSource: {fileID: 0}
 --- !u!1 &2423004819039424490
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,7 +4740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004819572808463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.421, z: -10}
+  m_LocalPosition: {x: 85.1, y: 8.021, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2423004820517587122}
@@ -5076,8 +5077,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004820217123529}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 85.1, y: 6.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2423004819396465391}
@@ -5154,7 +5155,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &2423004820217123541
 BoxCollider2D:
@@ -6088,6 +6089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontends:
   - {fileID: 3856108619663652857}
+  activeFrontends: []
 --- !u!1 &3856108619347300125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,8 +6141,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c68938d556198fd4f8df033d5f0da57f, type: 2}
   - {fileID: 11400000, guid: 44580105b3e73c643bc2adec70d7c309, type: 2}
   - {fileID: 11400000, guid: c9ac977927177e346954228e72822dd5, type: 2}
+  - {fileID: 11400000, guid: fcce8664aa9f9854e826666b8808a12b, type: 2}
   visitedLevels: []
   player: {fileID: 2423004820217123536}
+  activeLevel: {fileID: 0}
+  transitioning: 0
   persistentObjects: []
   sceneDoors: []
   enterAction:
@@ -6161,6 +6166,7 @@ MonoBehaviour:
       m_Flags: 0
   enterActionInit: 0
   levelBoundary: {fileID: 1887729627}
+  confiner: {fileID: 0}
 --- !u!1 &3856108619406612564
 GameObject:
   m_ObjectHideFlags: 0

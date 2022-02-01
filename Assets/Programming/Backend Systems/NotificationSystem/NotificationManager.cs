@@ -8,6 +8,8 @@ public class NotificationManager : MonoBehaviour
     public static NotificationManager Instance;
     public List<NotificationFrontend> frontends;
     public Dictionary<Notification, NotificationFrontend> requestedNotifications = new Dictionary<Notification, NotificationFrontend>();
+    public List<NotificationFrontend> activeFrontends = new List<NotificationFrontend>();
+    public Dictionary<Notification, NotificationFrontend> queuedNotifications = new Dictionary<Notification, NotificationFrontend>();
 
     private void Awake() {
         if (Instance == null)
@@ -36,6 +38,10 @@ public class NotificationManager : MonoBehaviour
         {
             Notify(requestedNotifications);
         }
+        else
+        {
+            Notify(queuedNotifications);
+        }
 
         requestedNotifications.Clear();
     }
@@ -62,12 +68,23 @@ public class NotificationManager : MonoBehaviour
 
         for (int i = 0; i < frontends.Count; i++)
         {
+            if (activeFrontends.Contains(frontends[i]))
+            {
+                foreach(Notification notif in notificationsByFrontends[i])
+                {
+                    //Queue these up for next frame
+                    if(queuedNotifications.ContainsKey(notif)) continue; //This has already been queued
+                    queuedNotifications.Add(notif, frontends[i]);
+                }
+                continue;
+            }
             StartCoroutine(DisplayNotifications(notificationsByFrontends[i], frontends[i]));
         }
     }
 
     private IEnumerator DisplayNotifications(List<Notification> toNotify, NotificationFrontend frontend)
     {
+        activeFrontends.Add(frontend);
         foreach(Notification notification in toNotify)
         {
             frontend.OnNotificationStart(notification);
@@ -85,7 +102,13 @@ public class NotificationManager : MonoBehaviour
             Debug.Log("Finished Displaying Notification");
             frontend.OnNotificationEnd(notification);
 
+            if(queuedNotifications.ContainsKey(notification))
+            {
+                queuedNotifications.Remove(notification);
+            }
+
             yield return new WaitUntil(() => frontend.IsReadyForNext(notification));
         }
+        activeFrontends.Remove(frontend);
     }
 }

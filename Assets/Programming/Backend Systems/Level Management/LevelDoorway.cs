@@ -62,7 +62,17 @@ public class LevelDoorway : MonoBehaviour
     public virtual void OnDoorwayExit()
     {
         Level level = LevelManager.Instance.FindLevel(SceneManager.GetActiveScene().name);
-        if (LevelManager.Instance.FindVisitedLevel(level.sceneName) != null) return;
+        if (level == null)
+        {
+            Debug.Log("Level was not found");
+            return;
+        }
+        
+        bool visited = (LevelManager.Instance.FindVisitedLevel(level.sceneName) != null);
+        //Debug.Log($"{level} was { ((visited) ? "visited" : " not visited") }");
+        if (visited) return;
+
+
         string displayName = (level.levelName != "") ? level.levelName : level.sceneName;
         NotificationManager.Instance.RequestNotification(new Notification(displayName, "Area", 1f), 0);
     }

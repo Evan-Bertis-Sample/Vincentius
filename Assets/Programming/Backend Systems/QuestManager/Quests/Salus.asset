@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 020b8a373a76aae42877fb9071c0738a, type: 3}
-  m_Name: TestScene
+  m_Script: {fileID: 11500000, guid: 9deccd4960fcb504dabd9283e25fdb5b, type: 3}
+  m_Name: Salus
   m_EditorClassIdentifier: 
-  levelName: 
-  sceneName: TilesetTest
-  backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
-  defaultDoorwayID: Default
-  playerActive: 1
+  questName: Salus' Call
+  questDescription: Journey up Mount Vesuvius.
+  completed: 1
+  questTasks:
+  - {fileID: 11400000, guid: 89c821a72f65246499b361595ba50b51, type: 2}

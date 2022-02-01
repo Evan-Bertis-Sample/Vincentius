@@ -74,8 +74,9 @@ public class AudioManager : MonoBehaviour
 
     public void SetBackgroundMusic(AudioClip clip)
     {
-        if(backgroundMusicSource.clip = clip) return; //Keep song playing
+        if(backgroundMusicSource.clip == clip) return; //Keep song playing
         backgroundMusicSource.clip = clip;
+        Debug.Log("Playing Background Music");
         backgroundMusicSource.Play();
     }
 }

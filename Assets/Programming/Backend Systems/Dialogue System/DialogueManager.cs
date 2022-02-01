@@ -31,6 +31,11 @@ public class DialogueManager : MonoBehaviour
 
     public List<DialogueFrontend> frontends;
 
+    public delegate void OnConvo(DialogueEmitter emitter);
+
+    public static OnConvo OnConversationStart;
+    public static OnConvo OnConversationEnd;
+
     private void Awake()
     {
         if (Instance == null)
@@ -115,6 +120,7 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = emitter.GetStartingDialogue();
         emitter.active = true;
         emitter.frontend.StartConversation(emitter);
+        OnConversationStart?.Invoke(emitter);
         Dialogue end = emitter.GetEndingDialogue();
         while (currentDialogue != null)
         {
@@ -196,6 +202,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         emitter.frontend.EndConversation(emitter);
+        OnConversationEnd?.Invoke(emitter);
         emitter.active = false;
     }
 

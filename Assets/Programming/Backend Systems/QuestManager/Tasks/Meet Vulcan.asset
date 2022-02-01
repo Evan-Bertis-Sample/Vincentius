@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 020b8a373a76aae42877fb9071c0738a, type: 3}
-  m_Name: TestScene
+  m_Script: {fileID: 11500000, guid: a55879ca65feca14db90c0e50b8581f1, type: 3}
+  m_Name: Meet Vulcan
   m_EditorClassIdentifier: 
-  levelName: 
-  sceneName: TilesetTest
-  backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
-  defaultDoorwayID: Default
-  playerActive: 1
+  taskName: A Conversation with the Man
+  taskDescription: Speak to Vulcan
+  completed: 1
+  mustSeeDialogue:
+  - {fileID: 11400000, guid: 009dd679516ccb240a4cb7c6ef51762c, type: 2}

@@ -1709,6 +1709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0}
   zPos: 0
+  originalSceneName: 
 --- !u!1 &200703391
 GameObject:
   m_ObjectHideFlags: 0
@@ -50824,8 +50825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorwayID: Woods
-  nextLevel: {fileID: 11400000, guid: 668b424f6439f234aa11f34825e536e3, type: 2}
-  nextDoorwayID: Default
+  nextLevel: {fileID: 11400000, guid: fcce8664aa9f9854e826666b8808a12b, type: 2}
+  nextDoorwayID: Enter
   requireInput: 0
   canEnter: 1
 --- !u!1 &747666823
