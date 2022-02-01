@@ -9,5 +9,12 @@ public class AutoEmitter : DialogueEmitter
         requireInput = false;
         DialogueManager.Instance.AddEmitter(this);
         DialogueManager.Instance.StartConversation(this);
+        DialogueManager.OnConversationEnd += emitter =>
+        {
+            if (emitter == this)
+            {
+                DialogueManager.Instance.RemoveEmitter(this);
+            }
+        };
     }
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 020b8a373a76aae42877fb9071c0738a, type: 3}
-  m_Name: TestScene
+  m_Name: Tutorial
   m_EditorClassIdentifier: 
-  levelName: 
-  sceneName: TilesetTest
+  levelName: The Call
+  sceneName: Tutorial
   backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
-  defaultDoorwayID: Default
+  defaultDoorwayID: Enter
   playerActive: 1

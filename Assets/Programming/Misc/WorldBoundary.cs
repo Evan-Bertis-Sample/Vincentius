@@ -12,6 +12,7 @@ public class WorldBoundary : MonoBehaviour
         if (boundary == null) return;
         boundary.isTrigger = true;
         LevelManager.Instance.SetLevelBoundary(boundary);
+        Debug.Log($"Set Boundary : {boundary}");
     }
 
     private void Update() {

@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     public List<Level> levels = new List<Level>();
     public List<Level> visitedLevels = new List<Level>();
     public Transform player;
-    public Level activeLevel {get; private set;}
+    public Level activeLevel;
     public bool transitioning;
 
     public List<GameObject> persistentObjects;
@@ -115,20 +115,25 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+        activeLevel = level;
         nextLevelOperation.allowSceneActivation = true;
 
         yield return null;
         
         //We are now in the next level
-        visitedLevels.Add(FindLevel(level.sceneName));
         sceneDoors.Clear();
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
         screenFade = ScreenFader.Instance.FadeScene(0);
 
+
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();
-            List<LevelDoorway> activeDoors = sceneDoors.Where(s => s.isActiveAndEnabled ==true).ToList();
-            return (sceneDoors.Count == activeDoors.Count);
+            
+            List<LevelDoorway> actualDoorways = FindObjectsOfType<LevelDoorway>().ToList();
+            actualDoorways = actualDoorways.Where(g => g.isActiveAndEnabled == true).ToList();
+
+            Debug.Log($"Doorway Count : {actualDoorways.Count}");
+            return (sceneDoors.Count == actualDoorways.Count);
         }); //Wait for doors
 
         LevelDoorway toDoor = FindDoorway(sceneDoors, doorWayID);
@@ -149,16 +154,24 @@ public class LevelManager : MonoBehaviour
             toDoor.OnDoorwayExit();
         }
 
+        transitioning = false;
+        Debug.Log($"Transitioning: {transitioning}");
+        AudioManager.Instance.SetBackgroundMusic(level.backgroundMusic);
+
         yield return null;
+
+        if (!visitedLevels.Contains(level))
+        {
+            visitedLevels.Add(FindLevel(level.sceneName));
+        }
         
         OnSceneLateChange?.Invoke(level.sceneName);
-        activeLevel = level;
-        transitioning = false;
-        AudioManager.Instance.SetBackgroundMusic(level.backgroundMusic);
     }
 
     public LevelDoorway FindDoorway(List<LevelDoorway> doorways, string find)
     {
+        if (doorways == null) return null;
+        if (doorways.Count == 0) return null;
         return doorways.Where((d) => d.doorwayID == find).FirstOrDefault();
     }
 

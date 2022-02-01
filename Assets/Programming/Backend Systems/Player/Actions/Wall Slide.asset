@@ -33,7 +33,7 @@ MonoBehaviour:
   waitForAnimationEvent: 0
   animationFlag: 0
   animationEventName: 
-  wallCheckDistance: 0.25
+  wallCheckDistance: 0.275
   slidingGravityScale: 0.1
   slideParticlesPrefab: {fileID: 1166751312267982865, guid: e83f941a771fc854ea0e17181f738815, type: 3}
   slideParticlesOffset: {x: 0, y: -0.25}
@@ -42,4 +42,4 @@ MonoBehaviour:
   maxSlideVelocity: 1
   wallLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768

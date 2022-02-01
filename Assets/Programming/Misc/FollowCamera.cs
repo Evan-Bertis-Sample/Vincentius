@@ -7,6 +7,7 @@ public class FollowCamera : MonoBehaviour
     public Vector2 offset = Vector2.zero;
     public float zPos = 0;
     private Camera mainCamera;
+    public string originalSceneName;
 
     private LevelManager.SceneChange SceneChange;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class FollowCamera : MonoBehaviour
         transform.position = mainCamera.transform.position + (Vector3)offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, zPos);
         transform.parent = mainCamera.transform;
+        originalSceneName = LevelManager.Instance.activeLevel.sceneName;
 
         SceneChange = new LevelManager.SceneChange((sceneName => DestroyThis()));
 
@@ -29,6 +31,9 @@ public class FollowCamera : MonoBehaviour
 
     private void DestroyThis()
     {
-        if (GetComponent<PersistentObject>() == null) Destroy(gameObject);
+        //Why tf does it not destroy
+        bool shouldDestroy = (LevelManager.Instance.activeLevel.sceneName != originalSceneName);
+        Debug.Log($"{gameObject.name} : {shouldDestroy}");
+        if (LevelManager.Instance.activeLevel.sceneName != originalSceneName && GetComponent<PersistentObject>() == null) Destroy(gameObject);
     }
 }
