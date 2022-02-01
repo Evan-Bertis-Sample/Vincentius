@@ -128,6 +128,7 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();
+            
             List<LevelDoorway> actualDoorways = FindObjectsOfType<LevelDoorway>().ToList();
             actualDoorways = actualDoorways.Where(g => g.isActiveAndEnabled == true).ToList();
 
@@ -149,7 +150,7 @@ public class LevelManager : MonoBehaviour
         if (toDoor != null)
         {
             player.position = toDoor.transform.position;
-            Debug.Log("Teleporting To Door");
+            Debug.Log("Teleporting To Door : " + toDoor);
             toDoor.OnDoorwayExit();
         }
 
