@@ -19,6 +19,7 @@ public class DialogueEmitter : MonoBehaviour
     public bool showSpeechBubble = true;
     public bool active;
     public bool requireInput = true;
+    public bool finishBeforeExit = false;
 
     [Header("Speech Bubble Options")]
     public Vector2 speechBubbleOffset = new Vector2(0.5f, 0.5f);
@@ -30,6 +31,8 @@ public class DialogueEmitter : MonoBehaviour
     public DialogueFrontend frontend;
     public int frontendIndex = 0;
     private DialogueManager DM;
+
+    DialogueManager.OnConvo OnConvoEnd;
 
     private void Start() 
     {
@@ -45,6 +48,12 @@ public class DialogueEmitter : MonoBehaviour
         frontend = DialogueManager.Instance.GetFrontend(frontendIndex);
 
         InitEmitter();
+
+        DialogueManager.OnConversationEnd += (em => {
+            if (em == this && finishBeforeExit) DM.RemoveEmitter(this); 
+        });
+
+        DialogueManager.OnConversationEnd += OnConvoEnd;
     }
 
     public virtual void InitEmitter()
@@ -109,6 +118,6 @@ public class DialogueEmitter : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        DM.RemoveEmitter(this);
+        if (!finishBeforeExit) DM.RemoveEmitter(this);
     }
 }
