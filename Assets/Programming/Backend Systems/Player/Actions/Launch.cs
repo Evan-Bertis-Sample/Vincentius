@@ -138,6 +138,14 @@ public class Launch : PlayerAction
         controller.canMove = false;
 
         vcam = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
+        if (shrinkTween == null)
+        {
+            originalZoom = vcam.m_Lens.OrthographicSize;
+        }
+        else if (!shrinkTween.IsPlaying())
+        {
+            originalZoom = vcam.m_Lens.OrthographicSize;
+        }
 
         if (bowObject == null || indicatorObject == null) CreateObjects();
 

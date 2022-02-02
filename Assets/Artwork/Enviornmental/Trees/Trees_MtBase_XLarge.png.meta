@@ -29,6 +29,84 @@ TextureImporter:
   - first:
       213: -6646342382661283919
     second: Trees_MtBase_XLarge_4
+  - first:
+      213: 6804786540455453999
+    second: Trees_MtBase_XLarge_4
+  - first:
+      213: 8213781927319108168
+    second: Trees_MtBase_XLarge_5
+  - first:
+      213: -1923263206738854848
+    second: Trees_MtBase_XLarge_6
+  - first:
+      213: 6945805019228306191
+    second: Trees_MtBase_XLarge_7
+  - first:
+      213: -4883295088779784492
+    second: Trees_MtBase_XLarge_8
+  - first:
+      213: 4526831887796252652
+    second: Trees_MtBase_XLarge_9
+  - first:
+      213: 877596866693231672
+    second: Trees_MtBase_XLarge_10
+  - first:
+      213: -1362258800950872671
+    second: Trees_MtBase_XLarge_11
+  - first:
+      213: -3305557934701808011
+    second: Trees_MtBase_XLarge_12
+  - first:
+      213: -1271716311586485327
+    second: Trees_MtBase_XLarge_13
+  - first:
+      213: -7511911583685687068
+    second: Trees_MtBase_XLarge_14
+  - first:
+      213: -5209261877855319026
+    second: Trees_MtBase_XLarge_15
+  - first:
+      213: -7167373568813046309
+    second: Trees_MtBase_XLarge_16
+  - first:
+      213: -6869296366306790593
+    second: Trees_MtBase_XLarge_17
+  - first:
+      213: -4258351509715544726
+    second: Trees_MtBase_XLarge_18
+  - first:
+      213: 1605940915006135531
+    second: Trees_MtBase_XLarge_19
+  - first:
+      213: -7759969333022310100
+    second: Trees_MtBase_XLarge_20
+  - first:
+      213: -6576936774135088126
+    second: Trees_MtBase_XLarge_21
+  - first:
+      213: -2757314317871647923
+    second: Trees_MtBase_XLarge_22
+  - first:
+      213: -129103206977350494
+    second: Trees_MtBase_XLarge_23
+  - first:
+      213: 6383999406509531152
+    second: Trees_MtBase_XLarge_24
+  - first:
+      213: 6791079295163835405
+    second: Trees_MtBase_XLarge_25
+  - first:
+      213: -1883659040249189229
+    second: Trees_MtBase_XLarge_26
+  - first:
+      213: -1563710048863351308
+    second: Trees_MtBase_XLarge_27
+  - first:
+      213: 8312053061562268519
+    second: Trees_MtBase_XLarge_28
+  - first:
+      213: 763541217143695370
+    second: Trees_MtBase_XLarge_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
+        y: 1024
         width: 256
         height: 512
       alignment: 0
@@ -153,7 +231,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 512
+        y: 1024
         width: 256
         height: 512
       alignment: 0
@@ -174,7 +252,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 512
+        y: 1024
         width: 256
         height: 512
       alignment: 0
@@ -194,8 +272,8 @@ TextureImporter:
       name: Trees_MtBase_XLarge_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 768
+        y: 1024
         width: 256
         height: 512
       alignment: 0
@@ -215,6 +293,111 @@ TextureImporter:
       name: Trees_MtBase_XLarge_4
       rect:
         serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25e4342e457f6e50800000000000000
+      internalID: 6804786540455453999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees_MtBase_XLarge_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84af068f4273df170800000000000000
+      internalID: 8213781927319108168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees_MtBase_XLarge_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c70c8ad423f45e0800000000000000
+      internalID: -1923263206738854848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees_MtBase_XLarge_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b7a325dd4746060800000000000000
+      internalID: 6945805019228306191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees_MtBase_XLarge_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de0fd35dfc0b3cb0800000000000000
+      internalID: -4883295088779784492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trees_MtBase_XLarge_9
+      rect:
+        serializedVersion: 2
         x: 256
         y: 0
         width: 256
@@ -226,8 +409,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bfc9d911d273c3a0800000000000000
-      internalID: -6646342382661283919
+      spriteID: cefa1062e9982de30800000000000000
+      internalID: 4526831887796252652
       vertices: []
       indices: 
       edges: []

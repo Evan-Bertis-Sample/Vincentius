@@ -32,7 +32,7 @@ public class ScreenDialogue : DialogueFrontend
         buttonPrompt.DOKill();
         buttonWords.DOKill();
 
-        fadeTween = ScreenFader.Instance.FadeScene(fadeAmount, -1, 1);
+        fadeTween = ScreenFader.Instance.FadeScene(fadeAmount, -1, 10);
         fadeTween.OnComplete(() =>
         {
             fadeInComplete = true;
@@ -120,7 +120,7 @@ public class ScreenDialogue : DialogueFrontend
             }
             else
             {
-                ScreenFader.Instance.FadeScene(0);
+                ScreenFader.Instance.FadeScene(0, -1, 10);
             }
         });
     }

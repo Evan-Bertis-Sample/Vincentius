@@ -308,7 +308,7 @@ MonoBehaviour:
   questElement: {fileID: 6747865804367160965}
   questCursor: {fileID: 5407005968817891325}
   questsDisplayTransform: {fileID: 910677562}
-  itemDistance: 5
+  itemDistance: 35
   descriptionOffset: {x: 20, y: -50, z: 0}
   itemFont: {fileID: 11400000, guid: fbf798157754c0d499482b1b9d88bc54, type: 2}
   itemColor: {r: 0.098039225, g: 0.121568635, b: 0.13333334, a: 1}
@@ -3727,7 +3727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004819009983907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7777786, y: 6.5, z: -10}
+  m_LocalPosition: {x: 0, y: 1.421, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2423004819446676573}
@@ -4740,7 +4740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004819572808463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.1, y: 8.021, z: -10}
+  m_LocalPosition: {x: 0, y: 1.421, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2423004820517587122}
@@ -5078,7 +5078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423004820217123529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 85.1, y: 6.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2423004819396465391}
@@ -5715,6 +5715,7 @@ MonoBehaviour:
   faderColor: {r: 0.08627451, g: 0.10980393, b: 0.13333334, a: 0}
   fadeTime: 1
   position: {x: 0, y: 0, z: 0}
+  currentHighestPriority: 0
 --- !u!1 &2423004820517587125
 GameObject:
   m_ObjectHideFlags: 0

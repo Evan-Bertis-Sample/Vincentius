@@ -105,7 +105,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Transitioning to Scene: " + level.sceneName + " from Scene: " + previousSceneName);
         AsyncOperation nextLevelOperation = SceneManager.LoadSceneAsync(level.sceneName);
         nextLevelOperation.allowSceneActivation = false;
-        Tween screenFade = ScreenFader.Instance.FadeScene(1);
+        Tween screenFade = ScreenFader.Instance.FadeScene(1,-1, 3);
         bool fadeComplete = false;
 
         screenFade.OnComplete(() => fadeComplete = true);
@@ -115,6 +115,7 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+        Debug.Log("Completed");
         activeLevel = level;
         nextLevelOperation.allowSceneActivation = true;
 
@@ -123,7 +124,7 @@ public class LevelManager : MonoBehaviour
         //We are now in the next level
         sceneDoors.Clear();
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
-        screenFade = ScreenFader.Instance.FadeScene(0);
+        screenFade = ScreenFader.Instance.FadeScene(0,-1, 3);
 
 
         yield return new WaitUntil(() => {

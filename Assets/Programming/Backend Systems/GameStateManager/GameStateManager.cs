@@ -22,6 +22,7 @@ public class GameStateManager : MonoBehaviour
     public float fadeAmount = 0.8f;
     public Vector3 rightPageLocation;
     public List<Level> cannotPauseLevels = new List<Level>();
+    private float originalFadeAmount;
 
     [Header("Quest State")]
     public RectTransform questElement;
@@ -81,6 +82,7 @@ public class GameStateManager : MonoBehaviour
     {
         Debug.Log("Pause");
         Time.timeScale = 0;
+        originalFadeAmount = ScreenFader.Instance.GetAlpha();
         //pauseElement.anchoredPosition = hiddenPos;
         pauseElement.DOKill();
         pauseElement.DOAnchorPos(showPos, showTime).SetUpdate(true);
@@ -142,10 +144,13 @@ public class GameStateManager : MonoBehaviour
         {
             for (int i = 0; i < activeQuests.Count; i++)
             {
-                Vector3 curItemPosition = questsDisplayTransform.position + new Vector3(0, -(i * itemDistance));
+                Debug.Log(i * itemDistance);
+                Vector3 curItemPosition = new Vector2(0, -(i * itemDistance));
+                Debug.Log(curItemPosition);
                 GameObject quest = CreateTextBox(curItemPosition, activeQuests[i].questName);
                 quest.transform.localScale = Vector3.one;
                 quest.transform.parent = questsDisplayTransform;
+                quest.transform.GetComponent<RectTransform>().anchoredPosition = curItemPosition;
                 questItems.Add(quest);
 
                 if (activeQuests[i].questDescription == "") continue;
@@ -153,6 +158,7 @@ public class GameStateManager : MonoBehaviour
                 GameObject description = CreateTextBox(curItemPosition + descriptionOffset, activeQuests[i].questDescription);
                 description.transform.parent = quest.transform;
                 description.GetComponent<TextMeshProUGUI>().color = descriptionColor;
+                description.GetComponent<RectTransform>().anchoredPosition = descriptionOffset;
             }
         }
         

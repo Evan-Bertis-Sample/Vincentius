@@ -16,7 +16,7 @@ public class ScreenFader : MonoBehaviour
     public Vector3 position = Vector3.zero;
     public Tween currentTween;
 
-    private int currentHighestPriority;
+    public int currentHighestPriority;
 
     private void Awake() {
         if (Instance == null)
@@ -36,38 +36,66 @@ public class ScreenFader : MonoBehaviour
     }
 
     private void LateUpdate() {
-        currentHighestPriority = int.MinValue;
+        if (currentTween != null)
+        {
+            if(currentTween.IsComplete() || !currentTween.IsActive())
+            {
+                currentHighestPriority = 0;
+            }
+        }
     }
 
-    public Tween FadeScene(float to, float from = -1, int priority = 0)
+    public Tween FadeScene(float to, float from = -1, int priority = 1)
     {
-        if (priority <= currentHighestPriority) return null;
+
+        if (priority < currentHighestPriority) return null;
 
         currentHighestPriority = priority;
 
         if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
 
-        box.DOKill();
+        if (currentTween != null)
+        {
+            if(!currentTween.IsComplete())
+            {
+                box.DOKill();
+            }
+        }
 
-        return box.DOFade(to, fadeTime).SetEase(Ease.InOutCubic);
+        currentTween = box.DOFade(to, fadeTime).SetEase(Ease.InOutCubic);
+
+        return currentTween;
     }
 
-    public Tween FadeSceneSpeed(float to, float speed, float from = -1, int priority = 0)
+    public Tween FadeSceneSpeed(float to, float speed, float from = -1, int priority = 1)
     {
-        if (priority <= currentHighestPriority) return null;
+        if (priority < currentHighestPriority) return null;
 
         currentHighestPriority = priority;
 
         if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
 
-        box.DOKill();
+        if (currentTween != null)
+        {
+            if(!currentTween.IsComplete())
+            {
+                box.DOKill();
+            }
+        }
 
-        return box.DOFade(to, speed).SetEase(Ease.InOutCubic);
+        currentTween = box.DOFade(to, speed).SetEase(Ease.InOutCubic).OnComplete(() => currentHighestPriority = 0);
+
+        return currentTween;
     }
 
     public void SetAlpha(float a, float priority)
     {
         if (priority <= currentHighestPriority) return;
         box.color = new Color(faderColor.r, faderColor.g, faderColor.b, a);
+    }
+
+    public float GetAlpha()
+    {
+        return box.color.a;
     }
 }

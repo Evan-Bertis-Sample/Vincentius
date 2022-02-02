@@ -104,10 +104,8 @@ public class ScrollAlertNotification : NotificationFrontend
     {
         if (!startedObjectFade)
         {
-            Debug.Log("Beginning Fade");
             backImage.DOFade(0, objectFadeTime).OnComplete(() =>
             {
-                Debug.Log("Finished Fade");
                 ready = true;
                 UIElement.gameObject.SetActive(false);
                 mainTextBox.gameObject.SetActive(false);

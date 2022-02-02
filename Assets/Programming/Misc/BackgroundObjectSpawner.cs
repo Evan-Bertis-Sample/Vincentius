@@ -69,7 +69,7 @@ public class BackgroundObjectSpawner : MonoBehaviour
 
         spawnPoints = GenerateSpawnPoints(numObjects);
 
-        for (int i = 0; i < numObjects; i++)
+        for (int i = 0; i < spawnPoints.Count; i++)
         {
             GameObject newObject = new GameObject($"Object: {spawnedObjects.Count}");
             SpriteRenderer newSr = newObject.AddComponent<SpriteRenderer>();
@@ -169,15 +169,24 @@ public class BackgroundObjectSpawner : MonoBehaviour
                 spawnPoints[i] = current;
             }
         }
+
+        List<Vector3> toRemove = new List<Vector3>();
         if (attachToGround)
         {
             for(int i = 0; i < spawnPoints.Count ; i ++)
             {
                 RaycastHit2D groundRay = Physics2D.Raycast(spawnPoints[i], Vector2.down, 5 , groundMask);
-                spawnPoints[i] = groundRay.point;
+                if (groundRay.collider == null)
+                {
+                    toRemove.Add(spawnPoints[i]);
+                }
+                else
+                {
+                    spawnPoints[i] = groundRay.point;
+                }
             }
         }
-
+        spawnPoints = spawnPoints.Except(toRemove).ToList();
         return spawnPoints;
     }
 
@@ -204,7 +213,7 @@ public class BackgroundObjectSpawner : MonoBehaviour
         else 
         {
             //There were objects that fit the requirement
-            chosen =  possibleObjects[Random.Range(0, spawnableObjects.Count - 1)];
+            chosen =  possibleObjects[Random.Range(0, possibleObjects.Count - 1)];
         }
 
         //Update spawnSinceUseValues
