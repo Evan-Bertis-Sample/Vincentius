@@ -101,7 +101,7 @@ public class GameStateManager : MonoBehaviour
         //pauseElement.anchoredPosition = showPos;
         pauseElement.DOKill();
         pauseElement.DOAnchorPos(hiddenPos, showTime);
-        ScreenFader.Instance.FadeSceneSpeed(0, showTime);
+        ScreenFader.Instance.ResetFaderSpeed(showTime, 0);
     }
 
     public void Resume()

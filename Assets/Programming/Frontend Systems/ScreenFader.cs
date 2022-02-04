@@ -18,6 +18,8 @@ public class ScreenFader : MonoBehaviour
 
     public int currentHighestPriority;
 
+    public float startFadeAmount;
+
     private void Awake() {
         if (Instance == null)
         {
@@ -51,6 +53,7 @@ public class ScreenFader : MonoBehaviour
         if (priority < currentHighestPriority) return null;
 
         currentHighestPriority = priority;
+        startFadeAmount = box.color.a;
 
         if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
 
@@ -72,6 +75,7 @@ public class ScreenFader : MonoBehaviour
         if (priority < currentHighestPriority) return null;
 
         currentHighestPriority = priority;
+        startFadeAmount = box.color.a;
 
         if (from != -1) box.color = new Color(faderColor.r, faderColor.g, faderColor.b, from);
 
@@ -88,7 +92,7 @@ public class ScreenFader : MonoBehaviour
         return currentTween;
     }
 
-    public void SetAlpha(float a, float priority)
+    public void SetAlpha(float a, int priority)
     {
         if (priority <= currentHighestPriority) return;
         box.color = new Color(faderColor.r, faderColor.g, faderColor.b, a);
@@ -97,5 +101,53 @@ public class ScreenFader : MonoBehaviour
     public float GetAlpha()
     {
         return box.color.a;
+    }
+
+    public Tween ResetFader(int priority = 1)
+    {
+        if (priority < currentHighestPriority) return null;
+
+        currentHighestPriority = priority;
+
+        if (currentTween != null)
+        {
+            if(!currentTween.IsComplete())
+            {
+                box.DOKill();
+            }
+        }
+
+        float fadeAmount = startFadeAmount;
+        if (TimeOfDayManager.Instance.current != null)
+        {
+            fadeAmount = TimeOfDayManager.Instance.current.fadeAmount;
+        }
+        currentTween = box.DOFade(fadeAmount, fadeTime).SetEase(Ease.InOutCubic).OnComplete(() => currentHighestPriority = 0);
+
+        return currentTween;
+    }
+
+    public Tween ResetFaderSpeed(float speed, int priority = 1)
+    {
+        if (priority < currentHighestPriority) return null;
+
+        currentHighestPriority = priority;
+
+        if (currentTween != null)
+        {
+            if(!currentTween.IsComplete())
+            {
+                box.DOKill();
+            }
+        }
+
+        float fadeAmount = startFadeAmount;
+        if (TimeOfDayManager.Instance.current != null)
+        {
+            fadeAmount = TimeOfDayManager.Instance.current.fadeAmount;
+        }
+        currentTween = box.DOFade(fadeAmount, fadeTime).SetEase(Ease.InOutCubic).OnComplete(() => currentHighestPriority = 0);
+
+        return currentTween;
     }
 }

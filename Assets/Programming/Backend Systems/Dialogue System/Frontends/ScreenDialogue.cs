@@ -120,7 +120,7 @@ public class ScreenDialogue : DialogueFrontend
             }
             else
             {
-                ScreenFader.Instance.FadeScene(0, -1, 10);
+                ScreenFader.Instance.ResetFader(10);
             }
         });
     }

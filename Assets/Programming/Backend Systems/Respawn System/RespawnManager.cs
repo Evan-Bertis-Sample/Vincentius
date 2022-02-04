@@ -11,9 +11,13 @@ public class RespawnManager : MonoBehaviour
 
     public Vector3 lastSafePos;
     public Queue<Vector3> safePos;
+    public Vector3 overrideSafePos;
     public int numFrames;
     public float safeTimeOnGround = 0.5f;
     public bool updateSafePos;
+
+    public string deathSound;
+    public GameObject deathParticles;
 
     private void Awake() 
     {
@@ -51,14 +55,22 @@ public class RespawnManager : MonoBehaviour
 
     public void KillPlayer()
     {
+        Debug.Log("Killing Player");
         updateSafePos = false;
         player.canMove = false;
-        ScreenFader.Instance.FadeSceneSpeed(1, fadeSpeed).OnComplete(() =>
+        player.gameObject.SetActive(false);
+        GameObject particles = Instantiate(deathParticles, player.transform.position, Quaternion.identity);
+        AudioManager.Instance.PlaySound(deathSound);
+        ScreenFader.Instance.FadeSceneSpeed(1, fadeSpeed, -1, int.MaxValue).OnComplete(() =>
         {
-            player.transform.position = lastSafePos;
+            Vector3 spawnPoint = (overrideSafePos == Vector3.zero) ? lastSafePos : overrideSafePos;
+            Debug.Log($"Spawning at point {spawnPoint}");
+            player.transform.position = spawnPoint;
             player.canMove = true;
             updateSafePos = true;
-            ScreenFader.Instance.FadeSceneSpeed(0, fadeSpeed);
+            player.gameObject.SetActive(true);
+            Destroy(particles);
+            ScreenFader.Instance.ResetFaderSpeed(fadeSpeed, int.MaxValue);
         });
     }
 }

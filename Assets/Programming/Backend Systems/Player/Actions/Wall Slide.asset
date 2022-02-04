@@ -34,6 +34,7 @@ MonoBehaviour:
   animationFlag: 0
   animationEventName: 
   wallCheckDistance: 0.275
+  topCastOffset: 0.4
   slidingGravityScale: 0.1
   slideParticlesPrefab: {fileID: 1166751312267982865, guid: e83f941a771fc854ea0e17181f738815, type: 3}
   slideParticlesOffset: {x: 0, y: -0.25}

@@ -175,7 +175,7 @@ public class BackgroundObjectSpawner : MonoBehaviour
         {
             for(int i = 0; i < spawnPoints.Count ; i ++)
             {
-                RaycastHit2D groundRay = Physics2D.Raycast(spawnPoints[i], Vector2.down, 5 , groundMask);
+                RaycastHit2D groundRay = Physics2D.Raycast(spawnPoints[i], Vector2.down, 15 , groundMask);
                 if (groundRay.collider == null)
                 {
                     toRemove.Add(spawnPoints[i]);

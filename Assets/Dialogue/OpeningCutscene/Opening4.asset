@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7799ee6bc5a0826439eb1f229d6113af, type: 3}
   m_Name: Opening4
   m_EditorClassIdentifier: 
-  text: Wake up. <Pause(0.5)>Pompeii is in danger.
+  text: Wake up.<Pause(0.5)> Pompeii is in danger.
   nextDialogues:
   - previewText: 
     next: {fileID: 11400000, guid: 03c2d4c09597ba144a2f4feec78700aa, type: 2}
   selectedResponse:
     previewText: 
-    next: {fileID: 0}
+    next: {fileID: 11400000, guid: 03c2d4c09597ba144a2f4feec78700aa, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []

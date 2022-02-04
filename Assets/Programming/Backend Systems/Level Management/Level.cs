@@ -12,4 +12,5 @@ public class Level : ScriptableObject
     public AudioClip backgroundMusic;
     public string defaultDoorwayID;
     public bool playerActive = true;
+    public TimeOfDay daySettings;
 }

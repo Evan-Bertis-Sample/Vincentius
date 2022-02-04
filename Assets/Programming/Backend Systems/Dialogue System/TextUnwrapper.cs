@@ -138,6 +138,8 @@ public class TextUnwrapper : MonoBehaviour
         //Commands have the syntax <CommandName(parameter1, parameter2, etc)>
         //Debug.Log("Found Command");
         string fullCommand = GetStringBetweenCharacters(unrevealed, '<', '>', 0, false); //Outputs commandName(parameter1, parameter2)
+        string marked = (GetStringBetweenCharacters(unrevealed, '<', '>') + " ");
+        //if (!marked.Contains('>')) return; //It is not a command
         request.foundCommands.Add(GetStringBetweenCharacters(unrevealed, '<', '>') + " ");
         string commandName = ExtractCommandName(fullCommand);
         string[] parameters = ExtractParameters(fullCommand, commandName);
@@ -228,7 +230,9 @@ public class TextUnwrapper : MonoBehaviour
             if(examine[i] == '<')
             {
                 //Found command
-                commands.Add(GetStringBetweenCharacters(examine, '<', '>', i));
+                string suspectedCommand = (GetStringBetweenCharacters(examine, '<', '>', i));
+                //if (!suspectedCommand.Contains('>')) continue; //This is not a full command
+                commands.Add(suspectedCommand);
             }
         }
 

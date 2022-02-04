@@ -7,6 +7,8 @@ public class WallSlide : PlayerAction
 {
     public float wallCheckDistance = 2.7f;
     RaycastHit2D wallCast;
+    RaycastHit2D topCast;
+    public float topCastOffset = 0.25f;
     public float slidingGravityScale = 0.25f;
     float originalGravityScale;
 
@@ -31,13 +33,20 @@ public class WallSlide : PlayerAction
         Vector3 endR = new Vector3(controller.transform.position.x + wallCheckDistance, controller.transform.position.y, controller.transform.position.z);
         wallCast = Physics2D.Linecast(endL, endR, wallLayers);
 
+        Vector3 topEndL = new Vector3(controller.transform.position.x - wallCheckDistance, controller.transform.position.y + topCastOffset, controller.transform.position.z);
+        Vector3 topEndR = new Vector3(controller.transform.position.x + wallCheckDistance, controller.transform.position.y + topCastOffset, controller.transform.position.z);
+        topCast = Physics2D.Linecast(topEndL, topEndR, wallLayers);
+
         if (controller.debug)
         {
             Color castColor = (wallCast.collider != null) ? Color.green : Color.red;
             Debug.DrawLine(endL, endR, castColor);
+
+            castColor = (topCast.collider != null) ? Color.green : Color.red;
+            Debug.DrawLine(topEndL, topEndR, castColor);
         }
 
-        return (wallCast.collider != null && !controller.OnGround && controller.moveInput.y >= 0 && controller.rb.velocity.y <= 0); //Return true when the collider is not null
+        return (wallCast.collider != null && topCast.collider != null && !controller.OnGround && controller.moveInput.y >= 0 && controller.rb.velocity.y <= 0); //Return true when the collider is not null
     }
 
     protected override void Initiate(PlayerController controller)

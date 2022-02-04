@@ -33,12 +33,14 @@ public class FollowOffset : MonoBehaviour
     public void SetPosition(Vector3 worldPos)
     {
         lockOffset = false;
+        transform.DOKill();
         transform.DOMove(worldPos, (transform.position - worldPos).magnitude * 0.25f);
     }
 
     public void SetAndLockPosition(Vector3 worldPos)
     {
         lockOffset = false;
+            transform.DOKill();
         transform.DOMove(worldPos, (transform.position - worldPos).magnitude * 0.25f).OnComplete(() => 
         {
             lockOffset = true;
@@ -49,12 +51,14 @@ public class FollowOffset : MonoBehaviour
     public void SetLocalPosition(Vector3 localPos)
     {
         lockOffset = false;
+        transform.DOKill();
         transform.DOLocalMove(localPos, (transform.localPosition - localPos).magnitude * 0.25f);
     }
 
     public void SetAndLockLocalPosition(Vector3 localPos)
     {
         lockOffset = false;
+        transform.DOKill();
         transform.DOLocalMove(localPos, (transform.localPosition - localPos).magnitude * 0.25f).OnComplete(() => 
         {
             lockOffset = true;
@@ -70,6 +74,7 @@ public class FollowOffset : MonoBehaviour
     public void ResetPosition()
     {
         lockOffset = false;
+        transform.DOKill();
         transform.DOLocalMove(Vector3.zero, transform.localPosition.magnitude * 0.25f);
     }
 }

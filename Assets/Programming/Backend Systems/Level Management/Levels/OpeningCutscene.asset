@@ -17,3 +17,4 @@ MonoBehaviour:
   backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
   defaultDoorwayID: 
   playerActive: 0
+  daySettings: {fileID: 0}

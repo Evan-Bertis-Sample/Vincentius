@@ -55,6 +55,7 @@ public class LevelManager : MonoBehaviour
             player.gameObject.SetActive(start.playerActive);
             activeLevel = start;
             AudioManager.Instance.SetBackgroundMusic(start.backgroundMusic);
+            if (start.daySettings != null) TimeOfDayManager.Instance.SetTimeOfDay(start.daySettings);
         }
 
         confiner = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineConfiner>();
@@ -124,8 +125,15 @@ public class LevelManager : MonoBehaviour
         //We are now in the next level
         sceneDoors.Clear();
         OnSceneChange?.Invoke(level.sceneName); //Will also prompt level doors to add themselves to level manager
-        screenFade = ScreenFader.Instance.FadeScene(0,-1, 3);
-
+        if (level.daySettings != null) 
+        {
+            TimeOfDayManager.Instance.SetTimeOfDay(level.daySettings);
+            screenFade = ScreenFader.Instance.FadeScene(level.daySettings.fadeAmount, 1, 3);
+        }
+        else
+        {
+            screenFade = ScreenFader.Instance.FadeScene(0,-1, 3);
+        }
 
         yield return new WaitUntil(() => {
             sceneDoors = sceneDoors.Where(s => s != null).ToList();

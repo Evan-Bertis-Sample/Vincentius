@@ -111,7 +111,7 @@ public class Launch : PlayerAction
 
     public override bool CheckParameter(PlayerController controller)
     {
-        if (QuestManager.Instance.GetQuestStatus(quest) == false) return false;
+        if (QuestManager.Instance.GetQuestStatus(quest) == false && !controller.debug) return false;
         
         if (controller.OnGround) performedInAir = 0;
         bool param = (performedInAir < timesInAir);

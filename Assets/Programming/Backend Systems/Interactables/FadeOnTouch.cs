@@ -8,6 +8,9 @@ public class FadeOnTouch : Interactable
     public bool horizontalFade = true;
     public bool flip;
 
+    public float minFade = 0;
+    public float maxFade = 1;
+
     private float min;
     private float max;
     private float current;
@@ -29,11 +32,12 @@ public class FadeOnTouch : Interactable
             min = col.bounds.min.y;
             max = col.bounds.max.y;
         }
+        
     }
 
     public override void OnExit(GameObject player)
     {
-        ScreenFader.Instance.SetAlpha(0, 1);
+        ScreenFader.Instance.ResetFader();
     }
 
     public override void OnHold(GameObject player)
@@ -49,6 +53,8 @@ public class FadeOnTouch : Interactable
 
         float t = Mathf.InverseLerp(min, max, current);
         if (flip) t = 1 - t;
-        ScreenFader.Instance.SetAlpha(t, 1);
+        if (TimeOfDayManager.Instance.current != null) minFade = TimeOfDayManager.Instance.current.fadeAmount;
+        float a = Mathf.Lerp(minFade, maxFade, t);
+        ScreenFader.Instance.SetAlpha(a, 1);
     }
 }
