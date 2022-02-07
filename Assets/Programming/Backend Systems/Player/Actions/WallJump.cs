@@ -10,6 +10,7 @@ public class WallJump : PlayerAction
     public float jumpAngle = 45f;
     public float jumpHeight = 3;
     public LayerMask wallLayers;
+    public string jumpSound = "Jump";
 
     public override bool CheckParameter(PlayerController controller)
     {
@@ -51,6 +52,7 @@ public class WallJump : PlayerAction
         controller.rb.velocity = Vector2.zero;
         float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * controller.rb.gravityScale));
         controller.rb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+        AudioManager.Instance.PlaySound(jumpSound);
 
     }
 

@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &162217848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1159,6 +1159,5 @@ MonoBehaviour:
   title: {fileID: 851379216}
   buttons:
   - {fileID: 1810397601}
-  - {fileID: 162217848}
   transitionTime: 0.75
   spawnOffset: {x: 400, y: 0}

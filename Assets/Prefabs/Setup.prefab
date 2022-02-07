@@ -606,10 +606,11 @@ MonoBehaviour:
   player: {fileID: 2423004820217123540}
   fadeSpeed: 0.5
   lastSafePos: {x: 0, y: 0, z: 0}
+  overrideSafePos: {x: 0, y: 0, z: 0}
   numFrames: 10
   safeTimeOnGround: 0.5
   updateSafePos: 0
-  deathSound: Chrip
+  deathSound: Orb
   deathParticles: {fileID: 4350511710616376266, guid: ff398458033dbd34cb3c46d6b249fe53, type: 3}
 --- !u!1 &551896044
 GameObject:
@@ -1052,6 +1053,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalZoom: 0
+  requests: []
+  currentRequest:
+    to: 0
+    speed: 0
+    reset: 0
+    lockValue: 0
+    requestLock: 0
+    global: 0
 --- !u!1 &910677561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,7 +3977,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2fe2caa3793596408cef0735d6bab91, type: 2}
   - {fileID: 11400000, guid: ff5589501b377f7448c925a6be139764, type: 2}
   - {fileID: 11400000, guid: c7c3c3f1e50bf734fbe111081fdbd3d5, type: 2}
+  - {fileID: 11400000, guid: 0681fd95d88568949bccde19df709388, type: 2}
+  - {fileID: 11400000, guid: aa3438dc085d027449618a4a89cd8cf2, type: 2}
+  - {fileID: 11400000, guid: e5ca4541dfcedaa46b857313bc040265, type: 2}
   globalVolume: 0.5
+  transitioningBackgroundMusic: 0
   backgroundMusicSource: {fileID: 0}
 --- !u!1 &2423004819039424490
 GameObject:
@@ -4592,6 +4605,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockOffset: 0
   lockPosition: {x: 0, y: 0, z: 0}
+  requests: []
+  currentRequest:
+    to: {x: 0, y: 0, z: 0}
+    speed: 0
+    reset: 0
+    lockValue: {x: 0, y: 0, z: 0}
+    requestLock: 0
+    global: 0
 --- !u!1 &2423004819420655275
 GameObject:
   m_ObjectHideFlags: 0
@@ -5289,7 +5310,7 @@ MonoBehaviour:
   lastAction: {fileID: 0}
   actionTimeElapsed: 0
   canMove: 1
-  debug: 1
+  debug: 0
   rb: {fileID: 0}
   playerGFX: {fileID: 0}
 --- !u!114 &2423004820217123543
@@ -6193,6 +6214,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44580105b3e73c643bc2adec70d7c309, type: 2}
   - {fileID: 11400000, guid: c9ac977927177e346954228e72822dd5, type: 2}
   - {fileID: 11400000, guid: fcce8664aa9f9854e826666b8808a12b, type: 2}
+  - {fileID: 11400000, guid: c454c18236ddc1142b352b70543b9e91, type: 2}
   visitedLevels: []
   player: {fileID: 2423004820217123536}
   activeLevel: {fileID: 0}

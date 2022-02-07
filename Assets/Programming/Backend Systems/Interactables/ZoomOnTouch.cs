@@ -19,6 +19,9 @@ public class ZoomOnTouch : Interactable
 
     public override void OnHold(GameObject player)
     {
-
+        if (CameraZoom.Main.currentRequest.to != zoomAmount)
+        {
+            OnContact(player);
+        }
     }
 }

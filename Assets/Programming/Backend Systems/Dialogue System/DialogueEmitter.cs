@@ -20,6 +20,7 @@ public class DialogueEmitter : MonoBehaviour
     public bool active;
     public bool requireInput = true;
     public bool finishBeforeExit = false;
+    public bool disablePlayerMovement = false;
 
     [Header("Speech Bubble Options")]
     public Vector2 speechBubbleOffset = new Vector2(0.5f, 0.5f);

@@ -11,6 +11,7 @@ public class Quest : ScriptableObject
     [TextArea] public string questDescription;
     public bool completed;
     public List<QuestTask> questTasks = new List<QuestTask>();
+    public bool display = true;
 
     public void BeginQuest()
     {

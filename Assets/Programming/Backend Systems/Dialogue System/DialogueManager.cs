@@ -122,6 +122,8 @@ public class DialogueManager : MonoBehaviour
         emitter.frontend.StartConversation(emitter);
         OnConversationStart?.Invoke(emitter);
         Dialogue end = emitter.GetEndingDialogue();
+
+        if (emitter.disablePlayerMovement) LevelManager.Instance.player.GetComponent<PlayerController>().canMove = false;
         while (currentDialogue != null)
         {
             if (!visitedDialogues.Contains(currentDialogue)) visitedDialogues.Add(currentDialogue);
@@ -200,7 +202,7 @@ public class DialogueManager : MonoBehaviour
             if (!possibleEmitters.Contains(emitter)) break;
             yield return null;
         }
-
+        if (emitter.disablePlayerMovement) LevelManager.Instance.player.GetComponent<PlayerController>().canMove = true;
         emitter.frontend.EndConversation(emitter);
         OnConversationEnd?.Invoke(emitter);
         emitter.active = false;
@@ -264,11 +266,13 @@ public class DialogueManager : MonoBehaviour
 
     public void AddEmitter(DialogueEmitter emitter)
     {
+        if (possibleEmitters.Contains(emitter)) return;
         possibleEmitters.Add(emitter);
     }
 
     public void RemoveEmitter(DialogueEmitter emitter)
     {
+        if (!possibleEmitters.Contains(emitter)) return;
         possibleEmitters.Remove(emitter);
     }
 }

@@ -106,7 +106,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Transitioning to Scene: " + level.sceneName + " from Scene: " + previousSceneName);
         AsyncOperation nextLevelOperation = SceneManager.LoadSceneAsync(level.sceneName);
         nextLevelOperation.allowSceneActivation = false;
-        Tween screenFade = ScreenFader.Instance.FadeScene(1,-1, 3);
+        Tween screenFade = ScreenFader.Instance.FadeScene(1,-1, int.MaxValue);
         bool fadeComplete = false;
 
         screenFade.OnComplete(() => fadeComplete = true);
@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour
         if (level.daySettings != null) 
         {
             TimeOfDayManager.Instance.SetTimeOfDay(level.daySettings);
-            screenFade = ScreenFader.Instance.FadeScene(level.daySettings.fadeAmount, 1, 3);
+            screenFade = ScreenFader.Instance.FadeScene(level.daySettings.fadeAmount, 1, int.MaxValue);
         }
         else
         {

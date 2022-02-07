@@ -19,6 +19,9 @@ public class RespawnManager : MonoBehaviour
     public string deathSound;
     public GameObject deathParticles;
 
+    public delegate void OnLife();
+    public static OnLife OnDeath;
+
     private void Awake() 
     {
         if (Instance == null)
@@ -70,6 +73,9 @@ public class RespawnManager : MonoBehaviour
             updateSafePos = true;
             player.gameObject.SetActive(true);
             Destroy(particles);
+
+            OnDeath?.Invoke();
+            
             ScreenFader.Instance.ResetFaderSpeed(fadeSpeed, int.MaxValue);
         });
     }

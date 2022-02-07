@@ -9,6 +9,7 @@ public class CamMoveOnTouch : Interactable
 
     public override void OnContact(GameObject player)
     {
+        Debug.Log("Entering area " + gameObject.name);
         if (global)
         {
             FollowOffset.main.SetAndLockPosition(newCamPosition);
@@ -26,6 +27,9 @@ public class CamMoveOnTouch : Interactable
 
     public override void OnHold(GameObject player)
     {
-
+        if (FollowOffset.main.currentRequest.to != newCamPosition)
+        {
+            OnContact(player);
+        }
     }
 }

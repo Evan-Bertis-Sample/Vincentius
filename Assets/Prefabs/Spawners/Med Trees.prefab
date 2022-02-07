@@ -55,7 +55,7 @@ MonoBehaviour:
   objectDensity: 0.1
   objectMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   spriteLayer: Midground
-  orderInLayer: -1
+  orderInLayer: -2
   spriteColor: {r: 1, g: 1, b: 1, a: 1}
   randomlyFlipSprites: 1
   spawnCurve:

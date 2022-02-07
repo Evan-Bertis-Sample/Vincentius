@@ -180,6 +180,10 @@ public class BackgroundObjectSpawner : MonoBehaviour
                 {
                     toRemove.Add(spawnPoints[i]);
                 }
+                else if (groundRay.normal != Vector2.up)
+                {
+                    toRemove.Add(spawnPoints[i]);
+                }
                 else
                 {
                     spawnPoints[i] = groundRay.point;

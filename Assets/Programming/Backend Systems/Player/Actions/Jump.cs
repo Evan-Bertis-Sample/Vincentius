@@ -9,6 +9,7 @@ public class Jump : PlayerAction
     public float jumpTime = 0.2f;
     public Vector2 particlesOffset = new Vector2(0, -0.525f);
     public GameObject jumpParticlesPrefab;
+    public string jumpSound = "Jump";
 
     public override bool CheckParameter(PlayerController controller)
     {
@@ -26,6 +27,7 @@ public class Jump : PlayerAction
         float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * controller.rb.gravityScale));
         controller.rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         Instantiate(jumpParticlesPrefab, (Vector2)controller.transform.position + particlesOffset, Quaternion.identity);
+        AudioManager.Instance.PlaySound(jumpSound);
     }
 
     protected override void OnExit(PlayerController controller, bool interrupted)

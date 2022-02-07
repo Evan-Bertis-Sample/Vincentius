@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using DG.Tweening;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager Instance;
     public float globalVolume = 1;
+    public bool transitioningBackgroundMusic;
 
     public AudioSource backgroundMusicSource;
 
@@ -42,6 +44,8 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
+        if(transitioningBackgroundMusic) return;
+
         backgroundMusicSource.volume = globalVolume;
     }
 
@@ -53,6 +57,12 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Sound: " + name + " was not found");
             return;
         }
+
+        if (s.source != null)
+        {
+            if (s.source.isPlaying) return;
+        }
+        
         s.Play();
     }
 
@@ -75,8 +85,16 @@ public class AudioManager : MonoBehaviour
     public void SetBackgroundMusic(AudioClip clip)
     {
         if(backgroundMusicSource.clip == clip) return; //Keep song playing
-        backgroundMusicSource.clip = clip;
-        Debug.Log("Playing Background Music");
-        backgroundMusicSource.Play();
+
+        //Fade song
+        transitioningBackgroundMusic = true;
+        backgroundMusicSource.DOKill();
+        backgroundMusicSource.DOFade(0, ScreenFader.Instance.fadeTime).OnComplete(() =>
+        {
+            backgroundMusicSource.clip = clip;
+            Debug.Log("Playing Background Music");
+            backgroundMusicSource.Play();
+            backgroundMusicSource.DOFade(globalVolume, ScreenFader.Instance.fadeTime).OnComplete(() => transitioningBackgroundMusic = false);
+        });
     }
 }

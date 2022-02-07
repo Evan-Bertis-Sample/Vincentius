@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System.Linq;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -123,7 +124,7 @@ public class GameStateManager : MonoBehaviour
         optionsCursor.SetActive(false);
 
         //Generate quests
-        List<Quest> activeQuests = QuestManager.Instance.activeQuests;
+        List<Quest> displayQuests = QuestManager.Instance.activeQuests.Where(q => q.display == true).ToList();
 
         if (questItems.Count > 0)
         {
@@ -134,7 +135,7 @@ public class GameStateManager : MonoBehaviour
             questItems.Clear();
         }
 
-        if (activeQuests.Count == 0)
+        if (displayQuests.Count == 0)
         {
             GameObject noQuest = CreateTextBox(questsDisplayTransform.position, "There are no active quests");
             noQuest.transform.parent = questsDisplayTransform;
@@ -142,20 +143,20 @@ public class GameStateManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < activeQuests.Count; i++)
+            for (int i = 0; i < displayQuests.Count; i++)
             {
                 Debug.Log(i * itemDistance);
                 Vector3 curItemPosition = new Vector2(0, -(i * itemDistance));
                 Debug.Log(curItemPosition);
-                GameObject quest = CreateTextBox(curItemPosition, activeQuests[i].questName);
+                GameObject quest = CreateTextBox(curItemPosition, displayQuests[i].questName);
                 quest.transform.localScale = Vector3.one;
                 quest.transform.parent = questsDisplayTransform;
                 quest.transform.GetComponent<RectTransform>().anchoredPosition = curItemPosition;
                 questItems.Add(quest);
 
-                if (activeQuests[i].questDescription == "") continue;
+                if (displayQuests[i].questDescription == "") continue;
 
-                GameObject description = CreateTextBox(curItemPosition + descriptionOffset, activeQuests[i].questDescription);
+                GameObject description = CreateTextBox(curItemPosition + descriptionOffset, displayQuests[i].questDescription);
                 description.transform.parent = quest.transform;
                 description.GetComponent<TextMeshProUGUI>().color = descriptionColor;
                 description.GetComponent<RectTransform>().anchoredPosition = descriptionOffset;

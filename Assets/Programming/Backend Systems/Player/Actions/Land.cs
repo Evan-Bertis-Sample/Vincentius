@@ -9,6 +9,7 @@ public class Land : PlayerAction
     public GameObject landParticles;
     public Vector2 particlesOffset = new Vector2(0, -0.525f);
     public float requiredFallVelocity = -5f;
+    public string landSound = "Land";
 
     public override bool CheckForOverrideExit(PlayerController controller)
     {
@@ -17,7 +18,12 @@ public class Land : PlayerAction
 
     public override bool CheckParameter(PlayerController controller)
     {
-        return (controller.timeOnGround < landTime && controller.OnGround && controller.lastFrameVelocity.y <= requiredFallVelocity);
+        bool hasLanded = (controller.timeOnGround < landTime && controller.OnGround);
+        bool spawnParticles = controller.lastFrameVelocity.y <= requiredFallVelocity;
+
+        if (hasLanded) AudioManager.Instance.PlaySound(landSound);
+
+        return (hasLanded && spawnParticles);
     }
 
     protected override void Initiate(PlayerController controller)

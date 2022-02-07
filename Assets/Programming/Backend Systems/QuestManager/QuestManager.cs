@@ -56,6 +56,7 @@ public class QuestManager : MonoBehaviour
 
         foreach(Quest q in completedThisFrame)
         {
+            if (!q.display) continue;
             NotificationManager.Instance.RequestNotification(new Notification(q.questName, "Quest", 1), 0);
             NotificationManager.Instance.RequestNotification(new Notification("Completed", "Quest", 1), 0);
         }
@@ -80,7 +81,7 @@ public class QuestManager : MonoBehaviour
     {
         if (completedQuests.Where(q => q == quest).Any() || activeQuests.Where(q => q == quest).Any()) return;
 
-        NotificationManager.Instance.RequestNotification(new Notification(quest.questName, "Quest"), 0);
+        if (quest.display) NotificationManager.Instance.RequestNotification(new Notification(quest.questName, "Quest"), 0);
         quest.BeginQuest();
         activeQuests.Add(quest);
     }

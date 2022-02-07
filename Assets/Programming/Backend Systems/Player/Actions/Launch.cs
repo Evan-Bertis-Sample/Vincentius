@@ -20,7 +20,7 @@ public class Launch : PlayerAction
     public float chargeTime = 1;
     public float timesInAir = 1;
     public float performedInAir;
-    float originalGravityScale;
+    public float originalGravityScale;
     Vector2 initMousePos;
 
     [Header("Zoom Settings")]
@@ -111,7 +111,11 @@ public class Launch : PlayerAction
 
     public override bool CheckParameter(PlayerController controller)
     {
-        if (QuestManager.Instance.GetQuestStatus(quest) == false && !controller.debug) return false;
+        if (QuestManager.Instance.GetQuestStatus(quest) == false && !controller.debug)
+        {
+            controller.playerGFX.sr.sharedMaterial.SetColor("New_Sleeve_Color", ableSleeveColor);
+            return false;
+        } 
         
         if (controller.OnGround) performedInAir = 0;
         bool param = (performedInAir < timesInAir);
@@ -150,8 +154,11 @@ public class Launch : PlayerAction
         if (bowObject == null || indicatorObject == null) CreateObjects();
 
         //Handle Camera Zoom
+        /*
         zoomTween?.Kill();
-        zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, zoomAmount, zoomInTime).SetEase(Ease.InOutBack);
+        if (originalZoom < zoomAmount) zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, zoomAmount, zoomInTime).SetEase(Ease.InOutBack);
+        */
+        if (originalZoom < zoomAmount) CameraZoom.Main.ZoomCamera(zoomAmount, zoomInTime);
         shrinkTween?.Kill();
 
         //Handle Objects
@@ -178,8 +185,11 @@ public class Launch : PlayerAction
         controller.playerGFX.sr.sharedMaterial.SetColor("New_Sleeve_Color", unableSleeveColor);
 
         //Handle Camera Zoom
+        /*
         zoomTween?.Kill();
         zoomTween = DOTween.To(() => vcam.m_Lens.OrthographicSize, x => vcam.m_Lens.OrthographicSize = x, originalZoom, zoomOutTime).SetEase(Ease.InOutBack);
+        */
+        if (originalZoom < zoomAmount) CameraZoom.Main.ResetZoom(zoomOutTime);
 
         //Handle Objects
         shrinkTween = bowObject.transform.DOScale(Vector3.zero, shrinkTime).SetEase(Ease.InOutBack).OnComplete(() => bowObject.SetActive(false));
