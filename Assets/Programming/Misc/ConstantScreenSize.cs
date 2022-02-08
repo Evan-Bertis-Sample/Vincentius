@@ -5,19 +5,19 @@ using Cinemachine;
 
 public class ConstantScreenSize : MonoBehaviour
 {
-    private float startingOrthoSize;
-    private Vector3 startingSize;
-    private float ratio;
+    [SerializeField]private float startingOrthoSize;
+    [SerializeField]private Vector3 startingSize;
+    [SerializeField]private float ratio;
 
-    private float curOrthoSize;
+    [SerializeField]private float curOrthoSize;
 
-    CinemachineVirtualCamera vcam;
+    Camera mCam;
 
     void Start()
     {
         startingSize = transform.localScale;
-        vcam = ((Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera) as CinemachineVirtualCamera);
-        startingOrthoSize = vcam.m_Lens.OrthographicSize;
+        mCam = Camera.main;
+        startingOrthoSize = mCam.orthographicSize;
 
         ratio = startingSize.magnitude / startingOrthoSize;
     }
@@ -25,6 +25,7 @@ public class ConstantScreenSize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = startingSize.normalized * vcam.m_Lens.OrthographicSize * ratio;
+        curOrthoSize = mCam.orthographicSize;
+        transform.localScale = startingSize.normalized * curOrthoSize * ratio;
     }
 }

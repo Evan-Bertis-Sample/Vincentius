@@ -45,6 +45,8 @@ public class LevelManager : MonoBehaviour
         enterAction.started += (context) => enterActionInit = true;
         persistentObjects = new List<GameObject>();
         levelBoundary.isTrigger = true;
+
+        //confiner = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineConfiner>();
     }
 
     private void Start() {
@@ -186,6 +188,10 @@ public class LevelManager : MonoBehaviour
 
     public void SetLevelBoundary(PolygonCollider2D col)
     {
+        if (confiner == null)
+        {
+            confiner = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineConfiner>();
+        }
         confiner.m_BoundingShape2D = col;
 
         /*

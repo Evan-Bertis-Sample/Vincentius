@@ -97,35 +97,35 @@ public class FollowOffset : MonoBehaviour
         }
     }
 
-    public void SetPosition(Vector3 worldPos, float speed = -1f)
+    public void SetPosition(Vector3 worldPos, float speed = -1f, int priority = 1)
     {
         float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.25f : speed;
-        CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true);
+        CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true, priority);
 
         requests.Add(request);
     }
 
-    public void SetAndLockPosition(Vector3 worldPos, float speed = -1f)
+    public void SetAndLockPosition(Vector3 worldPos, float speed = -1f, int priority = 1)
     {
         float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.25f : speed;
-        CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true);
+        CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true, priority);
         request.SetLock(worldPos);
 
         requests.Add(request);
     }
 
-    public void SetLocalPosition(Vector3 localPos, float speed = -1f)
+    public void SetLocalPosition(Vector3 localPos, float speed = -1f, int priority = 1)
     {
         float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.25f : speed;
-        CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false);
+        CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false, priority);
 
         requests.Add(request);
     }
 
-    public void SetAndLockLocalPosition(Vector3 localPos, float speed = -1f)
+    public void SetAndLockLocalPosition(Vector3 localPos, float speed = -1f, int priority = 1)
     {
         float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.25f : speed;
-        CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false);
+        CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false, priority);
         request.SetLock(localPos);
         requests.Add(request);
     }
