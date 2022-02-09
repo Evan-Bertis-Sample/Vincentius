@@ -74,7 +74,7 @@ public class LevelDoorway : MonoBehaviour
 
 
         string displayName = (level.levelName != "") ? level.levelName : level.sceneName;
-        NotificationManager.Instance.RequestNotification(new Notification(displayName, "Area", 1f), 0);
+        if (level.displayNotification) NotificationManager.Instance.RequestNotification(new Notification(displayName, "Area", 1f), 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: b65c478313625044bafeb89a580a58c7
+  - enabled: 1
+    path: Assets/Scenes/TheChoice.unity
+    guid: a9aaed097948733409971210f5e0c681
   m_configObjects: {}

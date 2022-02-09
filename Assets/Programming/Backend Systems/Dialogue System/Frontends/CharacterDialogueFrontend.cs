@@ -50,7 +50,7 @@ public class CharacterDialogueFrontend : DialogueFrontend
         nameTextBox?.SetText(emitter.characterName);
         UIElementTransform.DOAnchorPos(elementPosition, 0.5f);
 
-        float startCamPos = Mathf.Lerp(0, 1, Mathf.InverseLerp(0, Camera.main.pixelHeight, Camera.main.WorldToScreenPoint(fo.GetPosition()).y));
+        float startCamPos = Mathf.Lerp(0, 1, Mathf.InverseLerp(0, Camera.main.pixelHeight, Camera.main.WorldToScreenPoint(fo.transform.parent.position).y));
         if (startCamPos >= minYScreen) return;
 
         float newFollowY = Camera.main.ScreenToWorldPoint(new Vector3(0, Camera.main.pixelHeight * (minYScreen - startCamPos))).y;

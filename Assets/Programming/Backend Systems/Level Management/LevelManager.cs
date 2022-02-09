@@ -118,6 +118,8 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+        CameraZoom.Main.ResetZoom(0.2f);
+        FollowOffset.main.ResetPosition();
         Debug.Log("Completed");
         activeLevel = level;
         nextLevelOperation.allowSceneActivation = true;
@@ -131,10 +133,14 @@ public class LevelManager : MonoBehaviour
         {
             TimeOfDayManager.Instance.SetTimeOfDay(level.daySettings);
             screenFade = ScreenFader.Instance.FadeScene(level.daySettings.fadeAmount, 1, int.MaxValue);
+            fadeComplete = false;
+            screenFade.OnComplete(() => fadeComplete = true);
         }
         else
         {
             screenFade = ScreenFader.Instance.FadeScene(0,-1, 3);
+            fadeComplete = false;
+            screenFade.OnComplete(() => fadeComplete = true);
         }
 
         yield return new WaitUntil(() => {
@@ -175,6 +181,8 @@ public class LevelManager : MonoBehaviour
         {
             visitedLevels.Add(FindLevel(level.sceneName));
         }
+
+        yield return new WaitUntil(() => fadeComplete == true);
         
         OnSceneLateChange?.Invoke(level.sceneName);
     }

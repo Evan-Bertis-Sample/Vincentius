@@ -41,7 +41,7 @@ public class TextUnwrapper : MonoBehaviour
     public float defaultWaitTime = 0.1f;
     public bool unwrapCharDefault = true;
 
-    public delegate void Notify(string id);
+    public delegate void Notify(string id, string[] args);
     public event Notify TextEvent;
 
     [TextArea]
@@ -207,7 +207,7 @@ public class TextUnwrapper : MonoBehaviour
     private void DialogueEvent(UnwrapRequest request, string[] parameters)
     {
         Debug.Log("Called");
-        TextEvent?.Invoke(parameters[0]);
+        TextEvent?.Invoke(parameters[0], parameters.Skip(1).ToArray());
     }
 
     private void UnwrapCharacters(UnwrapRequest request, string[] parameters)

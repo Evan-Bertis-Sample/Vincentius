@@ -11,7 +11,7 @@ public class Annoyed : MonoBehaviour
         TextUnwrapper.Instance.TextEvent += AnnoyedAF;
     }
 
-    void AnnoyedAF(string id)
+    void AnnoyedAF(string id, string[] args)
     {
         if (id == "Annoyed")
         {

@@ -166,10 +166,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fecb2a82ce0254e478a252539882ace5, type: 2}
   endingDialogues: []
   cannotBeObstructed: 1
-  showSpeechBubble: 1
+  showSpeechBubble: 0
   active: 0
   requireInput: 0
   finishBeforeExit: 1
+  disablePlayerMovement: 1
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}

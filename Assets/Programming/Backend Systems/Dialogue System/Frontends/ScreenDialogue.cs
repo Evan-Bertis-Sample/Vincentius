@@ -23,6 +23,23 @@ public class ScreenDialogue : DialogueFrontend
     public Level nextLevel;
     public string doorwayID = "default";
 
+    public GameObject responsePrefab;
+    public RectTransform responseTransform;
+    public RectTransform selectedCursor;
+    public Image selectedCursorImage;
+    public Vector3 startingResponsePosOffset = new Vector3(0, 200f, 0);
+    public Vector3 cursorOffset = new Vector3(-60f, 0, 0);
+    public float responseDistance;
+    public List<TextMeshProUGUI> responses = new List<TextMeshProUGUI>();
+
+    private void Start()
+    {
+        if (selectedCursor == null) return;
+        selectedCursor.parent = responseTransform;
+        selectedCursorImage = selectedCursor.GetComponent<Image>();
+        selectedCursor.gameObject.SetActive(false);
+    }
+
     public override void StartConversation(DialogueEmitter emitter)
     {
         Debug.Log("Start");
@@ -31,6 +48,7 @@ public class ScreenDialogue : DialogueFrontend
         textElement.DOKill();
         buttonPrompt.DOKill();
         buttonWords.DOKill();
+        selectedCursorImage?.DOKill();
 
         fadeTween = ScreenFader.Instance.FadeScene(fadeAmount, -1, 10);
         fadeTween.OnComplete(() =>
@@ -47,6 +65,22 @@ public class ScreenDialogue : DialogueFrontend
     {
         Debug.Log("Starting to display dialogue: " + dialogue.text);
         buttonPrompt.gameObject.SetActive(false);
+
+        if (responsePrefab != null)
+        {
+            for (int i = 0; i < responseTransform.childCount; i++)
+            {
+                if (selectedCursor != null)
+                {
+                    if (responseTransform.GetChild(i).gameObject == selectedCursor.gameObject) continue;
+                }
+                Debug.Log("Destroying " + i);
+                Destroy(responseTransform.GetChild(i).gameObject);
+            }
+        }
+
+        if (selectedCursor != null) selectedCursor.gameObject.SetActive(false);
+
 
         if (dialogue.GetType() != typeof(ImageDialogue))
         {
@@ -71,6 +105,7 @@ public class ScreenDialogue : DialogueFrontend
     {
         textElement.SetText(displayedText);
         if (fadeInComplete == false) return;
+        Debug.Log($"Updating... {dialogue.text}");
         displayedText = TextUnwrapper.Instance.UnwrapText(dialogue.text);
     }
 
@@ -85,16 +120,52 @@ public class ScreenDialogue : DialogueFrontend
         buttonPrompt.DOFade(1, ScreenFader.Instance.fadeTime);
         buttonWords.color = new Color(buttonWords.color.r, buttonWords.color.g, buttonWords.color.b, 0);
         buttonWords.DOFade(1, ScreenFader.Instance.fadeTime);
+
+        if (selectedCursorImage != null) selectedCursorImage.DOFade(1, ScreenFader.Instance.fadeTime);
     }
 
     public override void OnResponseStart(List<NextDialogue> dialogues, NextDialogue selectedDialogue)
     {
+        responses.Clear();
+        if (dialogues == null) return;
+        if (dialogues.Count == 0 || dialogues.Count == 1) return;
+        if (responsePrefab == null) return;
 
+        Sequence introSequence = DOTween.Sequence();
+
+        for (int i = 0; i < dialogues.Count; i++)
+        {
+            Vector3 finalPosOffset = new Vector3(0, -(i * responseDistance));
+            GameObject response = Instantiate(responsePrefab, this.responseTransform);
+            response.SetActive(true);
+
+            RectTransform curResponseTransform = response.GetComponent<RectTransform>();
+            curResponseTransform.parent = response.transform;
+            curResponseTransform.anchoredPosition = startingResponsePosOffset + finalPosOffset;
+
+            TextMeshProUGUI responseText = response.GetComponent<TextMeshProUGUI>();
+            responseText.SetText(dialogues[i].previewText);
+            responses.Add(responseText);
+            introSequence.Append(curResponseTransform.DOAnchorPos(finalPosOffset, 0.25f));
+        }
+
+        if (selectedCursor == null) return;
+        introSequence.OnComplete(() =>
+        {
+            selectedCursorImage.color = Color.white;
+            selectedCursor.gameObject.SetActive(true);
+        });
     }
 
     public override void OnResponseUpdate(List<NextDialogue> dialogues, NextDialogue selectedDialogue)
     {
+        if (selectedCursor == null || responsePrefab == null) return;
+        if (dialogues == null) return;
+        if (dialogues.Count == 0 || dialogues.Count == 1) return;
 
+        int index = dialogues.IndexOf(selectedDialogue);
+        Vector3 position = cursorOffset + new Vector3(0, -(index * responseDistance));
+        selectedCursor.anchoredPosition = position;
     }
 
     public override void EndConversation(DialogueEmitter emitter)
@@ -110,6 +181,16 @@ public class ScreenDialogue : DialogueFrontend
         buttonPrompt.DOFade(0, ScreenFader.Instance.fadeTime);
         buttonWords.DOFade(0, ScreenFader.Instance.fadeTime);
 
+        if (responses != null)
+        {
+            foreach (TextMeshProUGUI tm in responses)
+            {
+                tm.DOFade(0, ScreenFader.Instance.fadeTime);
+            }
+        }
+
+        if (selectedCursorImage != null) selectedCursorImage.DOFade(0, ScreenFader.Instance.fadeTime);
+
         textElement.DOFade(0, ScreenFader.Instance.fadeTime).OnComplete(() =>
         {
             if (transitionLevel)
@@ -122,6 +203,17 @@ public class ScreenDialogue : DialogueFrontend
             {
                 ScreenFader.Instance.ResetFader(10);
             }
+
+            for (int i = 0; i < responseTransform.childCount; i++)
+            {
+                if (selectedCursor != null)
+                {
+                    if (responseTransform.GetChild(i).gameObject == selectedCursor.gameObject) continue;
+                }
+                Debug.Log("Destroying " + i);
+                Destroy(responseTransform.GetChild(i).gameObject);
+            }
+
         });
     }
 }

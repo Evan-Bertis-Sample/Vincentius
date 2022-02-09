@@ -12227,10 +12227,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2563131136464595847, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
-      propertyPath: minYScreen
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 3447498938076102716, guid: cc65da4b5eacacb49a6b358f4e4123db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12314,18 +12310,18 @@ MonoBehaviour:
   characterName: Vulcan
   characterPortrait: {fileID: 0}
   startingDialogues:
-  - {fileID: 11400000, guid: da2bb4a1b0d20864ea30d9f43433f8b5, type: 2}
+  - {fileID: 11400000, guid: c961f200c7eb6de4d94e38f6f7d3e871, type: 2}
   endingDialogues: []
   cannotBeObstructed: 1
-  showSpeechBubble: 1
+  showSpeechBubble: 0
   active: 0
-  requireInput: 1
+  requireInput: 0
   finishBeforeExit: 1
   disablePlayerMovement: 0
   speechBubbleOffset: {x: 1, y: 1.25}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}
-  frontendIndex: 5
+  frontendIndex: 2
 --- !u!61 &1980624519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12396,6 +12392,51 @@ Transform:
   - {fileID: 370097585}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1999801842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999801844}
+  - component: {fileID: 1999801843}
+  m_Layer: 0
+  m_Name: Vulcan Choice Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1999801843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999801842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2734e987c1ac0a4a9626b6caf564b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choice: 
+  endLevel: {fileID: 11400000, guid: dea061eb7be36de4ebdd3fd70432421a, type: 2}
+--- !u!4 &1999801844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999801842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2006968132 stripped
 Transform:
