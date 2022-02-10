@@ -14,6 +14,7 @@ public class UnspawnableZone : Interactable
 
     public override void OnExit(GameObject player)
     {
+        if (LevelManager.Instance.player.gameObject.activeInHierarchy == false) return;
         RespawnManager.Instance.updateSafePos = true;
         RespawnManager.Instance.overrideSafePos = Vector3.zero;
     }

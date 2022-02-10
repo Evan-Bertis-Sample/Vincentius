@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d230df27aada5194c9cd434011b768aa, type: 3}
   m_Name: Convinced 1
   m_EditorClassIdentifier: 
-  text: 
+  text: Vulcan, convinced by Vincentius' plea, allowed Pompeii to live another day.
   nextDialogues:
   - previewText: 
-    next: {fileID: 0}
+    next: {fileID: 11400000, guid: 9f05c3d6a93c9284098484ad53a7c59c, type: 2}
   selectedResponse:
     previewText: 
     next: {fileID: 0}

@@ -687,7 +687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 225, y: 10}
+  m_AnchoredPosition: {x: -110, y: 10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &626811750
@@ -6555,6 +6555,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c454c18236ddc1142b352b70543b9e91, type: 2}
   - {fileID: 11400000, guid: df139456cc6731a4daf1cf019882a320, type: 2}
   - {fileID: 11400000, guid: dea061eb7be36de4ebdd3fd70432421a, type: 2}
+  - {fileID: 11400000, guid: 1bd3e17fc50448a4881c2f0602e2cb7f, type: 2}
   visitedLevels: []
   player: {fileID: 2423004820217123536}
   activeLevel: {fileID: 0}
@@ -6639,7 +6640,7 @@ MonoBehaviour:
   responseTransform: {fileID: 620089281}
   selectedCursor: {fileID: 847674783}
   selectedCursorImage: {fileID: 0}
-  startingResponsePosOffset: {x: 200, y: 0, z: 0}
+  startingResponsePosOffset: {x: -250, y: 0, z: 0}
   cursorOffset: {x: -110, y: 0, z: 0}
   responseDistance: 15
   responses: []

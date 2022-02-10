@@ -15,10 +15,10 @@ MonoBehaviour:
   text: That might be a better idea.
   nextDialogues:
   - previewText: 
-    next: {fileID: 0}
+    next: {fileID: 11400000, guid: 73d141a42ccf3544bb2e39476110ce76, type: 2}
   selectedResponse:
     previewText: 
-    next: {fileID: 0}
+    next: {fileID: 11400000, guid: 73d141a42ccf3544bb2e39476110ce76, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []

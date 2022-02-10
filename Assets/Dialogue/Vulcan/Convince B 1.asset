@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Do you think I care? I've been wronged. It's time for revenge.
   nextDialogues:
-  - previewText: There are different ways to be remembered.
+  - previewText: 
     next: {fileID: 11400000, guid: bee60d94f74b25b4cbda5a1d7f0ca137, type: 2}
   selectedResponse:
     previewText: 
-    next: {fileID: 0}
+    next: {fileID: 11400000, guid: bee60d94f74b25b4cbda5a1d7f0ca137, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []

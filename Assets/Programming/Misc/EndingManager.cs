@@ -17,6 +17,8 @@ public class EndingManager : MonoBehaviour
     public Ending convincedVulcanEnding;
     public Ending failedConvincedEnding;
 
+    public Ending chosenEnding;
+
     public AutoEmitter emitter;
     SpriteRenderer sr;
 
@@ -36,29 +38,32 @@ public class EndingManager : MonoBehaviour
             }
         };
 
-        LevelManager.OnSceneLateChange += newScene =>
+        LevelManager.OnSceneChange += newScene =>
         {
-            Ending ending;
             switch (choice)
             {
                 case "KilledVulcan":
-                    ending = killedVulcanEnding;
+                    chosenEnding = killedVulcanEnding;
                     break;
                 case "DestroyPompeii":
-                    ending = allowedVulcanEnding;
+                    chosenEnding = allowedVulcanEnding;
                     break;
                 case "ConvincedVulcan":
-                    ending = convincedVulcanEnding;
+                    chosenEnding = convincedVulcanEnding;
                     break;
                 case "FailedConvinced":
-                    ending = failedConvincedEnding;
+                    chosenEnding = failedConvincedEnding;
                     break;
                 default:
-                    ending = killedVulcanEnding;
+                    chosenEnding = killedVulcanEnding;
                     break;
             }
+            StartCoroutine(SetEnding(chosenEnding));
+        };
 
-            StartCoroutine(SetEnding(ending));
+        LevelManager.OnSceneLateChange += newScene =>
+        {
+            emitter.gameObject.SetActive(true);
         };
     }
 
@@ -71,8 +76,8 @@ public class EndingManager : MonoBehaviour
         newStart.Add(ending.startingDialogue);
 
         emitter.startingDialogues = newStart;
-        Debug.Log($"Starting dialogue is : {ending.startingDialogue.text}");
-        emitter.gameObject.SetActive(true);
+        //Debug.Log($"Starting dialogue is : {ending.startingDialogue.text}");
+        //emitter.gameObject.SetActive(true);
 
     }
 }

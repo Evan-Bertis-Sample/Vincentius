@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System.Linq;
 
 public class ScreenDialogue : DialogueFrontend
 {
@@ -128,8 +129,10 @@ public class ScreenDialogue : DialogueFrontend
     {
         responses.Clear();
         if (dialogues == null) return;
-        if (dialogues.Count == 0 || dialogues.Count == 1) return;
+        if (dialogues.Count == 0) return;
         if (responsePrefab == null) return;
+
+        if (dialogues.Where(d => d.previewText != "").Any() == false) return;
 
         Sequence introSequence = DOTween.Sequence();
 
@@ -161,7 +164,8 @@ public class ScreenDialogue : DialogueFrontend
     {
         if (selectedCursor == null || responsePrefab == null) return;
         if (dialogues == null) return;
-        if (dialogues.Count == 0 || dialogues.Count == 1) return;
+        if (dialogues.Count == 0) return;
+        if (dialogues.Where(d => d.previewText != "").Any() == false) return;
 
         int index = dialogues.IndexOf(selectedDialogue);
         Vector3 position = cursorOffset + new Vector3(0, -(index * responseDistance));

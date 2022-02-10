@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Would you really?
   nextDialogues:
-  - previewText: I'll tell them.
-    next: {fileID: 0}
+  - previewText: Yes.
+    next: {fileID: 11400000, guid: 4a67aa4a09469624baa4173da0fe440d, type: 2}
   selectedResponse:
-    previewText: 
-    next: {fileID: 0}
+    previewText: Yes.
+    next: {fileID: 11400000, guid: 4a67aa4a09469624baa4173da0fe440d, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []

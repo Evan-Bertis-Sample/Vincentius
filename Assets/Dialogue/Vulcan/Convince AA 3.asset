@@ -17,11 +17,9 @@ MonoBehaviour:
   nextDialogues:
   - previewText: I'll tell them.
     next: {fileID: 11400000, guid: 1c8bb54c6ac19bb46be51adc0b0b9a62, type: 2}
-  - previewText: 
-    next: {fileID: 11400000, guid: 1c8bb54c6ac19bb46be51adc0b0b9a62, type: 2}
   selectedResponse:
-    previewText: 
-    next: {fileID: 0}
+    previewText: I'll tell them.
+    next: {fileID: 11400000, guid: 1c8bb54c6ac19bb46be51adc0b0b9a62, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []

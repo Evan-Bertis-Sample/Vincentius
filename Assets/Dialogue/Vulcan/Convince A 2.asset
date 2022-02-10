@@ -15,12 +15,12 @@ MonoBehaviour:
   text: Tell me how.
   nextDialogues:
   - previewText: Fertilize the people's crops. Then, they'll remember you.
-    next: {fileID: 11400000, guid: afc49422ab9331e4580e2b237b777702, type: 2}
+    next: {fileID: 11400000, guid: 23e9e86a7edd853468fa97653590b65f, type: 2}
   - previewText: Set blaze to the enemies of Rome.
     next: {fileID: 11400000, guid: 02911e9de897ef04bad71f346e2375af, type: 2}
   selectedResponse:
-    previewText: 
-    next: {fileID: 0}
+    previewText: Fertilize the people's crops. Then, they'll remember you.
+    next: {fileID: 11400000, guid: 23e9e86a7edd853468fa97653590b65f, type: 2}
   continueOnComplete: 0
   mustSeeDialogues: []
   anySeeDialogues: []
