@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
 
     public float transitionTime = 0.75f;
 
+    public string selectSound = "Select";
+
     public Vector2 spawnOffset = new Vector2(400, 0);
 
     public void Start()
@@ -47,6 +49,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        AudioManager.Instance.PlaySound(selectSound);
+        DialogueManager.Instance.Reset();
+        QuestManager.Instance.Reset();
+        LevelManager.Instance.Reset();
         Level newLevel = LevelManager.Instance.FindLevel(sceneName);
         LevelManager.Instance.TransitionLevel(newLevel, "Default");
     }

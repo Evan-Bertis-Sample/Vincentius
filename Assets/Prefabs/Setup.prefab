@@ -610,7 +610,7 @@ MonoBehaviour:
   numFrames: 10
   safeTimeOnGround: 0.5
   updateSafePos: 0
-  deathSound: Orb
+  deathSound: Death
   deathParticles: {fileID: 4350511710616376266, guid: ff398458033dbd34cb3c46d6b249fe53, type: 3}
 --- !u!1 &551896044
 GameObject:
@@ -823,6 +823,69 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &684806815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684806816}
+  - component: {fileID: 684806817}
+  m_Layer: 0
+  m_Name: EndsceneFrontend
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684806816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684806815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2423004819265168688}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684806817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684806815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb45a605c08354418bc71e7fcf07c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayedText: 
+  noCommandText: 
+  UIElement: {fileID: 3323582877698083339}
+  textElement: {fileID: 6678067645096347965}
+  displayImage: {fileID: 6305367791567769865}
+  buttonPrompt: {fileID: 1530203453}
+  buttonWords: {fileID: 1547550301}
+  fadeInComplete: 0
+  fadeAmount: 0.8
+  transitionLevel: 1
+  nextLevel: {fileID: 11400000, guid: 17adb39f0015d524696997e7f32df90d, type: 2}
+  doorwayID: BedDoor
+  responsePrefab: {fileID: 0}
+  responseTransform: {fileID: 0}
+  selectedCursor: {fileID: 0}
+  selectedCursorImage: {fileID: 0}
+  startingResponsePosOffset: {x: 0, y: 200, z: 0}
+  cursorOffset: {x: -100, y: 0, z: 0}
+  responseDistance: 0
+  responses: []
 --- !u!1 &696261984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,6 +4316,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0681fd95d88568949bccde19df709388, type: 2}
   - {fileID: 11400000, guid: aa3438dc085d027449618a4a89cd8cf2, type: 2}
   - {fileID: 11400000, guid: e5ca4541dfcedaa46b857313bc040265, type: 2}
+  - {fileID: 11400000, guid: ff2f0f8b779f3564f93ffeb8af6af1a9, type: 2}
+  - {fileID: 11400000, guid: b07e27f88afa77648bc609d5dfd01253, type: 2}
   globalVolume: 0.5
   transitioningBackgroundMusic: 0
   backgroundMusicSource: {fileID: 0}
@@ -4751,6 +4816,7 @@ Transform:
   - {fileID: 3856108619406612565}
   - {fileID: 1993534777}
   - {fileID: 8147088596673794233}
+  - {fileID: 684806816}
   m_Father: {fileID: 2423004818837570416}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4835,6 +4901,7 @@ MonoBehaviour:
   - {fileID: 3291251713963174934}
   - {fileID: 1993534778}
   - {fileID: 2563131136464595847}
+  - {fileID: 684806817}
 --- !u!1 &2423004819396465390
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,8 +5643,8 @@ MonoBehaviour:
   previousState: 0
   timeSinceLastAction: 0
   OnGround: 0
-  groundCheckDistance: 0.525
-  groundCheckRadius: 0.2
+  groundCheckDistance: 0.4
+  groundCheckRadius: 0.1
   timeOnGround: 0
   actionSets:
   - {fileID: 11400000, guid: f434c142e056e684898d6a0e5bb4bcb2, type: 2}
@@ -7371,13 +7438,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97962da98bc65a744a2cc6bbde465dc8, type: 3}
---- !u!1 &2628569370843794887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 583557646896898182, guid: 97962da98bc65a744a2cc6bbde465dc8, type: 3}
-  m_PrefabInstance: {fileID: 3198606301779029313}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2628569370843794906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 583557646896898203, guid: 97962da98bc65a744a2cc6bbde465dc8, type: 3}
+  m_PrefabInstance: {fileID: 3198606301779029313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2628569370843794887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 583557646896898182, guid: 97962da98bc65a744a2cc6bbde465dc8, type: 3}
   m_PrefabInstance: {fileID: 3198606301779029313}
   m_PrefabAsset: {fileID: 0}

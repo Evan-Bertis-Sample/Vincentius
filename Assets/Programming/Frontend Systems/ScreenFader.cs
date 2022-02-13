@@ -130,6 +130,7 @@ public class ScreenFader : MonoBehaviour
     public Tween ResetFaderSpeed(float speed, int priority = 1)
     {
         if (priority < currentHighestPriority) return null;
+        Debug.Log("Resetting Fade");
 
         currentHighestPriority = priority;
 

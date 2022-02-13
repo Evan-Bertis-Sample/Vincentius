@@ -17,6 +17,9 @@ public class LaunchOrb : Interactable
     public string collectSound = "Orb";
     private SpriteRenderer sr;
 
+    RespawnManager.OnLife OnDeath;
+    LevelManager.SceneChange SceneChange;
+
     public override void OnContact(GameObject player)
     {
         if (collected) return;
@@ -42,11 +45,21 @@ public class LaunchOrb : Interactable
         sr = GetComponent<SpriteRenderer>();
         collected = false;
 
-        RespawnManager.OnDeath += () => {
+        OnDeath = new RespawnManager.OnLife( () => {
             StopCoroutine(Respawn());
             sr.color = new Color(sr.color.r, sr.color.b, sr.color.g, 1);
             collected = false;
-        };
+        });
+
+        RespawnManager.OnDeath += OnDeath;
+
+        SceneChange = new LevelManager.SceneChange(newScene => 
+        {
+            RespawnManager.OnDeath -= OnDeath;
+            LevelManager.OnSceneChange -= SceneChange;
+        });
+
+        LevelManager.OnSceneChange += SceneChange;
     }
 
     IEnumerator Respawn()

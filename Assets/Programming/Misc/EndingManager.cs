@@ -10,6 +10,7 @@ public class EndingManager : MonoBehaviour
         public Sprite back;
         public Dialogue startingDialogue;
         public TimeOfDay timeOfDay;
+        public AudioClip backgroundMusic;
     }
 
     public Ending killedVulcanEnding;
@@ -21,6 +22,10 @@ public class EndingManager : MonoBehaviour
 
     public AutoEmitter emitter;
     SpriteRenderer sr;
+
+
+    LevelManager.SceneChange SceneChange;
+    LevelManager.SceneChange LateSceneChange;
 
     private void Start()
     {
@@ -38,7 +43,7 @@ public class EndingManager : MonoBehaviour
             }
         };
 
-        LevelManager.OnSceneChange += newScene =>
+        SceneChange = new LevelManager.SceneChange(newScene =>
         {
             switch (choice)
             {
@@ -59,12 +64,18 @@ public class EndingManager : MonoBehaviour
                     break;
             }
             StartCoroutine(SetEnding(chosenEnding));
-        };
+            LevelManager.OnSceneChange -= SceneChange;
+        });
 
-        LevelManager.OnSceneLateChange += newScene =>
+        LevelManager.OnSceneChange += SceneChange;
+
+        LateSceneChange = new LevelManager.SceneChange(newScene =>
         {
             emitter.gameObject.SetActive(true);
-        };
+            LevelManager.OnSceneLateChange -= LateSceneChange;
+        });
+ 
+        LevelManager.OnSceneLateChange += LateSceneChange;
     }
 
     IEnumerator SetEnding(Ending ending)
@@ -76,6 +87,11 @@ public class EndingManager : MonoBehaviour
         newStart.Add(ending.startingDialogue);
 
         emitter.startingDialogues = newStart;
+
+        yield return null;
+
+        Debug.Log($"Ending Music: {ending.backgroundMusic.name}");
+        AudioManager.Instance.SetBackgroundMusic(ending.backgroundMusic);
         //Debug.Log($"Starting dialogue is : {ending.startingDialogue.text}");
         //emitter.gameObject.SetActive(true);
 

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: 'Opening '
   sceneName: OpeningCutscene
-  backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 5985dbb565a1aa84f8fb8e7cd9049ca4, type: 3}
   defaultDoorwayID: 
   playerActive: 0
   daySettings: {fileID: 0}
+  displayNotification: 1

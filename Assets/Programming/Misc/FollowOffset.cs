@@ -99,7 +99,7 @@ public class FollowOffset : MonoBehaviour
 
     public void SetPosition(Vector3 worldPos, float speed = -1f, int priority = 1)
     {
-        float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.25f : speed;
+        float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.1f : speed;
         CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true, priority);
 
         requests.Add(request);
@@ -107,7 +107,7 @@ public class FollowOffset : MonoBehaviour
 
     public void SetAndLockPosition(Vector3 worldPos, float speed = -1f, int priority = 1)
     {
-        float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.25f : speed;
+        float time = (speed <= 0) ? (transform.position - worldPos).magnitude * 0.1f : speed;
         CameraRequest<Vector3> request = new CameraRequest<Vector3>(worldPos, time, false, true, priority);
         request.SetLock(worldPos);
 
@@ -116,7 +116,7 @@ public class FollowOffset : MonoBehaviour
 
     public void SetLocalPosition(Vector3 localPos, float speed = -1f, int priority = 1)
     {
-        float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.25f : speed;
+        float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.1f : speed;
         CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false, priority);
 
         requests.Add(request);
@@ -124,7 +124,7 @@ public class FollowOffset : MonoBehaviour
 
     public void SetAndLockLocalPosition(Vector3 localPos, float speed = -1f, int priority = 1)
     {
-        float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.25f : speed;
+        float time = (speed <= 0) ? (transform.localPosition - localPos).magnitude * 0.1f : speed;
         CameraRequest<Vector3> request = new CameraRequest<Vector3>(localPos, time, false, false, priority);
         request.SetLock(localPos);
         requests.Add(request);
@@ -137,7 +137,7 @@ public class FollowOffset : MonoBehaviour
 
     public void ResetPosition()
     {
-        CameraRequest<Vector3> request = new CameraRequest<Vector3>(Vector3.zero, transform.localPosition.magnitude * 0.25f, true, false);
+        CameraRequest<Vector3> request = new CameraRequest<Vector3>(Vector3.zero, transform.localPosition.magnitude * 0.1f, true, false);
         requests.Add(request);
     }
 }

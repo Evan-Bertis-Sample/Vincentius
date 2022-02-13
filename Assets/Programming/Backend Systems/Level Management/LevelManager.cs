@@ -58,9 +58,23 @@ public class LevelManager : MonoBehaviour
             activeLevel = start;
             AudioManager.Instance.SetBackgroundMusic(start.backgroundMusic);
             if (start.daySettings != null) TimeOfDayManager.Instance.SetTimeOfDay(start.daySettings);
+            StartCoroutine(LateStart());
         }
 
         confiner = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineConfiner>();
+    }
+
+    IEnumerator LateStart()
+    {
+        yield return null;
+        Level start = FindLevel(SceneManager.GetActiveScene().name);
+        OnSceneChange?.Invoke(start.sceneName);
+        OnSceneLateChange?.Invoke(start.sceneName);
+    }
+
+    public void Reset()
+    {
+        visitedLevels.Clear();
     }
 
     private void LateUpdate() {

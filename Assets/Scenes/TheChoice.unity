@@ -349,22 +349,27 @@ MonoBehaviour:
     back: {fileID: 21300000, guid: f6c9e51114535f04988fed31e5cc0322, type: 3}
     startingDialogue: {fileID: 11400000, guid: 10ba1267030133b429b92530d4de80c9, type: 2}
     timeOfDay: {fileID: 11400000, guid: b655c66aa21477e419386b40c4fa0773, type: 2}
+    backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
   allowedVulcanEnding:
     back: {fileID: 21300000, guid: de453501120675d4eb4e57f77e89e3cc, type: 3}
     startingDialogue: {fileID: 11400000, guid: 9771be368e535bb40a78e813476c428b, type: 2}
     timeOfDay: {fileID: 11400000, guid: 4bec49c82e5d46f4380613596dbb0c7a, type: 2}
+    backgroundMusic: {fileID: 8300000, guid: 5c3b2ff7629871143af2de315c132864, type: 3}
   convincedVulcanEnding:
     back: {fileID: 21300000, guid: f6c9e51114535f04988fed31e5cc0322, type: 3}
     startingDialogue: {fileID: 11400000, guid: 09ad6f31874f2b24d9459c830393a8a5, type: 2}
     timeOfDay: {fileID: 11400000, guid: b655c66aa21477e419386b40c4fa0773, type: 2}
+    backgroundMusic: {fileID: 8300000, guid: d65d2c9f8089b53429113f88c48dae3d, type: 3}
   failedConvincedEnding:
     back: {fileID: 21300000, guid: de453501120675d4eb4e57f77e89e3cc, type: 3}
     startingDialogue: {fileID: 11400000, guid: fbdef5add3ec278419e84bc28130b02a, type: 2}
     timeOfDay: {fileID: 11400000, guid: 4bec49c82e5d46f4380613596dbb0c7a, type: 2}
+    backgroundMusic: {fileID: 8300000, guid: 5c3b2ff7629871143af2de315c132864, type: 3}
   chosenEnding:
     back: {fileID: 0}
     startingDialogue: {fileID: 0}
     timeOfDay: {fileID: 0}
+    backgroundMusic: {fileID: 0}
   emitter: {fileID: 1996281308}
 --- !u!4 &1761261083
 Transform:
@@ -440,7 +445,7 @@ MonoBehaviour:
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}
-  frontendIndex: 2
+  frontendIndex: 5
 --- !u!4 &1996281309
 Transform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,18 @@ TextureImporter:
   - first:
       213: -4564612374249874421
     second: Rocks_MtBase_Med_4
+  - first:
+      213: -7531184813801189468
+    second: Rocks_MtBase_Med_0
+  - first:
+      213: 6100018314440657198
+    second: Rocks_MtBase_Med_1
+  - first:
+      213: 2915860872223668525
+    second: Rocks_MtBase_Med_5
+  - first:
+      213: -2452088484147718054
+    second: Rocks_MtBase_Med_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4528718589f0210f0800000000000000
-      internalID: -1147837808038673836
+      spriteID: 4af4093505bdb7790800000000000000
+      internalID: -7531184813801189468
       vertices: []
       indices: 
       edges: []
@@ -151,8 +163,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8e66ed70b35d1fb0800000000000000
-      internalID: -4675488820649103734
+      spriteID: e29cc93765e97a450800000000000000
+      internalID: 6100018314440657198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_MtBase_Med_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f4840b911e83b50800000000000000
+      internalID: 6573251156595199882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_MtBase_Med_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105ad06a2673ad400800000000000000
+      internalID: 349652817906869505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_MtBase_Med_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cdb7fda3d37a0c0800000000000000
+      internalID: -4564612374249874421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_MtBase_Med_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d293a5fa308377820800000000000000
+      internalID: 2915860872223668525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_MtBase_Med_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a589c80f38e68fdd0800000000000000
+      internalID: -2452088484147718054
       vertices: []
       indices: 
       edges: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SeenApollo
   m_EditorClassIdentifier: 
   taskName: Seen Apollo
-  taskDescription: Observe the Statue of Apollo
+  taskDescription: Speak To Apollo
   completed: 0
   mustSeeDialogue:
-  - {fileID: 11400000, guid: a867d213f3d98184b81768df19234ae0, type: 2}
+  - {fileID: 11400000, guid: 08abf5fe1d0e0a0468dd2ea5a77b03ec, type: 2}

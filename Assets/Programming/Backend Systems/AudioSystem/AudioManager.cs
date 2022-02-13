@@ -85,7 +85,7 @@ public class AudioManager : MonoBehaviour
     public void SetBackgroundMusic(AudioClip clip)
     {
         if(backgroundMusicSource.clip == clip) return; //Keep song playing
-
+        //Debug.Log("Setting Background Music: " + clip.name);
         //Fade song
         transitioningBackgroundMusic = true;
         backgroundMusicSource.DOKill();

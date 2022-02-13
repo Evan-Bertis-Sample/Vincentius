@@ -29,7 +29,7 @@ public class FollowCamera : MonoBehaviour
 
         SceneChange = new LevelManager.SceneChange((sceneName => DestroyThis()));
 
-        LevelManager.OnSceneLateChange += SceneChange;
+        LevelManager.OnSceneChange += SceneChange;
     }
 
     private void Update() 
@@ -46,7 +46,7 @@ public class FollowCamera : MonoBehaviour
 
     private void OnDestroy() {
         if (gameObject == null) return;
-        LevelManager.OnSceneLateChange -= SceneChange;
+        LevelManager.OnSceneChange -= SceneChange;
     }
 
     private void DestroyThis()

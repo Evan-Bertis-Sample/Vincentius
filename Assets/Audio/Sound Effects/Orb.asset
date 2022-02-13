@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Orb
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 2e5d6743b64df984388b3e4bd1a6589e, type: 3}
+  - {fileID: 8300000, guid: 0c8493026be97954596694f276579cbb, type: 3}
   loop: 0
   volume:
     min: 0.5

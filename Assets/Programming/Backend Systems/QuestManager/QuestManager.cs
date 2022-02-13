@@ -36,6 +36,22 @@ public class QuestManager : MonoBehaviour
         UpdateQuestStatus();
     }
 
+    public void Reset()
+    {
+        foreach (Quest q in activeQuests)
+        {
+            q.Reset();
+        }
+
+        foreach(Quest q in completedQuests)
+        {
+            q.Reset();
+        }
+
+        activeQuests.Clear();
+        completedQuests.Clear();
+    }
+
     private void UpdateQuestStatus()
     {
         List<Quest> completedThisFrame = new List<Quest>();

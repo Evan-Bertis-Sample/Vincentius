@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: The Peak
   sceneName: ThePeak
-  backgroundMusic: {fileID: 0}
-  defaultDoorwayID: 
+  backgroundMusic: {fileID: 8300000, guid: 5c3b2ff7629871143af2de315c132864, type: 3}
+  defaultDoorwayID: Enter
   playerActive: 1
   daySettings: {fileID: 11400000, guid: 4bec49c82e5d46f4380613596dbb0c7a, type: 2}
+  displayNotification: 1

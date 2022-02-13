@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetGlobalVolume(float volume)
     {
+        //AudioManager.Instance.backgroundMusicSource.DOKill();
         AudioManager.Instance.globalVolume = volume;
     }
 }

@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: f5b7df7b3d6e7c842a4fee87adedc83d
+  - enabled: 1
+    path: Assets/Scenes/ThePeak.unity
+    guid: 7a708b3375c061d4986fc20cb78d04cd
   m_configObjects: {}

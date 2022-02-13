@@ -37,4 +37,14 @@ public class Quest : ScriptableObject
         completed = true;
         return true;
     }
+
+    public void Reset()
+    {
+        foreach(QuestTask t in questTasks)
+        {
+            t.completed = false;
+        }
+
+        completed = false;
+    }
 }

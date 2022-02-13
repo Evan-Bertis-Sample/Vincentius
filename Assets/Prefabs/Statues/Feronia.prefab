@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0a42856e0dde74289c68e91ac97d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Apollo
+  characterName: Feronia
   characterPortrait: {fileID: 0}
   startingDialogues:
   - {fileID: 11400000, guid: 6e6e990fde5e08f48b11b20c9a6a72ca, type: 2}

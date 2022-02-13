@@ -68,6 +68,13 @@ public class DialogueManager : MonoBehaviour
         return frontends[index];
     }
 
+    public void Reset()
+    {
+        visitedDialogues.Clear();
+        currentDialogue = null;
+        possibleEmitters.Clear();
+    }
+
     public DialogueEmitter FindEmitter(Vector3 pos)
     {
         possibleEmitters = possibleEmitters.Where(e => e != null).ToList();

@@ -64,8 +64,10 @@ public class RespawnManager : MonoBehaviour
         player.gameObject.SetActive(false);
         GameObject particles = Instantiate(deathParticles, player.transform.position, Quaternion.identity);
         AudioManager.Instance.PlaySound(deathSound);
-        ScreenFader.Instance.FadeSceneSpeed(1, fadeSpeed, -1, int.MaxValue).OnComplete(() =>
+        Tween screenFade = ScreenFader.Instance.FadeSceneSpeed(1, fadeSpeed, -1, int.MaxValue);
+        screenFade.OnComplete(() =>
         {
+            Debug.Log("Here");
             Vector3 spawnPoint = (overrideSafePos == Vector3.zero) ? lastSafePos : overrideSafePos;
             Debug.Log($"Spawning at point {spawnPoint}");
             player.transform.position = spawnPoint;
@@ -75,7 +77,7 @@ public class RespawnManager : MonoBehaviour
             Destroy(particles);
 
             OnDeath?.Invoke();
-            
+        
             ScreenFader.Instance.ResetFaderSpeed(fadeSpeed, int.MaxValue);
         });
     }

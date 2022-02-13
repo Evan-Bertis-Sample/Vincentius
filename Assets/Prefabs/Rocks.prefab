@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &681961138441715601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681961138441715602}
+  - component: {fileID: 681961138441715603}
+  m_Layer: 0
+  m_Name: Rocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681961138441715602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681961138441715601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681961138441715603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681961138441715601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1948a9eb6826b4eb35ecb82a4cbcdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handleColor: {r: 1, g: 0, b: 0, a: 1}
+  handleSize: 0.5
+  objectSprites:
+  - {fileID: 1379788817183011383, guid: b1fdd935efedeff4b9ae30deb795adcd, type: 3}
+  - {fileID: 8344693238690257731, guid: b1fdd935efedeff4b9ae30deb795adcd, type: 3}
+  - {fileID: -1147837808038673836, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: -4675488820649103734, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: 6573251156595199882, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: 349652817906869505, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: -4564612374249874421, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: 2915860872223668525, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  - {fileID: -2452088484147718054, guid: e989c52b9c324fa4cb5b1312f03c0e17, type: 3}
+  objectDensity: 0.3
+  objectMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  spriteLayer: Midground
+  orderInLayer: -2
+  spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  randomlyFlipSprites: 1
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minIterationsUntilRepeat: 3
+  minXSpacing: 4
+  globalSpawnOffset: {x: 0, y: -0.1, z: 0}
+  attachToGround: 1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  leftBound: {x: -24.67896, y: -0.01, z: 0}
+  rightBound: {x: 35.22936, y: -0.01, z: 0}
