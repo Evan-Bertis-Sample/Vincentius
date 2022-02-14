@@ -29,7 +29,7 @@ MonoBehaviour:
       m_Action: Binding
       m_Flags: 0
   newState: 0
-  canBeStates: 010000000300000002000000
+  canBeStates: 01000000030000000200000005000000
   checkParameter: 1
   checkBinding: 1
   checkBindingStart: 1
@@ -48,6 +48,7 @@ MonoBehaviour:
   chargeTime: 0.5
   timesInAir: 1
   performedInAir: 0
+  originalGravityScale: 5
   zoomAmount: 4.5
   zoomInTime: 0.75
   zoomOutTime: 0.5

@@ -5,11 +5,13 @@ using UnityEngine;
 public class UnspawnableZone : Interactable
 {
     public GameObject overridePos;
+    private Vector3 enterPos;
 
     public override void OnContact(GameObject player)
     {
         RespawnManager.Instance.updateSafePos = false;
-        RespawnManager.Instance.overrideSafePos = (overridePos == null) ? player.transform.position : overridePos.transform.position;
+        enterPos = player.transform.position;
+        RespawnManager.Instance.overrideSafePos = (overridePos == null) ? enterPos : overridePos.transform.position;
     }
 
     public override void OnExit(GameObject player)
@@ -21,6 +23,7 @@ public class UnspawnableZone : Interactable
 
     public override void OnHold(GameObject player)
     {
-        
+        RespawnManager.Instance.updateSafePos = false;
+        RespawnManager.Instance.overrideSafePos = (overridePos == null) ? enterPos : overridePos.transform.position;
     }
 }

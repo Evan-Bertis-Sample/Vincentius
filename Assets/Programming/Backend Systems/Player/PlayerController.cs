@@ -57,10 +57,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(GameStateManager.Instance.paused) return; //This is lazy but I don't care
+        CheckGround();
+        if (canMove == false) return;
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         HandleActions();
         Move();
-        CheckGround();
         HandlePredfinedStateLogic();
         previousState = currentState;
         lastAction = currentAction;

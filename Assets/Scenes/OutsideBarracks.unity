@@ -68649,6 +68649,7 @@ MonoBehaviour:
   active: 0
   requireInput: 0
   finishBeforeExit: 1
+  disablePlayerMovement: 0
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}
@@ -78392,6 +78393,7 @@ MonoBehaviour:
   active: 0
   requireInput: 1
   finishBeforeExit: 0
+  disablePlayerMovement: 0
   speechBubbleOffset: {x: 0.5, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}
@@ -82510,6 +82512,7 @@ MonoBehaviour:
   active: 0
   requireInput: 1
   finishBeforeExit: 0
+  disablePlayerMovement: 0
   speechBubbleOffset: {x: 0.6, y: 0.5}
   isShowingSpeechBubble: 0
   frontend: {fileID: 0}
@@ -83880,7 +83883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932325126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.32, y: 0, z: 0}
+  m_LocalPosition: {x: -13.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 552681856}

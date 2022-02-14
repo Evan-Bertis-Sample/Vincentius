@@ -37,7 +37,7 @@ MonoBehaviour:
   checkBindingAfterInit: 1
   checkBindingStartAfterInit: 0
   bindingTriggeredThisFrame: 0
-  interruptable: 0
+  interruptable: 1
   waitForAnimationEvent: 1
   animationFlag: 0
   animationEventName: Jump
@@ -45,3 +45,4 @@ MonoBehaviour:
   jumpTime: 0.15
   particlesOffset: {x: 0, y: -0.25}
   jumpParticlesPrefab: {fileID: 1166751312267982865, guid: 392c10c863ab9604485240ef6e7a261e, type: 3}
+  jumpSound: Jump

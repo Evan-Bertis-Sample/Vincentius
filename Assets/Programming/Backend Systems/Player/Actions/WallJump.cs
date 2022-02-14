@@ -44,7 +44,7 @@ public class WallJump : PlayerAction
 
     protected override void Initiate(PlayerController controller)
     {
-        controller.StopMovementUntilOnGround();
+        //controller.StopMovementUntilOnGround();
         Vector3 wallNormal = wallCast.normal;
         float t = Map(jumpAngle, 0, 90, 0, 1);
         Vector3 dir = Vector3.Lerp(((controller.transform.position.x - wallCast.point.x) < 0f) ? Vector3.left : Vector3.right, Vector3.up, t).normalized ;

@@ -28,8 +28,8 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Binding
       m_Flags: 0
-  newState: 3
-  canBeStates: 00000000
+  newState: 0
+  canBeStates: 04000000
   checkParameter: 1
   checkBinding: 1
   checkBindingStart: 1
@@ -47,3 +47,4 @@ MonoBehaviour:
   wallLayers:
     serializedVersion: 2
     m_Bits: 768
+  jumpSound: Jump

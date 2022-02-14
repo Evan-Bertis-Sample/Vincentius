@@ -16,4 +16,4 @@ MonoBehaviour:
   taskDescription: Speak To Apollo
   completed: 0
   mustSeeDialogue:
-  - {fileID: 11400000, guid: 08abf5fe1d0e0a0468dd2ea5a77b03ec, type: 2}
+  - {fileID: 11400000, guid: 009dd679516ccb240a4cb7c6ef51762c, type: 2}
