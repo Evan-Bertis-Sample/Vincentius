@@ -40,7 +40,13 @@ public class PlayerGFX : MonoBehaviour
     }
 
     void LateUpdate() {
-        if (GameStateManager.Instance.paused) return; //The game is paused (I know this is lazy)
+        if (GameStateManager.Instance.paused || controller.controllerActive == false)
+        {
+            animator.enabled = false;
+            return;
+        }
+
+        animator.enabled = true;
 
         if (overrides.Count <= 0)
         {

@@ -60,7 +60,7 @@ public class RespawnManager : MonoBehaviour
     {
         Debug.Log("Killing Player");
         updateSafePos = false;
-        player.canMove = false;
+        player.controllerActive = false;
         player.gameObject.SetActive(false);
         GameObject particles = Instantiate(deathParticles, player.transform.position, Quaternion.identity);
         AudioManager.Instance.PlaySound(deathSound);
@@ -71,7 +71,7 @@ public class RespawnManager : MonoBehaviour
             Vector3 spawnPoint = (overrideSafePos == Vector3.zero) ? lastSafePos : overrideSafePos;
             Debug.Log($"Spawning at point {spawnPoint}");
             player.transform.position = spawnPoint;
-            player.canMove = true;
+            player.controllerActive = true;
             updateSafePos = true;
             player.gameObject.SetActive(true);
             Destroy(particles);

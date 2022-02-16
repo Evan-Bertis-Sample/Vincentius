@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d230df27aada5194c9cd434011b768aa, type: 3}
   m_Name: Salus 1
   m_EditorClassIdentifier: 
-  text: Vincentius, in order to aide you in your jouney, I have placed stone tablets
+  text: Vincentius, in order to aid you in your journey, I have placed stone tablets
     along the road to the Mountain.
   nextDialogues:
   - previewText: 

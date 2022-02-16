@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float actionTimeElapsed;
 
     [Header("Debug")]
+    public bool controllerActive = true;
     public bool canMove = true;
     public bool debug = true;
 
@@ -58,9 +59,10 @@ public class PlayerController : MonoBehaviour
     {
         if(GameStateManager.Instance.paused) return; //This is lazy but I don't care
         CheckGround();
+        if (controllerActive == false) return;
+        HandleActions();
         if (canMove == false) return;
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-        HandleActions();
         Move();
         HandlePredfinedStateLogic();
         previousState = currentState;
@@ -96,13 +98,13 @@ public class PlayerController : MonoBehaviour
             if (currentAction.waitForAnimationEvent && !currentAction.animationFlag) return; //Do not try to cancel the action if it hasn't even started yet
             if (currentAction.performingAction == false) currentAction.InitiateAction(this); //The action hasn't started yet because it was waiting for the animation event
             //Preliminary Check - if the player is already performing an action, perform that one until it cancels itself out
-            currentAction.PerformAction(this);
             actionTimeElapsed = currentAction.timeElapsed;
 
-            if (currentAction.CheckActionAfterInit(this))
+            if (!currentAction.CheckForExit(this))
             {
                 //The action is still valid, what do we do?
                 //If you can interrupt the action, allow for the algorithm to search for more actions. If not, stop it.
+                currentAction.PerformAction(this);
                 if (!currentAction.interruptable) return;
             }
             else
@@ -169,7 +171,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentState == PlayerState.Any || currentState == PlayerState.Idle || currentState == PlayerState.Run)
         {
-            if (moveInput.x != 0 && canMove)
+            if (moveInput.x != 0 && controllerActive)
             {
                 currentState = PlayerState.Run;
             }
@@ -195,7 +197,7 @@ public class PlayerController : MonoBehaviour
             timeSinceLastMove = 0;
             timeMoving += Time.deltaTime;
         }
-        if (canMove)
+        if (controllerActive)
         {
             float accelerationT = Mathf.InverseLerp(0, accelerationTime, timeMoving);
             float accelerationFactor = accelerationCurve.Evaluate(accelerationT);
@@ -246,12 +248,12 @@ public class PlayerController : MonoBehaviour
     IEnumerator StopMoveUntilOnGround()
     {
         //StopAllCoroutines();
-        canMove = false;
+        controllerActive = false;
         while (!OnGround)
         {
             yield return null;
         }
         Debug.Log("Hit Ground");
-        canMove = true;
+        controllerActive = true;
     }
 }

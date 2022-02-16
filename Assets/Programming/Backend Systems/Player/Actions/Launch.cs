@@ -106,6 +106,7 @@ public class Launch : PlayerAction
 
     public override bool CheckForOverrideExit(PlayerController controller)
     {
+        if (bowObject == null || indicatorObject == null) return true;
         return false;
     }
 
@@ -177,6 +178,8 @@ public class Launch : PlayerAction
         Time.timeScale = 1f;
         controller.rb.gravityScale = originalGravityScale;
         controller.canMove = true;
+
+        if (bowObject == null || indicatorObject == null) return;
         if (!interrupted)
         {
             float additionalLaunchStrength = Mathf.Lerp(1f, 1.5f, launchDir.y);

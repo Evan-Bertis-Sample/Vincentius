@@ -17,6 +17,6 @@ MonoBehaviour:
   selectedResponse:
     previewText: 
     next: {fileID: 0}
-  continueOnComplete: 0
+  continueOnComplete: 1
   mustSeeDialogues: []
   anySeeDialogues: []
