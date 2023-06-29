@@ -1,5 +1,5 @@
 # Vincentius
-### Pompeii is in danger.
+## Pompeii is in danger.
 
 Down below, within the crust of the earth, molten rock spews, and rivers of fire begin to flood.
 
@@ -15,7 +15,7 @@ Join Vincentius on his journey up the mountain, and as he is thrown into the dra
 
 **Play Now:** https://theshrimpchip.itch.io/vincentius
 
-### Development
+## Development
 Vincentius was developed for the 2022 Florida Technology Student Association Conference. It was created using the Unity Game Engine, and other tools such as Aseprite, Krita, Photoshop, FL Studio, and many others. All assets were created by a team of high schoolers at North Port High School.
 
 Developers include:
@@ -28,7 +28,7 @@ Jill-Alexis Garcia: Concept Artist, Level Designer and Writer
 Esteban Naravez-Garcia: Lead Level Designer and Writer
 ```
 
-Check out the official documentation submitted to the conference [here.](Documentation/Vincentius%20Documentation.pdf)
+Check out the official documentation submitted to the conference [here.](https://drive.google.com/file/d/1ny7HbLn9s310t4V2YfOaGgrpMm6uQyx5/view?usp=sharing)
 
 ### Screenshots
 ![Meeting Apollo](Documentation/Screenshots/Apollo.png)
