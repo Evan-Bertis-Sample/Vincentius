@@ -20,12 +20,9 @@ Vincentius was developed for the 2022 Florida Technology Student Association Con
 
 Developers include:
 ```
-Evan Bertis-Sample: Project Manager, Lead Artist and Lead Programmer
-Alexis Floyd: Artist
-Daniel Franco: Co-Music Director
-David Fanco: Co-Music Director
-Jill-Alexis Garcia: Concept Artist, Level Designer and Writer
-Esteban Naravez-Garcia: Lead Level Designer and Writer
+Evan Bertis-Sample: Lead Developer, Lead Artist, Lead Designer
+Daniel Franco: Co-Music Director, Designer
+David Fanco: Co-Music Director, Designer
 ```
 
 Check out the official documentation submitted to the conference [here.](https://drive.google.com/file/d/1ny7HbLn9s310t4V2YfOaGgrpMm6uQyx5/view?usp=sharing)
